@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+    	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    	<title>Preventing IE from downloading specific stylesheets</title>    	
+        <!--[if !IE]>-->
+             <style type="text/css">
+                 div.first {
+                    background: red;
+                 }
+             </style>
+        <!--<![endif]-->
+        <!--[if gte IE 8]>
+             <style type="text/css">
+                 div.first {
+                    background: red;
+                 }
+             </style>
+        <![endif]-->
+        <!--[if lte IE 7]>
+            <style type="text/css">
+                div.second {
+                   background: green;
+                }            
+            </style>
+        <![endif]-->
+        </head>
+    <body>
+        <h1>Preventing IE from downloading specific stylesheets</h1>
+        <div class="first" style="border: 2px solid black;">In modern browsers, this should be red, in IE7 and lower it should be white</div>
+        <div class="second" style="border: 2px solid black;">In IE7 and lower, this should be green, in modern browsers it should be white</div>        
+        <p>Please be aware that if you're running multiple IE's on the same system, that IE6 reads conditional comments as the latest version of IE installed, and not as IE6.</p>
+    </body>
+</html>

@@ -1,0 +1,2852 @@
+/*for all blocks*/
+div.g_block{
+	float:left;
+	position:relative;
+	margin-right:6px;
+	margin-bottom:8px;
+}
+
+.g_block_highlight{
+	background-color:#e8f5f9 !important;
+}
+
+.g_block_highlight2{
+	background-color:#e0e7b4 !important;	
+}
+
+/* Style to use when showing an error block */
+div.g_block div.g_block_content.g_block_error{
+	background-color:#fbf3f1;	
+}
+div.g_block div.g_block_content.g_block_error .g_block_txt{
+	color:#801914;
+}
+
+div.g_block div.g_block_content.g_block_alert{
+	background-color:#fbf3f1;
+	height:38px; /* Fixed height, only one line of text possible */
+}
+
+div.g_block div.g_block_content.g_block_alert .g_block_img{
+	margin:7px 4px 4px 24px;
+	float:left;
+}
+
+div.g_block div.g_block_content.g_block_alert .g_block_txt{
+	color:#801914;
+	float:left;
+	width:901px;
+	margin:10px;
+}
+
+div.g_middle{
+	border-left:1px solid #eee;
+	border-right:1px solid #eee;
+}
+
+/* Block content and image placement */
+div.g_block_content{
+	background-color:#fff;
+	border-left:1px solid #e2e2e2;
+	border-right:1px solid #e2e2e2;
+	overflow:hidden;
+}
+
+/*  Default margins for text areas in blocks
+	bottom margin set to 0, because p tags have bottom margin,
+	when text is floated it would result in double margin
+ */
+div.g_block_txt{
+	margin:18px 24px 0;
+}
+
+/* Green inline highlight box */
+/* special handling in form.css */
+#g_block_modals .g_block_txt.g_highlight2,
+.g_block .g_block_txt.g_highlight2{
+	padding:14px 18px 0 18px;
+	margin-bottom:18px !important;
+	background-color:#e0e7b4;
+	border:1px solid #91a510;	
+	width:auto;
+}
+/* Green box end */
+
+/* highlight box */
+#g_block_modals .g_block_txt.g_highlight,
+.g_block .g_block_txt.g_highlight{
+	padding:14px 18px 0 18px;
+	margin-bottom:18px !important;
+	background-color:#e8f5f9;
+	border:1px solid #93c1cf;	/* Needs to be updated with correct shade of blue */
+	width:auto;
+}
+/* Highlight box end */
+
+/* Alert box */
+#g_block_modals .g_block_txt.g_alert,
+.g_block .g_block_txt.g_alert{
+	padding:14px 18px 0 18px;
+	margin-bottom:18px !important;
+	background-color:#fbf3f1;
+	border:1px solid #c96363;	/* Needs to be updated with correct shade of blue */
+	width:auto;
+}
+/* Alert box end */
+
+/* Blocks below 6 col width only have 18px padding left and right, and 15px from the top */
+div.g_block.g_block_c3 .g_block_txt,
+div.g_block.g_block_c4 .g_block_txt,
+div.g_block.g_block_c5 .g_block_txt{
+	margin:18px 18px 0 18px; /* 0 bottom margin because of the margin on p tags, otherwise it would get double margin */
+}
+
+/* places the image to the left of the text */
+div.g_block_img_left div.g_block_img{
+	float:left;
+	margin:0;
+}
+
+/* places the image to the right of the text */
+div.g_block_img_right div.g_block_img{
+	float:right;
+	margin:0;
+}
+
+/* Block widths */
+.g_block_c3 .g_block_txt{	width:200px;}
+.g_block_c4 .g_block_txt{	width:282px;}
+.g_block_c5 .g_block_txt{	width:364px;}
+.g_block_c6 .g_block_txt{	width:434px;}
+.g_block_c7 .g_block_txt{	width:516px;}
+.g_block_c8 .g_block_txt{	width:598px;}
+.g_block_c9 .g_block_txt{	width:680px;}
+.g_block_c12 .g_block_txt{	width:926px;}
+
+/*  Handling of images to the left and right of the text
+	Column width - image width - leftpaddingontxt - rightpaddingtxt = width below */
+/* square 84 image */
+.g_block_c3 .g_block_img_left.g_block_img_84 .g_block_txt{		float:left;width:116px;}
+.g_block_c3 .g_block_img_right.g_block_img_84 .g_block_txt{		width:116px;}
+
+.g_block_c4 .g_block_img_left.g_block_img_84 .g_block_txt{		
+    padding-left: 84px; /* set this to the width of the image */
+    width: auto; /* override the 282px set in .g_block_c4 .g_block_txt */
+}
+.g_block_c4 .g_block_img_left.g_block_img_84 .g_block_img {
+    float: none !important;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+}
+
+.g_block_c4 .g_block_img_right.g_block_img_84 .g_block_txt{		width:198px;}
+
+.g_block_c5 .g_block_img_left.g_block_img_84 .g_block_txt{		float:left;width:280px;}
+.g_block_c5 .g_block_img_right.g_block_img_84 .g_block_txt{		width:280px;}
+
+.g_block_c6 .g_block_img_left.g_block_img_84 .g_block_txt{		float:left;width:350px;}
+.g_block_c6 .g_block_img_right.g_block_img_84 .g_block_txt{		width:350px;}
+
+/* square 156 image */
+.g_block_c4 .g_block_img_left.g_block_img_156 .g_block_txt{		float:left;width:126px;}
+.g_block_c4 .g_block_img_right.g_block_img_156 .g_block_txt{	width:126px;}
+
+.g_block_c5 .g_block_img_left.g_block_img_156 .g_block_txt{		float:left;width:198px;}
+.g_block_c5 .g_block_img_right.g_block_img_156 .g_block_txt{	width:198px;}
+
+.g_block_c6 .g_block_img_left.g_block_img_156 .g_block_txt{		float:left;width:278px;}
+.g_block_c6 .g_block_img_right.g_block_img_156 .g_block_txt{	width:278px;}
+
+/* square 228 image */
+.g_block_c5 .g_block_img_left.g_block_img_228 .g_block_txt{		float:left;width:136px;}
+.g_block_c5 .g_block_img_right.g_block_img_228 .g_block_txt{	width:136px;}
+
+.g_block_c6 .g_block_img_left.g_block_img_228 .g_block_txt{		float:left;width:206px;}
+.g_block_c6 .g_block_img_right.g_block_img_228 .g_block_txt{	width:206px;}
+
+/* 143 image width*/
+.g_block_c4 .g_block_img_left.g_block_img_143 .g_block_txt{		float:left;width:139px;}
+.g_block_c4 .g_block_img_right.g_block_img_143 .g_block_txt{	width:139px;}
+
+.g_block_c5 .g_block_img_left.g_block_img_143 .g_block_txt{		float:left;width:221px;}
+.g_block_c5 .g_block_img_right.g_block_img_143 .g_block_txt{	width:221px;}
+
+.g_block_c7 .g_block_img_left.g_block_img_143 .g_block_txt{		float:left;width:373px;}
+.g_block_c7 .g_block_img_right.g_block_img_143 .g_block_txt{	width:373px;}
+
+.g_block_c8 .g_block_img_left.g_block_img_143 .g_block_txt{		float:left;width:455px;}
+.g_block_c8 .g_block_img_right.g_block_img_143 .g_block_txt{	width:455px;}
+
+/* 2 col image widths */
+.g_block_c4 .g_block_img_left.g_block_img_2col .g_block_txt{	float:left;width:128px;}
+.g_block_c4 .g_block_img_right.g_block_img_2col .g_block_txt{	width:128px;}
+
+.g_block_c5 .g_block_img_left.g_block_img_2col .g_block_txt{	float:left;width:210px;}
+.g_block_c5 .g_block_img_right.g_block_img_2col .g_block_txt{	width:210px;}
+
+.g_block_c6 .g_block_img_left.g_block_img_2col .g_block_txt{	float:left;width:280px;}
+.g_block_c6 .g_block_img_right.g_block_img_2col .g_block_txt{	width:280px;}
+
+.g_block_c7 .g_block_img_left.g_block_img_2col .g_block_txt{	float:left;width:362px;}
+.g_block_c7 .g_block_img_right.g_block_img_2col .g_block_txt{	width:362px;}
+
+.g_block_c8 .g_block_img_left.g_block_img_2col .g_block_txt{	float:left;width:444px;}
+.g_block_c8 .g_block_img_right.g_block_img_2col .g_block_txt{	width:444px;}
+
+.g_block_c9 .g_block_img_left.g_block_img_2col .g_block_txt{	float:left;width:508px;}
+.g_block_c9 .g_block_img_right.g_block_img_2col .g_block_txt{	width:508px;}
+
+/* 3 col widths */
+.g_block_c5 .g_block_img_left.g_block_img_3col .g_block_txt{	float:left;width:128px;}
+.g_block_c5 .g_block_img_right.g_block_img_3col .g_block_txt{	width:128px;}
+/* padding on 6 col+ blocks is 24px */
+.g_block_c6 .g_block_img_left.g_block_img_3col .g_block_txt{	float:left;width:198px;}
+.g_block_c6 .g_block_img_right.g_block_img_3col .g_block_txt{	width:198px;}
+
+.g_block_c7 .g_block_img_left.g_block_img_3col .g_block_txt{	float:left;width:280px;}
+.g_block_c7 .g_block_img_right.g_block_img_3col .g_block_txt{	width:280px;}
+
+.g_block_c8 .g_block_img_left.g_block_img_3col .g_block_txt{	float:left;width:362px;}
+.g_block_c8 .g_block_img_right.g_block_img_3col .g_block_txt{	width:362px;}
+
+.g_block_c9 .g_block_img_left.g_block_img_3col .g_block_txt{	float:left;width:444px;}
+.g_block_c9 .g_block_img_right.g_block_img_3col .g_block_txt{	width:444px;}
+
+/* 4 col */
+.g_block_c7 .g_block_img_left.g_block_img_4col .g_block_txt{	float:left;width:198px;}
+.g_block_c7 .g_block_img_right.g_block_img_4col .g_block_txt{	width:198px;}
+
+.g_block_c8 .g_block_img_left.g_block_img_4col .g_block_txt{	float:left;width:280px;}
+.g_block_c8 .g_block_img_right.g_block_img_4col .g_block_txt{	width:280px;}
+
+.g_block_c9 .g_block_img_left.g_block_img_4col .g_block_txt{	float:left;width:362px;}
+.g_block_c9 .g_block_img_right.g_block_img_4col .g_block_txt{	width:362px;}
+
+/* 6 col */
+.g_block_c9 .g_block_img_left.g_block_img_6col .g_block_txt{	float:left;width:198px;}
+.g_block_c9 .g_block_img_right.g_block_img_6col .g_block_txt{	width:198px;}
+
+
+/* put padding around images that corresponds to the block width, 
+   18px for blocks smaller than 6cols, 24 for 6col+*/
+.g_block_img_padding .g_block_img{
+	padding:18px 18px 0 18px;
+}
+
+/* Block height based on the space between blocks, 12px */
+.g_block_height_3{	height:36px;	} /* Needed for MyTDC Login/logout bar at the top of all pages */
+.g_block_height_4{	height:48px;	}
+.g_block_height_5{	height:60px;	}
+.g_block_height_6{	height:72px;	}
+.g_block_height_7{	height:84px;	}
+.g_block_height_8{	height:96px;	}
+.g_block_height_9{	height:108px;	}
+.g_block_height_10{	height:120px;	}
+.g_block_height_11{	height:132px;	}
+.g_block_height_12{	height:144px;	}
+.g_block_height_13{	height:156px;	}
+.g_block_height_14{	height:168px;	}
+.g_block_height_15{	height:180px;	}
+.g_block_height_16{	height:192px;	}
+.g_block_height_17{	height:204px;	}
+.g_block_height_18{	height:216px;	}
+.g_block_height_19{	height:228px;	}
+.g_block_height_20{	height:240px;	}
+.g_block_height_21{	height:252px;	}
+.g_block_height_22{	height:264px;	}
+.g_block_height_23{	height:276px;	}
+.g_block_height_24{	height:288px;	}
+.g_block_height_25{	height:300px;	}
+.g_block_height_26{	height:312px;	}
+.g_block_height_27{	height:324px;	}
+.g_block_height_28{	height:336px;	}
+.g_block_height_29{	height:348px;	}
+.g_block_height_30{	height:360px;	}
+.g_block_height_31{	height:372px;	}
+.g_block_height_32{	height:384px;	}
+.g_block_height_33{	height:396px;	}
+.g_block_height_34{	height:408px;	}
+.g_block_height_35{	height:420px;	}
+.g_block_height_36{	height:432px;	}
+.g_block_height_37{	height:444px;	}
+.g_block_height_38{	height:456px;	}
+.g_block_height_39{	height:468px;	}
+.g_block_height_40{	height:480px;	}
+.g_block_height_41{	height:492px;   }
+.g_block_height_42{	height:504px;   }
+.g_block_height_43{	height:516px;   }
+.g_block_height_44{	height:528px;   }
+.g_block_height_45{	height:540px;   }
+.g_block_height_46{	height:552px;   }
+.g_block_height_47{	height:564px;   }
+.g_block_height_48{	height:576px;   }
+.g_block_height_49{	height:588px;   }
+.g_block_height_50{	height:600px;   }
+.g_block_height_51{	height:612px;   }
+.g_block_height_52{	height:624px;   }
+.g_block_height_53{	height:636px;   }
+.g_block_height_54{	height:648px;   }
+.g_block_height_55{	height:660px;   }
+.g_block_height_56{	height:672px;   }
+.g_block_height_57{	height:684px;   }
+.g_block_height_58{	height:696px;   }
+.g_block_height_59{	height:708px;   }
+.g_block_height_60{	height:720px;   }
+.g_block_height_61{	height:732px;   }
+.g_block_height_62{	height:744px;   }
+.g_block_height_63{	height:756px;   }
+.g_block_height_64{	height:768px;   }
+.g_block_height_65{	height:780px;   }
+.g_block_height_66{	height:792px;   }
+.g_block_height_67{	height:804px;   }
+.g_block_height_68{	height:816px;   }
+.g_block_height_69{	height:828px;   }
+.g_block_height_70{	height:840px;   }
+.g_block_height_71{	height:852px;   }
+.g_block_height_72{	height:864px;   }
+.g_block_height_73{	height:876px;   }
+.g_block_height_74{	height:888px;   }
+.g_block_height_75{	height:900px;   }
+.g_block_height_76{	height:912px;   }
+.g_block_height_77{	height:924px;   }
+.g_block_height_78{	height:936px;   }
+.g_block_height_79{	height:948px;   }
+.g_block_height_80{	height:960px;   }
+.g_block_height_81{	height:972px;   }
+.g_block_height_82{	height:984px;   }
+.g_block_height_83{	height:996px;   }
+.g_block_height_84{	height:1008px;  }
+.g_block_height_85{	height:1020px;  }
+.g_block_height_86{	height:1032px;  }
+.g_block_height_87{	height:1044px;  }
+.g_block_height_88{	height:1056px;  }
+.g_block_height_89{	height:1068px;  }
+.g_block_height_90{	height:1080px;  }
+.g_block_height_91{	height:1092px;  }
+.g_block_height_92{	height:1104px;  }
+.g_block_height_93{	height:1116px;  }
+.g_block_height_94{	height:1128px;  }
+.g_block_height_95{	height:1140px;  }
+.g_block_height_96{	height:1152px;  }
+.g_block_height_97{	height:1164px;  }
+.g_block_height_98{	height:1176px;  }
+.g_block_height_99{	height:1188px;  }
+.g_block_height_100{height:1200px;  }
+
+/* 72px + 2px border in each side */
+div.g_block_c2{	width:158px;} /* Special block width made for DemandWare overlays that show a 7col element and needs an element besides it */
+div.g_block_c3{	width:240px;}
+div.g_block_c4{	width:322px;}
+div.g_block_c5{	width:404px;}
+div.g_block_c6{	width:486px;}
+div.g_block_c7{	width:568px;}
+div.g_block_c8{	width:650px;}
+div.g_block_c9{	width:732px;}
+div.g_block_c12{width:978px;}
+
+/*jCarousel */
+.g_button:focus, .g_button:active{
+	outline: none;
+	border: none;
+}
+.g_carousel{
+	margin-left:25px;
+	overflow:hidden;
+	z-index:2; 
+}
+
+.g_carousel ul{
+	list-style-type:none;
+	position:relative; 
+}
+.g_carousel ul li{
+	float:left;
+	overflow:hidden;
+	background: transparent; 
+}
+.g_carousel li img, .g_carousel li p{
+	background-color:transparent;
+}
+.g_block_carousel.g_carousel_bigblock .g_carousel li img, .g_block_carousel.g_carousel_bigblock .g_carousel li p{
+	background-color:#fff;
+	margin:0;   
+	padding:0;
+	width:auto;
+	height:auto;
+}
+.g_carousel_prev, .g_carousel_next{
+	height:80px;
+	margin-top:-40px;
+	position:absolute;
+	top:50%;
+	width:23px;
+	float:left;
+	background:#fff url("/gfx/grd/common/block/carousel_sprite_1.0.png") no-repeat scroll -8px -7px;
+	z-index:10;
+}
+
+.g_carousel_bigblock .g_carousel_prev,.g_carousel_bigblock .g_carousel_next{
+	background-color:transparent;  
+}
+
+.g_carousel_prev.withpagination, .g_carousel_next.withpagination{
+	margin-top:-60px;
+}
+
+.g_carousel_next{
+	background-position:-72px -7px;
+	right:5px;
+}
+.g_carousel_prev{
+	background-position:-46px -7px;
+	left:5px;
+}
+.g_carousel_prev:hover{
+	background-position:0px -7px;      
+}  
+.g_carousel_prev:active{
+	background-position:0px -7px;      
+}
+.g_carousel_next:hover{
+	background-position:-120px -7px;
+}
+
+.g_carousel_next:active{
+	background-position:-120px -7px;
+}   
+.g_carousel_prev.disabled, .g_carousel_next.disabled,.g_carousel_prev.disabled:hover, 
+.g_carousel_next.disabled:hover,.g_carousel_prev.disabled:active, .g_carousel_next.disabled:active{
+  outline:none;
+}
+
+/* Placement of scroll arrows on top of images -132px height */
+.g_carousel_img_panorama_6col .g_carousel_next,
+.g_carousel_img_panorama_6col .g_carousel_prev{
+	top:65px;
+}
+
+/* Placement of scroll arrows on top of images of 180px height*/
+.g_carousel_img_panorama_8col .g_carousel_next,
+.g_carousel_img_panorama_8col .g_carousel_prev,
+.g_carousel_img_wide_4col .g_carousel_next,
+.g_carousel_img_wide_4col .g_carousel_prev{
+	top:93px;
+}
+
+.g_carousel_indicator{
+	clear:left;
+	height:24px;
+	margin:0 20px;
+}  
+
+.g_class_indicator_dots li{    
+	display:inline;
+	position:relative;
+}
+.g_class_indicator_dots{
+	clear:both;
+	position:relative;
+	text-align:center;
+	bottom:12px;
+}        
+.g_class_indicator_dots li a{ 
+	background:url(/gfx/grd/common/block/carousel_sprite_1.0.png) repeat-x scroll 0 0 transparent;
+	display:block;  
+}
+
+.g_class_indicator_dots li a{
+	background-position:-59px -91px;
+	display:inline-block;
+	height:15px;
+	position:relative;
+	width:15px;
+	margin-top: 4px;
+}
+.g_class_indicator_dots li a:hover{
+	background-position: -44px -91px;
+}
+
+.g_class_indicator_dots li a.active{
+	background-position: -44px -91px;
+}
+
+.g_carousel_container .g_carousel_bigblock {margin:0;} 
+.g_carousel_container .g_carousel_bigblock,.g_carousel_container .g_carousel {position:relative;} 
+
+.g_carousel_container{
+	margin:0;
+	position:relative;
+	visibility:hidden;
+	overflow:hidden;
+}
+
+
+div.g_block .g_block_carousel div.g_block_txt{}
+
+/** TDC Film Carousel **/
+.g_carousel_tdcfilm li{
+	text-align:center;
+	margin:18px 0;
+}
+
+.g_block_c12 .g_carousel_tdcfilm li{
+	width:154px;
+}
+
+div.g_block_c8 .g_carousel.g_carousel_tdcfilm{
+	width:590px;
+	margin-left:27px;
+}
+.g_block_c8 .g_carousel_tdcfilm li{
+	width:147px;
+}
+div.g_block_c4 .g_carousel.g_carousel_tdcfilm{
+	width:262px;
+	margin-left:27px;
+}
+.g_block_c4 .g_carousel_tdcfilm li{
+	width:131px;
+}
+
+.g_carousel_tdcfilm li img{
+	margin-bottom:7px;
+}
+.g_carousel_tdcfilm li a{
+	display:block;
+}
+
+.g_block_carousel.g_block_highlight .g_carousel_next,
+.g_block_carousel.g_block_highlight .g_carousel_prev{
+	background-color:transparent; /*overwrite of the default #fff */
+}
+
+.g_block_carousel.g_block_highlight .g_btn_default{
+	top:-18px;
+}
+
+/*testing fixed sizes*/
+div.g_block_c3  .g_carousel{width:190px;}
+div.g_block_c4  .g_carousel{width:272px;}
+div.g_block_c5  .g_carousel{width:354px;}
+div.g_block_c6  .g_carousel{width:436px;}
+div.g_block_c7  .g_carousel{width:518px;}
+div.g_block_c8  .g_carousel{width:600px;}
+div.g_block_c9  .g_carousel{width:682px;}
+div.g_block_c12 .g_carousel{width:921px;}
+
+div.g_block_c3  .g_block_carousel.g_carousel_bigblock .g_carousel{width:236px;margin:0;} 
+div.g_block_c4  .g_block_carousel.g_carousel_bigblock .g_carousel{width:318px;margin:0;} 
+div.g_block_c5  .g_block_carousel.g_carousel_bigblock .g_carousel{width:400px;margin:0;} 
+div.g_block_c6  .g_block_carousel.g_carousel_bigblock .g_carousel{width:482px;margin:0;} 
+div.g_block_c7  .g_block_carousel.g_carousel_bigblock .g_carousel{width:564px;margin:0;}
+div.g_block_c8  .g_block_carousel.g_carousel_bigblock .g_carousel{width:646px;margin:0;}
+div.g_block_c9  .g_block_carousel.g_carousel_bigblock .g_carousel{width:728px;margin:0;} 
+div.g_block_c12 .g_block_carousel.g_carousel_bigblock .g_carousel{width:974px;margin:0;} 
+
+div.g_block_c3  .g_block_carousel.g_carousel_bigblock {}
+
+.g_block_carousel.g_block_carousel_hasheader{margin-top:10px;}
+div.g_block_c12 .g_block_carousel.g_block_carousel_hasheader{margin-top:-15px;}
+
+div.g_block_carousel.g_carousel_bigblock .g_carousel ul li {padding:0;}
+/* end jCarousel */  
+
+/*MODAL DIALOGUE STYLES*/
+/* Block content and image placement */
+
+body {zoom:1;}
+
+#g_block_modal_back{
+	display:block;
+	left:0;
+	position:fixed;
+	top:0;
+	width:100%;
+	height:100%;
+	background-color:#90979b;
+	z-index:100;
+	display:none;
+}
+#g_block_modals {
+	top:50%;
+	left:50%;
+	width:auto;
+	text-align:left;
+	position:fixed;
+	display:none;
+	z-index:500;
+} 
+
+/* Removes margin on txt divs when inside a modal */
+#g_block_modals .g_block_txt{
+	margin:0;
+	width:100%; /* Force content of an overlay to span entire width of the modal block */
+	clear:both; /* rendering issues? */
+}
+
+#g_block_modals .g_block_modal{
+	z-index:600;
+} 
+/* Padding from content in the overlay, to the border of the overlay itself */
+#g_block_modals .g_block_content{
+	padding:20px;
+}
+
+/* When the overlay contains more complex markup like login flows in Selfcare */
+#g_block_modals .g_block_content.g_modal_complex_content .f_section{
+	padding-left:4px;
+	padding-right:4px;
+}
+
+#g_block_modals .g_modal_complex_content #g_progress_container {
+	padding:0 4px;
+}
+#g_block_modals .g_modal_complex_content #g_progress_container .g_progress_bar {
+	left:13px;
+}
+
+.g_modal_complex_content div.g_block_c7 .g_hr, .g_hr_c7{
+	background-position:-3px -160px;
+}
+
+#g_block_modals .g_block_modal .g_modal_header{
+	text-align:right;
+	padding:0 0 20px 0;
+	clear:both;
+	z-index:601;
+}
+
+
+#g_block_modals .g_block_modal .g_modal_footer{
+	text-align:right;
+	padding:20px 0 0 0;
+	clear:both;
+	z-index:602;
+}
+#g_block_modals .g_block_modal .g_modal_content{
+	text-align:left;
+}
+
+#g_block_modals.g_modal_scrollable{
+	position:absolute;
+}
+
+#g_block_modals .g_block {
+	margin-right:0;
+}
+
+/* Overwrite default width on g_block_txt when used in modals */
+.g_block_modal div.g_block_txt.g_article {
+	width:100%;
+	padding-bottom:0;
+}
+
+/* Headers in overlays need not have top margin */
+.g_block_modal .g_block_txt h1{
+	margin-top:0;
+}
+
+/* TDC login in modal */
+#g_block_modals .g_block_tdclogin h1,
+#g_block_modals .g_block_tdclogin h2 {
+	margin-top: -45px;
+}
+
+#g_block_modals .g_block_tdclogin .g_tdclogin {
+	width:100%;
+}
+
+/* Special TDC login popup, makes sure there is margin below the loginfield */
+#g_block_modals .g_block_tdclogin .g_block_bot{
+	margin-bottom:18px;
+}
+
+/** Tabs
+ * 
+ * All classes prefixed with .ui are jQuery ui specific classes, we just skinned them */
+
+div.g_block_c7 div.g_tabs{}
+
+div.g_block_c7 div.g_tabs div.g_block_img{
+	float:left;
+	margin-left:32px;
+	margin-top:32px;
+}
+ 
+div.g_block_c7 div.g_tabs_head div.g_block_txt{
+	width:248px;
+	float:left;
+	margin-top:62px;
+}
+
+div.g_tabs_head{
+	width:100%;
+	float:left;
+	margin-bottom:10px;
+}
+div.g_tabs div.g_tabs_container{
+	width:100%;
+	float:left;
+	zoom:1;
+}
+
+/** Front tabs **/
+div.g_block_content.g_fronttab{
+	overflow:visible; /*overwrite from g_block_content, to make sure the current tab arrow is shown correctly */
+}
+
+.g_fronttab ul.ui-tabs-nav > li{
+	background-color:transparent;
+}
+
+.g_fronttab ul.g_fronttab_controls{
+	height:25px;
+	background:transparent url("/gfx/grd/common/sprite_hr.png") no-repeat 0 -310px;
+	padding:0;
+	border:0;
+}
+
+.g_fronttab ul.g_fronttab_controls li {
+	border:0;
+	height:25px;
+	width:324px;
+	margin:0;
+	padding:0;
+	text-align:center;
+	position:relative;
+	float:left;
+}
+.g_fronttab ul.g_fronttab_controls a{
+	line-height:22px;
+	color:#b4b4b4;
+}
+
+.g_fronttab .g_fronttab_item:first-child{
+	display:block;
+}
+
+.g_fronttab .g_fronttab_item{
+	display:none;
+	height:372px;
+}
+
+.g_fronttab .ui-tabs-panel{
+	display:block !important;
+}
+
+.g_fronttab .ui-tabs-hide{
+	display:none !important;
+}
+
+.g_fronttab ul.g_fronttab_controls .ui-tabs-selected{
+	background-color:transparent;
+}
+
+.g_fronttab ul.g_fronttab_controls .ui-tabs-selected a{
+	color:#828385;
+}
+
+.g_fronttab ul.g_fronttab_controls .ui-tabs-selected span{
+	background:transparent url("/gfx/grd/common/block/fronttab_current.png") no-repeat 0 0;
+	position:absolute;
+	bottom:-2px;
+	left:50%;
+	width:22px;
+	margin-left:-11px;
+	height:8px;
+}
+
+/* The ul containing the tabs itself */
+.ui-tabs-nav{
+	height:27px;
+	padding-left:10px;
+	background:transparent url(/gfx/grd/common/block/tabs_bg.png) repeat-x 0 0;	
+	/* the bottom border should be a cut graphics perhaps? */
+	border-bottom:1px solid #e7e7e7;
+}
+
+/* Styling for all tabs */
+.ui-tabs-nav > li{
+	float:left;
+	height:27px;
+	margin:0 3px;
+	border-left:1px solid #e7e7e7;
+	border-right:1px solid #e7e7e7;
+	border-bottom:1px solid #e7e7e7;
+	background-color:#f4f4f4;
+}
+
+.ui-tabs-nav > li a{
+	line-height:27px;
+	padding:0 18px;
+	display:block;
+	outline-style:none;
+}
+
+/* Styling tabs when tabs are shown with a tab_head */
+.g_tabs_head ~ .g_tabs_container .ui-tabs-nav li{
+	border-top:1px solid #e7e7e7;
+	height:26px;
+}
+
+.g_tabs_head ~ .g_tabs_container .ui-tabs-nav li a{
+	padding:0 16px;
+}
+
+/* Styling specific to the selected tab when tabs are shown with a tab_head */
+.g_tabs_head ~ .g_tabs_container .ui-tabs-nav .ui-tabs-selected{
+	height:27px;
+}
+
+.ui-tabs-nav .ui-tabs-selected{
+	border-left:1px solid #e7e7e7;
+	border-right:1px solid #e7e7e7;
+	border-bottom:none;
+	height:28px;
+	background-color:#fff;
+}
+
+.ui-tabs-nav .ui-tabs-selected a{
+	color:#192228;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+.ui-tabs-hide{
+	display:none;
+}
+
+/* Content area for the tab panel, we might not need to style this content specifically?? */
+.ui-tabs-panel{}
+/** End tabs **/
+
+
+/**
+ * Radio button replacement, requires
+ * /js/grd/plugins/replaceRadio.jquery.js
+ * inspired by http://www.filamentgroup.com/lab/accessible_custom_designed_checkbox_radio_button_inputs_styled_css_jquery/
+ * @author Sune
+**/
+	
+/* Wrapper divs */
+.g_radioreplace{
+	position:relative;
+	width:140px;
+	text-align:left;
+}
+	
+/* input, label positioning */
+.g_radioreplace input {
+	position: absolute;
+	left: 2px;
+	top: 3px;
+	margin:0;
+	z-index:0;
+}
+
+.g_radioreplace label{
+	display: block;
+	position: relative;
+	z-index:1;
+	padding: .9em 0 .5em 30px;
+	margin: 0 0 .3em;
+	cursor: pointer;
+	text-indent:-9999px;
+	height:21px;
+	overflow:hidden;
+	background:#fff url("/gfx/grd/common/button/sprite_radioreplace.png") no-repeat 0 0;
+	width:104px;
+}
+
+/* Default button */
+.g_radioreplace_type_default label{ background-position:0 0;}
+.g_radioreplace_type_default label:hover{ background-position: 0 -45px;}
+
+.g_radioreplace_type_default label.g_current{ background-position:-444px -90px;}
+.g_radioreplace_type_default label.g_current:hover{ background-position: -444px -135px;}
+
+.g_radioreplace_type_clear label{	background-position:0 0;	}
+.g_radioreplace_type_clear label:hover { 	background-position:0 -45px;}
+
+.g_radioreplace_type_clear label.g_current {	background-position:0 -90px; }
+.g_radioreplace_type_clear label.g_current:hover{	cursor:default;}
+
+.g_radioreplace_type_yes label{ background-position:-148px 0;}
+.g_radioreplace_type_yes label:hover{ background-position:-148px -45px;}
+
+.g_radioreplace_type_yes label.g_current{ background-position:-148px -90px; cursor:pointer;}
+.g_radioreplace_type_yes label.g_current:hover{} /* Selected buttons does not have a hover effect */
+
+.g_radioreplace_type_no label{ background-position:-296px 0;}
+.g_radioreplace_type_no label:hover{ background-position:-296px -45px;}
+
+.g_radioreplace_type_no label.g_current{ background-position:-296px -90px;}
+.g_radioreplace_type_no label.g_current:hover{} /* Selected buttons does not have a hover effect */
+
+.g_radioreplace_type_add label{
+	background-image:url("/gfx/grd/common/button/sprite_tilfoej.png");
+	background-position:0 0;
+	width:136px;
+	height:36px;
+	padding:0;
+}
+.g_radioreplace_type_add label:hover{ background-position:0 -45px;}
+
+.g_radioreplace_type_add label.g_current{ background-position:0 -91px;}
+.g_radioreplace_type_add label.g_current:hover{
+	background-position:0 -136px;
+	cursor:default;
+}
+
+.g_radioreplace.g_radioreplace_type_add a.g_radio_clear{
+	background-image:url("/gfx/grd/common/button/sprite_tilfoej.png");
+	background-position:-101px -91px;
+}
+.g_radioreplace.g_radioreplace_type_add a.g_radio_clear:hover{
+	background-position:-101px -136px;
+}
+
+/* Link to clear radio buttons */
+.g_radioreplace a.g_radio_clear{
+	background:#fff url("/gfx/grd/common/button/sprite_radioreplace.png") no-repeat -101px -90px;
+	width:32px;
+	height:32px;
+	text-indent:-9999px;
+	display:block;
+	position:absolute;
+	top:0;
+	left:101px;
+	z-index:10;
+	overflow:hidden;	
+}
+.g_radioreplace_type_clear a.g_radio_clear:hover {
+	background-position:-101px -135px;
+}
+/** radioreplace end **/
+
+/*G_BLOCKS_BOX css used by block box template*/
+#g_page .g_block_top,
+#g_page .g_block_bot,
+#g_page .g_block_top_r,
+#g_page .g_block_top_l,
+#g_page .g_block_bot_r,
+#g_page .g_block_bot_l,
+#g_block_modals .g_block_top,
+#g_block_modals .g_block_bot,
+#g_block_modals .g_block_top_r,
+#g_block_modals .g_block_top_l,
+#g_block_modals .g_block_bot_r,
+#g_block_modals .g_block_bot_l{
+	background:url("/gfx/grd/common/block/9_slice_repeat_x.png") repeat-x scroll 0 0 transparent;	
+	height:2px;
+}
+
+#g_page .g_block_bot,#g_block_modals .g_block_bot{
+	background-position: 0 -4px ;
+}
+	
+#g_page .g_block_bot_l,#g_block_modals .g_block_bot_l{
+	background-position: -1px -16px ;
+	width:2px;
+	position:absolute;
+}
+	
+#g_page .g_block_bot_r,#g_block_modals .g_block_bot_r{
+	background-position:-8px -16px ;
+	width:2px;
+	float:right;
+}
+
+#g_page .g_block_top_l,#g_block_modals .g_block_top_l{
+	background-position: -1px -8px ;
+	width:2px;
+	position:absolute;
+}
+
+#g_page .g_block_top_r,#g_block_modals .g_block_top_r{
+	background-position: -8px -8px ;
+	width:2px;
+	float:right;
+}
+	
+	
+/** CMS Flow styling **/
+
+.g_cart_calculation{
+	border:1px solid #d7d7d7;
+	margin-bottom:18px;
+	padding:18px;
+}
+
+/* Header in boxes in flows */
+div.g_flow_container h2{
+	margin:0 24px 18px;
+	font-size:15px;
+	font-weight:bold;
+	color:#192228;
+}
+
+div.g_flow_container{
+	padding-top:24px;
+}
+
+div.g_flow_container hr{
+	width:516px;
+	clear:both;
+	margin-left:24px;
+	margin-right:24px;
+}
+
+div.g_flow_container div.g_flow_row{
+	float:left;
+	min-height:35px;
+	padding:0 18px 8px 24px; /*bottom margin should be 18px, but because all g_flow_input_container elements have a margin-bottom:10px it is only 8px */
+	position:relative;
+	width:522px;
+}
+
+div.g_flow_container div.g_flow_img{
+	float:left;
+}
+
+div.g_flow_container div.g_flow_row div.g_flow_txt{
+	width:170px;
+	float:left;
+}
+
+div.g_flow_container div.g_flow_row div.g_flow_desc p{
+	margin-bottom:0; /* overwrites the default margin-bottom */
+}
+
+/* placement of radio replaceed buttons */
+div.g_flow_container div.g_flow_row div.g_radioreplace_type_clear{
+	position:absolute;
+	bottom:0;
+	right:-5px; /* because of the 5px faded border around button graphics */
+}
+
+
+div.g_flow_container div.g_flow_row p.g_txt_price{
+	padding-top:3px;
+	margin-bottom:0; /* resets the default p margin-bottom */
+	color:#90979b;
+	font-size:110%;
+}
+
+/* Teaser top of a flow box [image] [text] */
+div.g_flow_container div.g_flow_teaser{
+	clear:left;
+	overflow:hidden;
+}
+
+div.g_flow_container div.g_flow_teaser div.g_flow_desc{
+	float:left;
+	padding:0 0 0 24px;
+	width:348px;
+}
+div.g_flow_container div.g_flow_teaser div.g_flow_desc p{
+	width:100%;
+	margin-bottom:0;
+}
+
+div.g_flow_container div.g_flow_desc{
+	width:170px;
+	float:left;
+}
+
+div.g_flow_container div.g_flow_row div.g_flow_col_33{
+	left:212px; /* width of the element + 24px border in its parent */
+	position:absolute;
+	bottom:18px;
+	width:170px;
+	text-align:right;
+	min-height:35px;
+}
+
+div.g_flow_container div.g_flow_row div.g_flow_col_33.g_flow_last{
+	left:364px;/* width of the element + 24px border in its parent */
+	
+}
+
+div.g_flow_container div.g_flow_row div.g_flow_col_66{
+	width:332px;
+	text-align:left;
+	margin-left:190px;
+	overflow:hidden;
+}
+
+div.g_flow_container div.g_flow_row div.g_flow_col_100{
+	width:516px;
+	text-align:left;
+	min-height:10px;
+}
+
+.g_flow_input_container .g_flow_checkbox input[type="checkbox"]{
+	margin:0 3px 3px 0;
+	float:left;
+	width:auto;
+	height:auto;
+}
+.g_flow_checkbox label{
+	margin-left:24px;
+	display:block;
+	margin-top:4px;
+}
+
+
+.g_flow_input_container .g_flow_input_radio{
+	float:left;
+}
+
+.g_flow_input_radio div.g_radioreplace{
+	float:left;
+	padding:0;
+	margin-left:21px;
+}
+
+
+.g_flow_input_radio input[type="radio"]{
+	width:auto;
+}
+
+.g_flow_input_radio label{
+	
+}
+
+.g_flow_input_container{
+	float:left;
+	width:100%;
+	margin-bottom:10px;
+	position:relative;
+}
+.g_flow_input_container label{
+	display:block;
+	margin-bottom:2px;
+}
+
+p.g_flow_input_caption{
+	color:#90979b;
+	margin-bottom:0; /* overwrite default paragraph margin */
+}
+
+.g_flow_input_container input[type="text"]{
+	width:100%;
+	height:24px;
+	line-height:22px;
+	font-size:13px;
+	background-color:#f0f3f5;
+	border:1px solid #e0e2e3;
+	padding:0 4px;
+}
+
+div.g_flow_input_container div.g_flow_input_text_25,
+div.g_flow_input_container div.g_flow_input_text_33,
+div.g_flow_input_container div.g_flow_input_text_66,
+div.g_flow_input_container div.g_flow_input_text_100{
+	padding-right:8px;
+}
+
+
+.g_flow_input_container .g_flow_input_text_25{
+	width:71px;
+	float:left;
+}
+
+.g_flow_input_container .g_flow_input_text_33{
+	width:98px; /* 107 */
+	float:left;
+}
+
+/* Needs to be adjusted to look better */
+.g_flow_input_container .g_flow_input_text_66{
+	width:204px; /*214 */
+	float:left;
+}
+.g_flow_input_container .g_flow_input_text_100{
+	width:310px;
+	float:left;
+}
+
+/* 8px smaller than the container, to compensate for a padding left and right of 4px */
+.g_flow_input_container .g_flow_input_text_66 input[type="text"]{	width:196px;}
+.g_flow_input_container .g_flow_input_text_33 input[type="text"]{	width:90px;}
+.g_flow_input_container .g_flow_input_text_25 input[type="text"]{	width:63px;}
+.g_flow_input_container .g_flow_input_text_100 input[type="text"]{	width:302px;}
+
+
+.g_flow_input_container .g_flow_select{
+	width:310px;
+}
+
+.g_flow_input_container .g_flow_select select{
+	width:100%;
+	height:26px;
+}
+
+.g_flow_checkbox{
+	padding-right:20px;
+}
+
+/* Used to highlight the * at fields that are required! */
+span.g_flow_required{
+	color:#3d8cb8;
+}
+
+span.g_flow_error_text{
+	/* Image is not a sprite, but should perhaps be one when the Help icon is introduced */
+	background:transparent url("/gfx/grd/flow/red_error_small.png") no-repeat 100%;
+	width:13px;
+	height:13px;
+	position:absolute;
+	top:20px;
+	right:0;
+}
+
+span.g_flow_error_radio{
+	/* Image is not a sprite, but should perhaps be one when the Help icon is introduced */
+	background:transparent url("/gfx/grd/flow/red_error_small.png") no-repeat 100%;
+	width:13px;
+	height:13px;	
+	position:absolute;
+	top:11px;
+	right:0px;
+}
+
+span.g_flow_error_checkbox{
+	/* Image is not a sprite, but should perhaps be one when the Help icon is introduced */
+	background:transparent url("/gfx/grd/flow/red_error_small.png") no-repeat 100%;
+	width:13px;
+	height:13px;	
+	position:absolute;
+	top:5px;
+	right:0px;
+}
+
+/** This is a general class that is set on all input fields with an error */
+.g_flow_error_input input[type="text"]{
+	background-color:#f9edeb;
+}
+
+
+/** Aprox width for buttons, might need another number */
+div.g_flow_container a.g_btn_default{
+	width:108px;
+}
+
+div.g_flow_container div.g_flow_input_container div.g_flow_input_text_33 a.g_btn_default{
+	width:80px;
+	margin-top:10px; /* to compensate for the label above input fields */
+}
+
+/* Back and Next box */
+div.g_flow_row .g_flow_controls{
+	height:100px;
+	position:relative;
+	overflow:visible;
+	height:40px;
+	margin:27px 24px 0;
+}
+
+div.g_flow_row .g_flow_controls a{
+	float:left;
+}
+
+div.g_flow_row .g_flow_controls .g_btn{
+	position:absolute;
+	left:auto; /* buttons are left positioned already */
+	right:0;
+	top:-12px;
+}
+
+/**
+ * Subscription box
+**/
+div.g_subscription {
+	padding-bottom:13px;
+}
+
+div.g_block_c5 div.g_block_txt.g_subscription_head{
+	margin-top:0;	
+}
+
+div.g_block_c5 div.g_subscription h2{
+	font-size:15px;
+	margin-top:0;
+}
+
+div.g_block.g_block_c5 div.g_subscription_desc{
+	width:200px;
+	float:left;
+	margin:18px 0 18px 18px;
+}
+
+div.g_block_c5 div.g_subscription_info{
+	width:163px;
+	float:right;
+	text-align:right;
+	margin-right:18px;
+	margin-top:18px;
+}
+
+div.g_subscription_table{
+	border:1px solid #d7d7d7;
+	background-color:#f0f3f5;
+	padding:18px;
+	margin:0 18px;
+	margin-bottom:13px; /* 18-5 = 13px, 5 because of the 5px gray faded border on button graphics */
+	clear:both;
+}
+
+div.g_subscription_table table{
+	width:100%;
+}
+div.g_subscription_table td{
+	border-bottom:1px solid #aed8e7;
+}
+
+div.g_subscription_table td,th{
+	padding:2px;	
+}
+div.g_subscription_table th{
+	padding-bottom:12px;
+}
+
+/* Block to show when a phone/product is out of stock (used with a Notify Me button) */
+.g_block div.g_subscription .g_notonstock{
+	background-color:#f9ebeb;
+	margin-top:7px !important;
+	margin-bottom:15px;
+	padding:0;
+	font-size:18px;
+	font-weight:bold;
+	color:#90979b;
+}
+.g_block div.g_subscription .g_notonstock p {
+	padding:4px;
+	margin-bottom:0;
+}
+
+/* only works in FF, Chrome - the bottom border is visible in IE, must fix later */
+div.g_subscription_table tr:last-child td{
+	border-bottom:0 none;
+}
+
+p.g_txt_price{
+	font-size:24px;
+	font-weight:bold;
+	margin-bottom:8px;
+}
+
+p.g_txt_price span{
+	font-size:10px;
+	display:block;
+	font-weight:normal;
+}
+/** Subscription end **/
+
+
+/** News list **/
+table.g_news_list{
+	margin-top:10px;
+}
+div.g_col_50 table.g_news_list{
+	width:275px;
+}
+
+table.g_news_list tr td.g_news_logo{
+	width:19px;
+	border:0;
+}
+
+table.g_news_list td.g_news_time span{
+	display:block;
+}
+
+table.g_news_list td.g_news_time{
+	width:44px;
+	border-right:0;
+}
+
+table.g_news_list tr td.g_news_logo span{
+	background:transparent url(/gfx/grd/local/news/sprite_news_logo.png) no-repeat 0 20px;
+	display:block;
+	width:18px;
+	height:18px;
+}
+
+table.g_news_list tr.g_news_pol td.g_news_logo span{	background-position:-9px -9px !important;}
+table.g_news_list tr.g_news_bt td.g_news_logo span{		background-position:-9px -35px !important;}
+table.g_news_list tr.g_news_jp td.g_news_logo span{		background-position:-9px -61px !important;}
+table.g_news_list tr.g_news_mxp td.g_news_logo span{	background-position:-9px -87px !important;}
+table.g_news_list tr.g_news_eb td.g_news_logo span{		background-position:-9px -113px !important;}
+table.g_news_list tr.g_news_ber td.g_news_logo span{	background-position:-9px -139px !important;}
+
+table.g_news_list td{
+	padding:2px 0;
+	border-top:1px solid #e1e1e1;
+	border-bottom:1px solid #e1e1e1;
+	border-left:0;
+	line-height:18px;
+}
+
+table.g_news_list td span{
+	color:#90979b;
+}
+
+ul.g_news_logobig{
+	margin-top:10px;
+	overflow:hidden;
+	clear:left;
+}
+
+div.g_block_txt ul.g_news_logobig li{
+	float:left;
+	list-style:none;
+	margin:0;
+}
+
+ul.g_news_logobig li a{
+	background:transparent url("/gfx/grd/local/news/sprite_news_logobig.png") no-repeat 0 0;
+	width:115px;
+	height:35px;
+	text-indent:-99999px;
+	margin-left:5px;
+	display:block;
+}
+ul.g_news_logobig li:first-child a{
+	margin-left:0;
+}
+
+ul.g_news_logobig li.g_news_pol a{	}
+ul.g_news_logobig li.g_news_ber a{	background-position:-125px 0;}
+ul.g_news_logobig li.g_news_jp a{	background-position:-250px 0;}
+ul.g_news_logobig li.g_news_bt a{	background-position:-375px 0;}
+ul.g_news_logobig li.g_news_eb a{	background-position:-500px 0;}
+/** News list end **/
+
+/* News detail */
+.g_news_item{
+	position:relative;
+}
+
+div.g_news_time{
+	position:absolute;
+	top:13px;
+	left:46px;
+}
+
+.g_news_item .g_news_txt{
+	padding:12px 0 0 62px;
+	margin:0 24px;
+	overflow:hidden;
+	border-top:1px solid #e1e1e1;
+}
+
+.g_block_highlight .g_news_txt{
+	border-top:0;
+}
+
+.g_news_item.g_block_highlight + .g_news_item .g_news_txt{
+	border-top:0;
+}
+
+.g_block_txt + .g_news_item{
+	margin-top:12px;
+}
+
+.g_news_item h4{
+	margin-bottom:4px;
+}
+
+.g_news_item h4 span{
+	color:#90979b;
+	font-weight:normal;
+}
+
+.g_news_item p{
+	margin:0 0 12px;
+}
+
+.g_news_item .g_news_logo{
+	background:transparent url(/gfx/grd/local/news/sprite_news_logo.png) no-repeat 0 20px;
+	display:block;
+	width:18px;
+	height:18px;
+	position:absolute;
+	top:10px;
+	left:24px;
+}
+
+.g_news_item .g_news_logo.g_news_pol	{	background-position:-9px -9px !important;}
+.g_news_item .g_news_logo.g_news_bt		{	background-position:-9px -35px !important;}
+.g_news_item .g_news_logo.g_news_jp		{	background-position:-9px -61px !important;}
+.g_news_item .g_news_logo.g_news_mxp	{	background-position:-9px -87px !important;}
+.g_news_item .g_news_logo.g_news_eb		{	background-position:-9px -113px !important;}
+.g_news_item .g_news_logo.g_news_ber	{	background-position:-9px -139px !important;}
+
+
+/* Version without description */
+.g_news_list .g_news_item .g_news_txt{
+	padding-top:4px;	
+}
+.g_news_list .g_news_time{
+	top:5px;	
+}
+
+.g_news_list .g_news_item .g_news_logo{
+	top:3px;	
+}
+
+.g_news_list {
+	padding-bottom:18px;
+}
+
+.g_news_list .g_block_txt + .g_news_item .g_news_txt{
+	border-top:1px solid #e1e1e1;
+}
+
+.g_news_list .g_news_item .g_news_txt{
+	border-top:0;
+	border-bottom:1px solid #e1e1e1;
+}
+.g_news_list .g_news_item h4{
+	font-weight:normal;
+}
+
+/** Multiblock **/
+div.g_multi_row{
+	float:left;
+	width:100%;
+}
+
+div.g_multi h3{
+	font-size:18px;
+}
+
+div.g_multi .g_block_txt{
+	float:left;
+}
+
+/* Description text @ headline in Multiblock */
+div.g_multi .g_block_txt:first-child h4.g_multi_headerdesc{
+	font-weight:normal;
+	line-height:18px; /* to match that of p tags */
+}
+
+div.g_block_c8 div.g_multi .g_block_txt:first-child h4.g_multi_headerdesc,
+div.g_block_c9 div.g_multi .g_block_txt:first-child h4.g_multi_headerdesc,
+div.g_block_c12 div.g_multi .g_block_txt:first-child h4.g_multi_headerdesc{
+	width:598px; /* To accomodate 24px padding on left and right */
+}
+
+/* Overwrite of the special 3, 4 and 5 col margin of 18px 18px */
+div.g_multi .g_multi_c3 .g_block_txt{
+	margin:0;
+	width:156px;
+}
+
+div.g_multi_row .g_block_txt h3{
+	font-size:15px;
+}
+
+div.g_multi .g_block_img{
+	float:left;
+}
+
+div.g_block div.g_block_txt.g_multi_seperator{
+	margin:0 18px; /*to force this margin, instead of the default margin for block_txt */
+}
+
+.g_multi_c3,
+.g_multi_c4,
+.g_multi_c5,
+.g_multi_c6,
+.g_multi_c7,
+.g_multi_c7_50, /* 50% width of the 7 col multiblock */
+.g_multi_c8,
+.g_multi_c9,
+.g_multi_12col{
+	float:left;
+	background:transparent url(/gfx/grd/common/block/multiblock_cut.png) no-repeat 0 100%;
+}
+
+.g_multi_row .g_multi_c5{
+	width:364px;
+	padding:0 18px;
+}
+
+.g_multi_row .g_multi_c6{
+	width:439px; /*half the width of a 12col minus 5 px for the cut */ 
+	padding:0 24px;
+}
+
+.g_multi_row .g_multi_c7{
+	width:516px;
+	padding:0 24px;
+}
+
+.g_multi_row .g_multi_c7_50{
+	background-position:-5px 100%;
+	width:236px; /*half the width of the c7 block*/
+	padding:0 28px 0 18px;
+}
+
+.g_multi_row .g_multi_c7_50:first-child{
+	padding-left:28px;
+	padding-right:18px;
+}
+
+.g_multi_row .g_multi_c3:first-child,
+.g_multi_row .g_multi_c4:first-child,
+.g_multi_row .g_multi_c5:first-child,
+.g_multi_row .g_multi_c6:first-child,
+.g_multi_row .g_multi_c7:first-child,
+.g_multi_row .g_multi_c7_50:first-child{
+	background-image:none;
+}
+
+/* Handle margin on the first col element in a row */
+div.g_multi .g_multi_row .g_multi_c3:first-child{
+	padding-left:40px;
+}
+
+/* When fixed height, the cut needs to be placed accordingly, the -723 is an aprox number, not calculated */
+div.g_multi .g_multi.g_block_height_13 .g_multi_c4{
+	background-position: 0 -723px;
+}
+
+div.g_multi .g_multi_noimg img{
+	margin-bottom:18px;
+}
+
+div.g_multi .g_multi_noimg .g_block_txt{
+	margin:0;
+}
+
+/* If image turned off and noimg is set */
+div.g_multi .g_multi_c3.g_multi_noimg {	padding:0 40px 0 50px}
+div.g_multi .g_multi_c3.g_multi_noimg .g_block_txt{	width:156px;}
+div.g_multi .g_multi_c4.g_multi_noimg { padding:0 18px 0 24px;}
+div.g_multi .g_multi_c4.g_multi_noimg .g_block_txt{	width:276px;}
+div.g_multi .g_multi_c5.g_multi_noimg .g_block_txt{	width:364px;}
+div.g_multi .g_multi_c6.g_multi_noimg .g_block_txt{	width:439px;}
+div.g_multi .g_multi_c7.g_multi_noimg .g_block_txt{	width:516px;}
+div.g_multi .g_multi_c7_50.g_multi_noimg .g_block_txt{width:236px;}
+
+div.g_multi .g_multi_c3.g_multi_square_156{
+	width:156px;
+	padding:0 40px 0 50px;
+}
+
+div.g_multi .g_multi_c4.g_multi_left_square_84{
+	padding:0 18px 0 24px;
+	width:276px;
+}
+
+div.g_multi .g_multi_c4.g_multi_wide_3col,
+div.g_multi .g_multi_c4.g_multi_panorama_3col{
+	padding:0 40px 0 51px;
+	width:236px;
+}
+
+div.g_multi .g_multi_c5.g_multi_panorama_4col{
+	padding:0 41px 0 40px;
+	width:319px;
+}
+
+div.g_multi .g_multi_c7.g_multi_panorama_6col{
+	padding:0 41px 0 40px;
+	width:483px;
+}
+
+/* To prevent no bottom-margin if image is higher than the text */
+div.g_multi .g_block_img{
+	padding-bottom:18px;
+}
+
+div.g_multi .g_multi_c4.g_multi_wide_3col:first-child,
+div.g_multi .g_multi_c4.g_multi_panorama_3col:first-child{
+	padding-left:41px;
+}
+
+div.g_multi .g_multi_c7_50.g_multi_panorama_3col .g_block_txt,
+div.g_multi .g_multi_c4.g_multi_wide_3col .g_block_txt,
+div.g_multi .g_multi_c4.g_multi_panorama_3col .g_block_txt{
+	margin:0;
+	width:236px;
+}
+
+div.g_multi .g_multi_c5.g_multi_panorama_4col .g_block_txt{
+	margin:0;
+	width:319px;
+}
+
+div.g_multi .g_multi_c7.g_multi_panorama_6col .g_block_txt{
+	margin:0;
+	width:483px;
+}
+
+/* Square small - txt */
+div.g_multi .g_multi_c4.g_multi_left_square_84 .g_block_txt{
+	width:174px;
+	margin:0 0 0 18px;
+}
+
+/* Tower - txt */
+div.g_multi .g_multi_c6.g_multi_tower .g_block_txt{
+	width:265px;
+	margin:0 0 0 20px;
+}
+
+div.g_multi .g_multi_c5.g_multi_tower .g_block_txt{
+	margin:0;
+	padding:0 0 0 20px;
+	width:190px;
+}
+
+div.g_multi .g_multi_c7.g_multi_tower .g_block_txt{
+	width:342px;
+	padding:0 0 0 20px;
+	margin:0; /*overwrite default margin on block_txt */
+}
+
+/* Square - txt*/
+div.g_multi .g_multi_c5.g_multi_square_156 .g_block_txt{
+	width:190px;
+	margin:0 0 0 18px;
+}
+div.g_multi .g_multi_c6.g_multi_square_156 .g_block_txt{
+	width:256px;
+	margin:0 0 0 18px;
+}
+div.g_multi .g_multi_c7.g_multi_square_156 .g_block_txt{
+	width:342px;
+	margin:0 0 0 18px;
+}
+
+/** Destinationbar **/
+.g_block_destinationbar div.g_block_txt{
+	padding:15px 4px 4px;
+}
+.g_block_destinationbar ul{
+	overflow:hidden;
+	margin:24px 3px 0;
+}
+.g_block_destinationbar li{
+	background:transparent url("/gfx/grd/common/block/multiblock_cut.png") no-repeat -4px 100%;
+	width:121px;
+	float:left;
+	text-align:center;
+	height:76px;
+	margin-bottom:20px;
+	overflow:hidden;
+}
+
+.g_block_destinationbar li:first-child{
+	background:none;
+}
+
+.g_block_destinationbar li:hover h4{
+	text-decoration:underline;
+}
+
+.g_block_destinationbar li img{
+	margin-bottom:8px;
+}
+
+ .g_block_destinationbar li h4{
+	margin:0 5px;
+	line-height:12px;
+}
+
+.g_block_destinationbar li h4 a{
+	color:#545d62;
+	text-decoration:none;
+}
+.g_block_destinationbar li h4 a:hover{
+	text-decoration:underline;
+}
+
+/** Submenu **/
+div.g_block .g_block_submenu.g_block_txt{
+	margin-top:0;
+}
+
+div.g_block div.g_block_submenu ul li{
+	list-style:none outside none;
+	line-height:24px;
+}
+
+div.g_block_submenu a{
+	font-size:13px;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+div.g_block_submenu a:hover{
+	text-decoration:underline;
+}
+
+div.g_block_submenu ul ul{
+	margin-bottom:0;
+}
+
+div.g_block_submenu li li{
+	background:transparent url("/gfx/grd/common/navigation/submenu_blue.png") no-repeat 4px 10px;
+	padding-left:18px;
+}
+
+div.g_block_submenu li li a{
+	font-size:12px;
+	font-weight:normal;
+}
+
+div.g_block_submenu li li.g_current{
+	background:transparent url("/gfx/grd/common/navigation/submenu_black.png") no-repeat 4px 10px;
+}
+
+div.g_block_submenu li.g_current a{
+	color:#192228;
+}
+
+/** Google search results for the Help section */
+div.g_block .g_block_searchresult ol li{
+	list-style:none outside none;
+	padding:0; /*overwrite from typography.css */
+	text-indent:0; /*overwrite from typography.css */
+}
+div.g_block .g_block_searchresult ol li a{
+	font-weight:bold;
+}
+
+div.g_block .g_block_searchresult .g_block_search_paging{}
+div.g_block .g_block_searchresult .g_block_search_paging ul{
+	text-align:center;
+}
+div.g_block .g_block_searchresult .g_block_search_paging li{
+	display:inline;	
+	list-style:none outside none;
+}
+
+div.g_block .g_block_searchresult .g_block_search_paging li a{
+	display:inline-block;
+	padding:0 5px;
+}
+
+/* Front bottom box */
+
+.g_block_frontbottombox{
+	background:transparent url("/gfx/grd/local/sprite_front_bottomboxes.png") no-repeat -100% -100%;
+	width:487px;
+	float:left;
+	height:65px;
+}
+
+.g_block_frontbottombox:hover{
+	background-position:100% 100%;
+}
+
+.g_block_frontbottombox:first-child{
+	width:486px;
+	border-right:1px solid #e0e1e2;
+}
+
+.g_block_frontbottombox:first-child:hover{
+	background-position:0 100%;	
+}
+
+.g_block_frontbottombox a{
+	background:transparent url("/gfx/grd/local/sprite_front_bottomboxes.png") no-repeat 0 0;
+	display:block;
+	height:65px;
+	width:100%;
+}
+/* Hide the text in the link */
+.g_block_frontbottombox{
+	text-indent:-9999px;
+}
+
+/* Privat */
+.g_block_frontbottombox_mail a{
+	background-position:-15px 2px;
+}
+.g_block_frontbottombox_play a{
+	background-position:-480px 2px;
+}
+
+/* Erhverv */
+.g_block_frontbottombox_public a{
+	background-position:-15px -62px;
+}
+.g_block_frontbottombox_workers a{
+	background-position:-480px -62px;
+}
+
+/* Error class, mostly used in TDC Login */
+.g_error{
+	padding:8px 8px 0 8px;
+	background: #fbf3f1;
+	border: 1px solid red;
+}
+.g_error p{
+	margin-bottom:8px;
+}
+/** Deprecated style used by Ulrik in SSO stuff, should not be here, but is here as a quick fix **/
+.t_error{
+	padding: 8px;
+	background: #fbf3f1;
+	border: 1px solid red;
+}
+/** Deprecated style end **/
+
+
+/** Weather forecast box for MitTDC frontpage **/
+div.g_block_weather .g_block_txt{
+	width:450px;
+}
+div.g_block_weather .g_block_txt ul{
+	overflow:hidden;
+}
+div.g_block_weather .g_block_txt li{
+	list-style:none outside none;
+	float:left;
+	margin:0 1px 0 0;
+}
+
+div.g_block_weather .g_block_txt li div{
+	height:60px;
+	width:74px;
+	background-color:#deeef8;
+}
+div.g_block_weather .g_block_txt p{
+	clear:left;
+}
+
+div.g_block_weather div.g_weather_locallist{
+	position:absolute;
+	top:2px;
+	right:18px;
+	width:133px;
+	margin-left:0;
+	margin-right:0;
+}
+div.g_block_weather .g_weather_locallist li:first-child{
+	border-top:1px solid #e1e1e1;
+}
+div.g_block_weather .g_weather_locallist li{
+	
+	border-bottom:1px solid #e1e1e1;
+	float:none;
+}
+
+/** TV Guide MitTDC block  /tdcpear/Tdcsite/Grid/Element/Plugin/Front/Tvguide.php **/
+div.g_block_tvguide table{
+	margin-top:10px;
+}
+div.g_block_tvguide td{
+	padding:4px;
+	border:0;
+}
+
+div.g_block_tvguide td:first-child{
+	padding-left:0;
+	border-right: 0;
+}
+div.g_block_tvguide td:first-child span{
+	position:relative;
+	top:-5px;
+}
+
+div.g_block_tvguide td span{
+	width:74px;
+	height:25px;
+	display:block;
+}
+
+div.g_block_tvguide td.g_tvguide_webtvchan span{
+	background:transparent url("/gfx/grd/local/tvguide/button_bg.png") no-repeat 0 0;
+}
+/** TV Guide end **/
+
+/** Bluetoday /tdcpear/Tdcsite/Grid/Front/Bluetoday.php **/
+div.g_block_bluetoday h2{
+	text-indent:-9999px;
+	background:transparent url("/gfx/grd/local/bluetoday/mittdcoverblik.png") no-repeat 0 0;
+	height:15px;
+	margin-top:0;
+}
+
+div.g_block_bluetoday a{
+	position:absolute;
+	right:18px;
+	bottom:18px;
+}
+/** Bluetoday end **/
+
+
+/** MitTDC Topbanner **/
+div.g_block_topbanner{
+	width:978px;
+	margin:0 auto;
+	
+}
+div.g_block_topbanner .g_block_topbanner_content{
+	background:#fff url("/gfx/grd/banner/banner_flag.png") no-repeat scroll 928px 0;
+}
+div.g_block_topbanner .g_middle{
+	position:relative;
+	left:-9px;	
+}
+div.g_block_topbanner .g_block_bot{
+	position:relative;
+	left:-9px;
+}
+/** Topbaner end **/
+
+/** Banner block **/
+/* Tweak in ie7.css */
+.g_block_banner{
+	background:transparent url("/gfx/grd/banner/banner_300x250_flag.png") no-repeat 0 100%;
+	margin:8px;
+	padding-bottom:13px;
+}
+/** Banner block end **/
+
+/** Play lists **/
+div.g_block .g_block_playlist ul{
+	overflow:hidden;
+	margin-bottom:4px;
+	margin-top:-12px; /* to compensate for the p tag above the list, it has negative margin */
+}
+
+div.g_block .g_block_playlist ul li{
+	list-style:none outside none;
+	float:left;
+	margin:0 0 0 13px;
+	position:relative;
+}
+
+div.g_block .g_block_playlist ul li:first-child{
+	margin-left:0;
+}
+
+/* For Play icon */
+div.g_block .g_block_playlist ul li span{
+	background:transparent url("/gfx/grd/local/play/sprite_play.png") no-repeat -5px -5px;
+	display:block;
+	width:22px;
+	height:22px;
+	position:absolute;
+	top:1px;
+	right:1px;
+	overflow:hidden;
+	text-indent:-9999px;
+}
+
+/* Top 3 list */
+div.g_block .g_block_playlist ol{
+	clear:left;
+	margin-bottom:15px;
+}
+
+div.g_block .g_block_playlist ol li{
+	border-bottom:1px solid #e2e2e2;
+	position:relative;
+	padding-right:22px;
+}
+div.g_block .g_block_playlist ol li:first-child{
+	border-top:1px solid #e2e2e2;
+}
+
+div.g_block .g_block_highlight.g_block_playlist ol li{
+	border-bottom:1px solid #c7d3da;
+}
+
+div.g_block .g_block_highlight.g_block_playlist ol li:first-child{
+	border-top:1px solid #c7d3da;
+}
+
+div.g_block .g_block_playlist ol li a span.g_artist{
+	font-weight:bold;
+}
+
+/* Download icon */
+div.g_block .g_block_playlist ol li .g_download{
+	background:transparent url("/gfx/grd/local/play/sprite_play.png") no-repeat -32px -5px;
+	width:19px;
+	height:19px;
+	display:block;
+	text-indent:-9999px;
+	position:absolute;
+	right:0;
+	top:0;
+}
+div.g_block .g_block_playlist ol li .g_download:hover{ 	background-position:-56px -5px;}
+
+div.g_block .g_block_playlist .g_playlist_buttons{
+	margin-bottom:13px; /* should be 18px, but buttons have "margin-bottom" in the graphics */
+}
+/** Play list end **/
+
+
+/** Film detail **/
+div.g_block_c8 .g_block_moviedetail .g_movie_info{
+	width:330px;
+}
+div.g_block_c8 .g_block_moviedetail .g_block_waitspinner{
+	background-position:50% 18px;
+	padding-top:40px;
+}
+
+.g_block_moviedetail .g_movie_info td{
+	padding-left:10px;
+}
+.g_block_moviedetail .g_movie_info td:first-child{
+	padding-left:0;
+}
+.g_block_moviedetail img{
+	margin-bottom:18px;	
+}
+/** Film detail end **/
+
+/** Film actor liste **/
+/* Makes space between the H3 of the block and the first movie */
+.g_block_movieactors h3{
+	margin-bottom:11px;
+}
+
+.g_movie {
+	padding-bottom:17px;
+	padding-top:5px;
+	overflow:hidden;
+}
+.g_movie .g_movie_actor{
+	margin-left:133px;
+	overflow:hidden;
+}
+
+/* Width is needed in Chrome, otherwise the text block is not wide enough */
+.g_block_c8 .g_movie .g_movie_actor{
+	width:465px;	
+}
+
+.g_movie .g_movie_actor dt{
+	float:left;
+	clear:left;
+	width:90px;
+	font-weight:bold;
+}
+.g_movie .g_movie_actor dt:after {
+	content: ":";
+}
+.g_movie .g_movie_actor dd {
+	margin: 0 0 0 100px;
+	padding: 0 0 0.5em 0;
+}
+/** film actor liste end **/
+
+/** MyTDC SSObar **/
+.g_block_ssobar{
+	padding:0 24px;
+}
+
+.g_block_ssobar p{
+	line-height:36px; /* corresponds to the height of the loginbar - g_block_height_3 */
+	margin-bottom:0;
+}
+
+div.g_block_c12 .g_block_ssobar li{
+	background:transparent url("/gfx/grd/lists/dash.png") no-repeat 0 10px;
+	float:left;
+	list-style:none outside none;
+	line-height:36px;
+	padding-left:10px;
+	padding-right:5px;
+}
+
+div.g_block_c12 .g_block_ssobar li:first-child{
+	background-image:none;
+	padding-left:0;
+}
+
+.g_block_ssobar .g_ssobar_tools{
+	position:absolute;
+	top:2px; /* because of the border */
+	right:26px; /*24px + 2px for the borders on the box */
+}
+/** MyTDC SSO bar end **/
+
+
+
+/**Clss for hiding elements*/
+.g_block_hide {
+	visibility:hidden !important;
+}
+
+/* Used by the EmbedVideo plugin /tdcpear/Tdcsite/Element/Plugin/EmbedVideo.php */
+.g_embeddedvideo{
+	margin:1px 10px 12px 2px;
+}
+
+/** Web TV **/
+.g_block_c8 .g_carousel.g_carousel_webtv_channels{
+	margin-left:28px;
+	width:590px;
+}
+
+.g_block_c8 .g_carousel_webtv_channels li{
+	width:98px;
+}
+
+.g_block_c12 .g_carousel_webtv_channels li{
+	width:102px;
+}
+
+.g_carousel_webtv_channels span{
+	background:transparent url("/gfx/grd/local/tvguide/button_big_bg.png") no-repeat 0 0;
+	width:80px;
+	margin:12px 9px;
+	height:50px;
+	display:block;
+}
+
+.g_block_c12 .g_carousel_webtv_channels {
+	margin-left:27px;
+}
+
+.g_block_c12 .g_carousel_webtv_channels span{
+	margin:12px 11px;
+}
+
+.g_carousel_webtv_channels span img{
+	margin:13px 0 0 3px;
+}
+
+/* Google Adsense in blocks */
+.g_block_c4 .g_ads_defered{	padding:12px 5px;}
+.g_block_c8 .g_ads_defered{	padding:12px 18px;}
+.g_block_c9 .g_ads_defered{	padding:12px 18px;}
+
+/* Replaced selects */
+.g_form_select{
+	width:160px;
+	height:24px;
+	position:relative;
+	border:1px solid #e0e2e3;
+	background-color:#f0f3f5;
+}
+
+.g_form_select select{
+	width:100%;
+	height:26px;
+	position:relative;
+	z-index:10;
+}
+
+.g_form_select span{
+	position:absolute;
+	top:-1px;
+	left:0;
+	display:block;
+	width:100%;
+	height:26px;
+	line-height:26px;
+	text-indent:6px;
+	z-index:5;
+}
+
+.g_form_select span span{
+	background:transparent url("/gfx/grd/common/form/sprite_select.png") no-repeat 0 0;
+	width:27px;
+	height:26px;
+	display:block;
+	position:absolute;
+	left:auto;
+	right:-1px;
+	top:0;
+}
+
+.g_form_select:hover span span,
+.g_form_select.g_current span span{
+	background-position:0 -36px;
+}
+
+.g_form_select:hover,
+.g_form_select.g_current{
+	border:1px solid #90979b;
+}
+
+/* Movie search */
+.g_movie_search{
+	float:left;
+	display:block;
+	margin-left:18px;
+	padding-bottom:18px;
+}
+
+.g_movie_search:first-child{
+	margin-left:0;
+}
+
+.g_movie_search label{
+	margin-bottom:2px;
+	display:block;
+}
+
+.g_movie_search .g_form_select{
+	width:250px;
+}
+
+#g_movie_genre_container select{
+	display:block;
+	width:250px;
+}
+
+#g_movie_search_container{
+	position:relative;
+	width:326px;
+}
+
+#g_movie_search_container input{
+	width:260px;
+	height:16px;
+	line-height:16px;
+	border:1px solid #e0e2e3;
+	background-color:#f0f3f5;
+	padding:4px 6px;
+}
+
+#g_movie_search_container button{
+	left:auto;
+	position:absolute;
+	right:-8px;
+	top:10px;
+}
+
+/* Is placed as a child inside a g_block */
+#g_ajaxresult{
+	position:absolute;
+	top:0;
+	left:0;
+	border:1px solid #e0e0e0;
+	width:260px;
+	padding:4px 6px;
+	background-color:#fff;
+	z-index:1200;
+}
+
+.g_recaptcha_bg{
+	background:#fff;
+	width:444px;
+}
+
+/* Page rating */
+#g_page_rating {
+	display:none;
+}
+#g_page_rating .g_clear {padding-bottom:18px;}
+
+#g_page_rating label {
+	display:block;
+	float:left;
+	padding-right:6px;
+	height:18px;
+}
+
+#g_page_rating label.marker {
+	padding-top:2px;
+}
+
+#g_page_rating label.star {
+	background: #fff url("/gfx/grd/common/form/rating_sprite.gif") no-repeat 0 -36px;
+	cursor:pointer;
+	text-indent:-9000px;
+	width:18px;
+}
+
+#g_page_rating label.active {	background-position:0 -18px;}
+#g_page_rating label.selected {	background-position:0 0;}
+
+#g_page_rating label.inactive {
+	cursor: default !important;
+}
+#g_page_rating textarea {
+	background-color:#eff3f6;
+	border:2px solid #e0e0e0;
+	color:#666;
+	display:block;
+	float:left;
+	padding:3px 5px;
+	width:450px;
+	height:45px;
+	margin-right:23px;
+	font:11px Verdana,arial,sans-serif;
+}
+
+#g_page_rating textarea.active {
+	color:#192228;
+}
+
+#g_page_rating_comment {
+	padding-top:22px;
+	display:none;
+	clear:both;
+}
+
+#g_page_rating_comment_send {
+	display:block;
+	float:left;
+	margin-top:20px;
+	padding-left:22px;
+}
+
+#g_page_rating_thankyou {
+	clear:both;
+	display:none;
+	padding:18px 0 0 0;
+}
+
+/* Yes/No rating */
+.g_footer_rating {
+	position:absolute;
+	right:20px;
+	top:2px;
+	z-index:20;
+}
+ 
+.g_footer_rating .g_rate {
+	position:absolute;
+	right:0;
+	top:0;
+	width:210px;
+	height:27px;
+	background-color:#fff;
+	border-left:2px solid #e4e4e4;
+	padding:0 0 0 10px;
+	z-index:21;
+}
+.g_footer_rating .g_rate span {
+	float:left;
+	line-height:26px;
+	width:134px;
+}
+ 
+.g_footer_rating .g_btn_default {
+	left:4px !important;
+}
+.g_footer_rating .g_btn {
+	padding-top:27px;
+	float:left;
+}
+
+.g_footer_rating a.g_btn_yes {			background-position:-206px -154px;}
+.g_footer_rating a.g_btn_yes:hover {	background-position:-206px -195px;}
+.g_footer_rating a.g_btn_no {			background-position:-256px -154px;}
+.g_footer_rating a.g_btn_no:hover {		background-position:-256px -195px;}
+
+.g_footer_rating .g_input {
+	display:none;
+	position:absolute;
+	right:-2px;
+	top:0;
+	width:400px;
+	height:100px;
+	background-color:#fff;
+	border:2px solid #e4e4e4;
+	border-top:0;
+	padding:10px;
+	z-index:9995;
+}
+.g_footer_rating .g_input strong {
+	display:block;
+	padding:0 0 4px 7px;
+}
+
+.g_footer_rating .g_input textarea {
+	background-color:#eff3f6;
+	border:2px solid #e0e0e0;
+	color:#8c9296;
+	display:block;
+	float:left;
+	height:32px;
+	padding:3px 5px;
+	margin-bottom:7px;
+	width:386px;
+}
+.g_footer_rating .g_input .g_buttons {
+	text-align:right;
+}
+
+/* Lithium Active Cast */
+
+/* Messages Container */
+div#AC_MESSAGES {
+	margin-bottom:10px;
+}
+/* Message Header */
+#AC_HEADER {
+	font-size:18px;
+	margin-bottom:10px;
+	margin-top:0;
+}
+
+#lithium_active_cast h2{
+	font-size:11px;
+	line-height:18px;
+	font-weight:normal;
+	margin-left:78px !important;
+	margin-top:2px !important;
+}
+
+#lithium_active_cast {
+	margin:0;
+	padding:18px 18px 0;
+}
+
+#lithium_active_cast .g_spinner{
+	text-align:center;
+	margin-top:85px;	
+}
+
+.g_block_c3 #lithium_active_cast {
+	background:transparent url("/gfx/grd/local/forum/cms/236x66.jpg") no-repeat 0 0;
+}
+.g_block_c3 #lithium_active_cast h1{
+	margin-top:58px;
+}
+
+.g_block_c3 #lithium_active_cast .g_spinner{
+	text-align:center;
+	margin-top:58px;
+}
+
+
+.g_block_c4 #lithium_active_cast{
+	background:transparent url("/gfx/grd/local/forum/cms/318x89.jpg") no-repeat 0 0;
+}
+
+.g_block_c4 #lithium_active_cast h1{
+	margin-top:85px;
+}
+.g_block_c4 #lithium_active_cast .g_spinner{
+	text-align:center;
+	margin-top:85px;
+}
+
+/** Lithium Active Cast **/
+/* Message Threads */
+div.ac_thread0,
+div.ac_thread1 {
+	padding:0 0 0px 0;
+	border-top:1px solid #f4f4f4;
+	position:relative;
+}
+
+/* Message Subject */
+h2.ac_subject {
+	margin:10px 0 0 0 !important;
+}
+
+/* Message Subject Link */
+h2.ac_subject a,
+h2.ac_subject a:visited {
+	color:#006CB8 !important;
+}
+
+/* Message Info List */
+ul.ac_msginfo {
+	margin:6px 0 0 0 !important;
+}
+
+#lithium_active_cast ul.ac_msginfo li {
+	color:#999;
+	list-style:none;
+	margin-left:0;
+}
+
+/* Hide author and message body */
+p.ac_body,
+ul.ac_msginfo li.ac_author {
+	display:none;
+}
+
+/* Message Post Date */
+ul.ac_msginfo li.ac_posted {
+	left:1px;
+	overflow:hidden;
+	position:absolute;
+	text-indent:-55px;
+	top:2px;
+	width:70px;
+}
+/** Lithium Active Cast end **/
+
+/** Styling of Feedburner element (elm id. 18014) **/
+.g_feedburn_rss label{
+	display:block;
+}
+.g_feedburn_rss input[type="text"]{
+	width:169px;
+	height:24px;
+	line-height:22px;
+	font-size:13px;
+	background-color:#f0f3f5;
+	border:1px solid #e0e2e3;
+	padding:0 4px;
+}
+/** Feedburner end **/
+
+/** Form for OMP campaign **/
+.g_omp_form{
+	width:282px;
+	padding:0 18px;
+	margin-bottom:18px;
+}
+
+.g_omp_form .g_btn_default{
+	left:153px;
+	top:4px;
+}
+
+.g_omp_form label{
+	display:block;
+	position:relative;
+	padding:0;
+	margin:0;
+	clear:left;
+}
+
+.g_omp_form label.g_icon {
+	margin-left:45px;
+}
+
+.g_omp_form label.g_icon input{
+	width:222px;
+}
+
+.g_omp_form label.g_icon span{
+	display:block;
+	background:transparent url("/gfx/grd/common/form/sprite_omp_icon.png") no-repeat 0 0;
+	width:36px;
+	height:36px;
+	position:absolute;
+	left:-45px;
+	top:19px;
+	text-indent:-9999px;
+}
+
+.g_omp_form label.g_icon.g_icon_landline span{
+	background-position:-41px 0;
+}
+.g_omp_form input{
+	width:268px;
+	height:24px;
+	margin-top:4px;
+	margin-bottom:9px;
+	padding:5px;
+	line-height:24px;
+	border:2px solid #e0e0e0;	
+	background-color:#eff3f6;
+	color:#192228;
+	font-size:15px;
+	font-weight:bold;
+	float:left;		/* IE puts a 1px top/bottom margin on all inputs, floating it fixes this. Requires label to clear left*/
+}
+/** OMP end **/
+
+
+/* Togglebox */
+.g_block_togglebox{
+	position:relative; /* So we can position icons */
+	background: transparent url("/gfx/grd/common/block/tabs_bg.png") repeat-x scroll 0 51px;
+	border-top:1px solid #E7E7E7;
+	/* Zoom:1 in ie7.css */
+}
+
+.g_block_togglebox:first-child{
+	border-top:0;	
+}
+
+.g_block_togglebox .g_hr{
+	position:relative;
+	left:24px;
+}
+
+.g_block_togglebox .g_togglebox_content{
+	display:none; /* will be shown via javascript */
+}
+
+.g_block_togglebox .g_togglebox_content .g_block_txt:first-child{
+	margin-top:10px;
+}
+
+.g_block_togglebox .g_togglebox_head{
+	cursor:pointer;
+	padding:24px 24px 18px 24px;
+	overflow:hidden;
+}
+
+.g_block_togglebox .g_togglebox_head:hover{
+	background:transparent url("/gfx/grd/common/togglebox_bg.png") repeat-x 0 0;
+}
+
+.g_block_togglebox .g_togglebox_head span.g_price{
+	line-height:36px;
+	float:right;
+	margin-right:31px;
+	white-space:nowrap; /* fixes possible textwrap issue in Ie7.css */
+}
+
+.g_block_togglebox .g_togglebox_head h3{
+	line-height:36px;
+	margin-bottom:0;
+	display:inline;
+	margin-right:18px;
+	margin-left:16px;
+	float:left;
+}
+
+.g_block_togglebox .g_togglebox_head a{
+	float:left;
+	line-height:36px;
+	outline:none;
+}
+
+.g_block_togglebox .g_togglebox_head img.g_left{
+	margin-right:8px;	
+}
+.g_block_togglebox .g_icon_togglebox{
+	background:	transparent url("/gfx/grd/common/sprite_icon.png") no-repeat 0 0;
+	width:18px;
+	height:18px;
+	text-indent:-9999px;
+	position:absolute;
+	right:24px;
+	top:33px;
+	display:block;
+}
+
+.g_block_togglebox:first-child .g_icon_togglebox{
+	top:33px;
+}
+
+.g_block_togglebox.g_visible{
+	background-image:none;	
+}
+
+.g_block_togglebox.g_visible .g_icon_togglebox{
+	background-position:-20px 0;
+}
+/** Togglebox end **/
+
+/** Datatable **/
+.dataTables_wrapper{
+	margin-bottom:18px;
+}
+
+.g_block_txt .sorting,
+.g_block_txt .sorting_asc,
+.g_block_txt .sorting_desc{
+	position:relative;
+	cursor:pointer;
+	color:#006cb8; /* Fake link color */
+}
+
+.g_block_txt .sorting_desc span,
+.g_block_txt .sorting_asc span{
+	background-image:url("/gfx/grd/common/sprite_datatable.png");
+	background-repeat:no-repeat;
+	padding-right:15px;
+}
+
+.g_block_txt .sorting_desc span{
+	background-position:100% 4px;
+}
+
+.g_block_txt .sorting_asc span{
+	background-position:100% -26px;
+}
+
+.g_block_txt .dataTables_footer{
+	overflow:hidden;
+}
+
+.g_block_txt .dataTables_footer .dataTables_info{
+	float:left;
+	width:33%;
+}
+.g_block_txt .dataTables_footer .dataTables_length{
+	text-align:right;
+	float:left;
+	width:33%;
+}
+
+.g_block_txt .dataTables_paginate.paging_full_numbers{
+	float:left;
+	margin:0:auto;
+	width:33%;
+	text-align:center;
+}
+
+/* Hide first and last buttons */
+.g_block_txt .dataTables_paginate.paging_full_numbers .first.paginate_button,
+.g_block_txt .dataTables_paginate.paging_full_numbers .last.paginate_button{
+	display:none;
+}
+.g_block_txt .dataTables_paginate.paging_full_numbers .first.paginate_button,
+.g_block_txt .dataTables_paginate.paging_full_numbers .previous.paginate_button,
+.g_block_txt .dataTables_paginate.paging_full_numbers .next.paginate_button,
+.g_block_txt .dataTables_paginate.paging_full_numbers .last.paginate_button{
+	font-weight:bold;
+}
+
+.g_block_txt .dataTables_paginate.paging_full_numbers .previous.paginate_button,
+.g_block_txt .dataTables_paginate.paging_full_numbers .next.paginate_button{
+	background:transparent url("/gfx/grd/common/sprite_datatable.png") no-repeat 0 -36px;
+}
+
+.g_block_txt .dataTables_paginate.paging_full_numbers .previous.paginate_button{
+	padding-left:12px;
+	margin-right:8px;
+}
+
+.g_block_txt .dataTables_paginate.paging_full_numbers .next.paginate_button{
+	padding-right:12px;
+	margin-left:8px;
+	background-position:100% -47px;
+}
+
+.g_block_txt .dataTables_paginate.paging_full_numbers .paginate_active,
+.dataTables_paginate.paging_full_numbers .paginate_button{
+	padding:0 3px;
+}
+
+.g_block_txt .dataTables_paginate.paging_full_numbers .paginate_button{
+	color:#006cb8;
+}
+.g_block_txt .dataTables_paginate.paging_full_numbers .paginate_button:hover{
+	text-decoration:underline;
+	cursor:pointer;
+}
+
+.g_block_txt .dataTables_paginate.paging_full_numbers .paginate_active{
+	color:#192228;
+}
+
+/* Handling of footer items in c6 widths */
+.g_block_c6 .dataTables_footer{
+	overflow:visible;
+	position:relative;
+	padding-bottom:20px;
+	height:20px;
+}
+.g_block_c6 .dataTables_footer .dataTables_paginate.paging_full_numbers{
+	position:absolute;
+	bottom:0;
+	width:100%;
+}
+.g_block_c6 .dataTables_footer .dataTables_info,
+.g_block_c6 .dataTables_footer .dataTables_length{
+	width:50%;
+}

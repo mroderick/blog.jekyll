@@ -1,0 +1,59 @@
+/*
+
+ul,ol{
+	margin-bottom:22px;	
+}
+
+ul li,
+ol li{
+	line-height:18px;
+}
+*/
+
+ul.g_dash,ul.g_arrow{
+	overflow:hidden;	
+}
+ul.g_dash li{
+	background:transparent url(../../gfx/grd/common/lists/sg_lists.gif) no-repeat 2px 4px;	
+	padding-left:14px;
+	float:left;
+}
+
+ul.g_dot li{
+	background:transparent url(../../gfx/grd/common/lists/sg_lists.gif) no-repeat 2px -7px;	
+	padding-left:14px;
+	float:left;
+}
+
+ul.g_arrow li{
+	background:transparent url(../../gfx/grd/common/lists/sg_lists.gif) no-repeat 2px -23px;	
+	padding-left:14px;
+	float:left;
+}
+
+ul.g_none{
+	overflow:auto;
+}
+
+ul.g_none li{
+	float:left;
+	padding-left:14px;
+}
+
+ul.g_dash li.g_first,
+ul.g_dot li.g_first,
+ul.g_arrow li.g_first{
+	background:none;
+	padding:0;
+}
+/* List of categories for Help, needs to be redesigned */
+div.g_block ul.g_category_list{
+	margin-bottom:18px;
+	overflow:hidden;
+}
+div.g_block ul.g_category_list li{
+	float:left;
+	list-style:none outside none;
+	width:33%;
+	margin-left:0 /* Overwrite of the normal margin on lists */
+}
