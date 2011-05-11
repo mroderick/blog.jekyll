@@ -15,7 +15,29 @@
 ### github.com/paulirish/html5-boilerplate-server-configs
 ###
 
-
+Redirect permanent /blog/2008/11/16/fixing-bus-error-segfault-in-rcov 																				http://roderick.dk/2008/11/16/fixing-bus-error-segfault-in-rcov                     
+Redirect permanent /blog/2008/11/20/un-indexable-javascript-warnings 																					http://roderick.dk/2008/11/20/un-indexable-javascript-warnings                      
+Redirect permanent /blog/2009/03/11/hello-world-webby 																												http://roderick.dk/2009/03/11/hello-world-webby/                                    
+Redirect permanent /blog/2009/03/16/creating-sitemaps-with-comatose-cms 																			http://roderick.dk/2009/03/16/creating-sitemaps-with-comatose-cms                   
+Redirect permanent /blog/2009/03/17/adding-page-caching-to-sitemaps 																					http://roderick.dk/2009/03/17/adding-page-caching-to-sitemaps                       
+Redirect permanent /blog/2009/03/23/sitemaps-with-webby 																											http://roderick.dk/2009/03/23/sitemaps-with-webby                                   
+Redirect permanent /blog/2009/03/27/ie6-background-flicker-once-again 																				http://roderick.dk/2009/03/27/ie6-background-flicker-once-again                     
+Redirect permanent /blog/2009/05/07/introduction-to-low-pro-for-prototype 																		http://roderick.dk/2009/05/07/introduction-to-low-pro-for-prototype            
+Redirect permanent /blog/2009/07/02/lowpro-updated-for-firefox-3.5-compatibility 															http://roderick.dk/2009/05/07/introduction-to-low-pro-for-prototype                 
+Redirect permanent /blog/2009/07/02/reclaim-disk-space-from-safari-4																					http://roderick.dk/2009/07/02/reclaim-disk-space-from-safari-4                      
+Redirect permanent /blog/2009/07/08/setting-up-virtual-hosts-on-os-x-leopard 																	http://roderick.dk/2009/07/08/setting-up-virtual-hosts-on-os-x-leopard              
+Redirect permanent /blog/2009/08/03/disable-webpage-preview-images-in-safari-4-final													http://roderick.dk/2009/08/03/disable-webpage-preview-images-in-safari-4-final/     
+Redirect permanent /blog/2009/08/16/textmate-snippet-for-creating-low-pro-behaviors 													http://roderick.dk/2009/08/16/textmate-snippet-for-creating-low-pro-behaviors/      
+Redirect permanent /blog/2009/08/28/installing-mercurial-with-bash-completion 																http://roderick.dk/2009/08/28/installing-mercurial-with-bash-completion/            
+Redirect permanent /blog/2009/10/04/combining-javascript-files-juicer-vs-sprockets	 													http://roderick.dk/2009/10/04/combining-javascript-files-juicer-vs-sprockets/       
+Redirect permanent /blog/2009/11/03/perfect-pitch																															http://roderick.dk/2009/11/03/perfect-pitch                                         
+Redirect permanent /blog/2009/11/04/speeding-up-your-webby-site-with-juicer																		http://roderick.dk/2009/11/04/speeding-up-your-webby-site-with-juicer/              
+Redirect permanent /blog/2010/02/26/ie8-getting-ecmascript-262-rev5-compliant-native-json											http://roderick.dk/2010/02/26/ie8-getting-ecmascript-262-rev5-compliant-native-json/
+Redirect permanent /blog/2010/02/26/juicer-1-0-0-released																											http://roderick.dk/2010/02/26/juicer-1-0-0-released/
+Redirect permanent /blog/2010/02/26/strict-mode-in-ecmascript-5/																							http://roderick.dk/2010/02/26/strict-mode-in-ecmascript-5/
+Redirect permanent /blog/2010/09/02/introducing-failfast-a-javascript-library-for-failure											http://roderick.dk/2010/09/02/introducing-failfast-a-javascript-library-for-failure/
+Redirect permanent /blog/2010/10/12/introducing-pubsubjs-a-library-for-doing-publish-subscribe-in-javascript	http://roderick.dk/2010/10/12/introducing-pubsubjs-a-library-for-doing-publish-subscribe-in-javascript/
+Redirect permanent /blog/2010/11/03/jquery-data-link-considered-harmful																				http://roderick.dk/2010/11/03/jquery-data-link-considered-harmful/
 
 # ----------------------------------------------------------------------
 # Better website experience for IE users
