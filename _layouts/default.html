@@ -15,20 +15,24 @@
 		<!-- Mobile viewport optimized: j.mp/bplateviewport -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+		<!-- CSS: implied media="all" -->
+		<link rel="stylesheet" href="/stylesheets/style.css?v=2" />
+
 		<!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
 		<link rel="shortcut icon" href="/favicon.ico" />
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-
-		<!-- CSS: implied media="all" -->
-		<link rel="stylesheet" href="css/style.css?v=2" />
 	</head>
 	<body>
 	  <div id="container">
 		<header>
-			<ul>
+			<a href="/" class="home">roderick.dk</a>
+			<ul class="nav">
 				<li><a href="/">Blog</a></li>
-				<li><a href="/archive">Blog</a></li>
+				<li><a href="/archives.html">Archives</a></li>
+				<li><a href="/about/">About</a></li>
+				<li><a href="/contact/">Contact</a></li>
 			</ul>
+			<a href="/atom.xml" class="feed">Subscribe to the feed</a>
 		</header>
 		<div id="main" role="main">
 			{{ content }}
@@ -40,7 +44,7 @@
 
 	  <!-- mathiasbynens.be/notes/async-analytics-snippet Change UA-XXXXX-X to be your site's ID -->
 	  <script>
-		var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"]];
+		var _gaq=[["_setAccount","UA-869742-1"],["_trackPageview"]];
 		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
 		g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
 		s.parentNode.insertBefore(g,s)}(document,"script"));
