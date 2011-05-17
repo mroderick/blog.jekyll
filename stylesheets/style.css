@@ -197,6 +197,16 @@ header ul.nav {
     margin: 0.5em 0 1em;
 }
 
+#main h1 {
+    font-size: 2em;
+}
+#main h2 {
+    font-size: 1.8em;
+}
+#main h3 {
+    font-size: 1.6em;
+}
+
 
 
 
