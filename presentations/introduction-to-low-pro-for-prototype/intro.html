@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>Introduction to using Low Pro with Prototype</title>		
+		<link href="stylesheets/tripoli/tripoli.simple.css" type="text/css" rel="stylesheet" /> 
+		<!--[if IE]><link rel="stylesheet" type="text/css" href="tripoli.simple.ie.css"><![endif]-->
+		<link href="stylesheets/lowpro-intro.css" type="text/css" rel="stylesheet" media="screen, projection" />
+		<script type="text/javascript" src="javascripts/prototype.js" charset="utf-8"></script>
+		<script src="javascripts/lowpro.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" charset="utf-8">
+
+			ProductForm = Behavior.create({
+
+				// initialize the behavior
+				initialize : function(){
+					var isSpecialOffer = this.element.down('#product_special_offer').checked;
+					if ( isSpecialOffer ){
+						this.element.down('div.special-offer-text').show();
+					} else {
+						this.element.down('div.special-offer-text').hide();
+					}
+				},
+				
+				// create an event delegate that catches onchange events, and for the #product_special_offer will 
+				// toggle the visibility of of the textarea
+				onchange : Event.delegate({
+					'#product_special_offer': function( e ){
+						e.element().up('fieldset').down('div.special-offer-text').toggle();
+					}
+				}),
+
+				// disable the button and change the text to "Saving..." when submitting the form
+				onsubmit : function( e ){					
+					var target = this.element.down( 'input.submit' );
+					target.disabled = true;
+					target.value = 'Saving...';
+					return false;
+				}
+			});			
+
+			Event.addBehavior({
+				'form.product' : ProductForm
+			});
+
+		</script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div id="header">
+				<div class="content">
+					<h1>Acme Inc</h1>
+				</div>
+			</div>
+			<div class="content">
+				
+				
+				<form class="product" action="intro.html" method="post">
+					<h2>Edit product</h2>
+					
+					<fieldset class="special-offer">
+
+						<div>
+							<input type="checkbox" id="product_special_offer" name="product[special_offer]" />
+							<label for="product_special_offer">This product is a special offer</label>
+						</div>
+
+						<div class="special-offer-text">
+							<label for="product_special_offer_text">Special Offer Text</label>
+							<textarea id="product_special_offer_text" name="product[special_offer_text]">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>				
+						</div>
+
+					</fieldset>
+
+					<fieldset class="controls">
+						<input type="submit" class="submit" value="Save" /> or <a href="#.#">cancel</a>
+					</fieldset>
+					
+				</form>
+				
+				
+			</div>			
+		</div>
+	</body>
+</html>
