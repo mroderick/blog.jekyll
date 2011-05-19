@@ -135,4 +135,4 @@ Both Juicer and Sprockets are carefully crafted tools and show great maturity. B
 
 Setting up each tool and using it for merging dependencies for a large project with many JavaScript files took me about half an hour.
 
-I can only recommend that you try out both tools and see which one fits best with YOUR plans for World Domination[tm].
+I can only recommend that you try out both tools and see which one fits best with YOUR plans for World Domination&trade;.
