@@ -1,0 +1,197 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>	   <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>	   <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Combining JavaScript Files - Juicer vs Sprockets | roderick.dk</title>
+		
+		<meta name="author" content="Morgan Roderick" />
+
+		<!-- Mobile viewport optimized: j.mp/bplateviewport -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- CSS: implied media="all" -->
+		<link rel="stylesheet" href="/stylesheets/style.css?v=2" />
+
+		<!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+	</head>
+	<body>
+	  <div id="container">
+		<header>
+			<a href="/" class="home">roderick.dk</a>
+			<ul class="nav">
+				<li><a href="/">Blog</a></li>
+				<li><a href="/archives.html">Archives</a></li>
+				<li><a href="/about/">About</a></li>
+				<li><a href="/contact/">Contact</a></li>
+			</ul>
+			<a href="/atom.xml" class="feed">Subscribe to the feed</a>
+		</header>
+		<div id="main" role="main">
+			<div class="article">
+	<article>
+		<h1>Combining JavaScript Files - Juicer vs Sprockets</h1>
+		<p>Currently working on a project that has well defined use of &#8220;namespaces&#8221; and structured use folders for its JavaScript files. I wanted to investigate the options for combining and minifying JavaScript files.</p>
+
+<p>I need a tool that:</p>
+
+<ul>
+<li>can be run from command line (my team uses many different editors and IDEs)</li>
+
+<li>will work on both Windows and Unix based platforms</li>
+
+<li>does not require huge, obscure configuration files</li>
+
+<li>can merge sources recursively</li>
+
+<li>has an acceptable software license (MIT / Apache / BSD)</li>
+
+<li>is thorougly tested</li>
+
+<li>is extensible</li>
+
+<li>can work with any JavaScript framework</li>
+</ul>
+
+<p>I settled for trying out <a href='http://github.com/cjohansen/juicer'>Juicer</a> and <a href='http://getsprockets.org'>Sprockets</a>, since both tools met the requirements and were the only high-quality tools on my radar.</p>
+
+<p>Feel free to suggest more tools to try out in the comments.</p>
+
+<p>Both Juicer and Sprockets use Ruby, so make sure you have a recent Ruby and Rubygems installed if you want to experiment with them. Most developers that care enough about good frontend performance seem to have Ruby anyway these days.</p>
+
+<p>I tested the tools with Ruby 1.8.7 on OS X 10.6.1.</p>
+
+<h2 id='juicer'>Juicer</h2>
+
+<p>License: MIT</p>
+
+<p>URL: <a href='http://github.com/cjohansen/juicer'>http://github.com/cjohansen/juicer</a></p>
+
+<p>I first became aware of Juicer when Christian Johansen released the 0.2.0 version to the public about six months ago. Since then I have been wanting to try it out for work related projects.</p>
+
+<h3 id='installation'>Installation</h3>
+
+<p>Installation of Juicer is pretty straight forward</p>
+<div class='highlight'><pre><code class='bash'><span class='nv'>$ </span>gem install juicer
+<span class='nv'>$ </span>juicer install yui_compressor
+<span class='nv'>$ </span>juicer install jslint
+</code></pre>
+</div>
+<h3 id='usage'>Usage</h3>
+
+<p>Using Juicer for JavaScript dependency management is pretty straight forward, in your code you simply specify dependencies with the @depend keyword and juiced picks up on this and merges the files automagically.</p>
+<div class='highlight'><pre><code class='javascript'><span class='cm'>/**</span>
+<span class='cm'>  * My script file</span>
+<span class='cm'>  *</span>
+<span class='cm'>  * @depend jquery-1.2.0.js</span>
+<span class='cm'>  */</span>
+  <span class='kd'>var</span> <span class='nx'>myNS</span> <span class='o'>=</span> <span class='p'>{</span>
+    <span class='nx'>myObject</span> <span class='o'>=</span> <span class='p'>{}</span>
+  <span class='p'>};</span>
+</code></pre>
+</div>
+<p>To merge the dependencies into the file you simply run</p>
+<div class='highlight'><pre><code class='javascript'><span class='nx'>$</span> <span class='nx'>juicer</span> <span class='nx'>merge</span> <span class='nx'>myfile</span><span class='p'>.</span><span class='nx'>js</span>
+</code></pre>
+</div>
+<p>This will produce a new file, <code>myfile.min.js</code>, which contains all dependencies merged in. It parses each dependency and resolves it&#8217;s dependencies as well. The file will be stripped of all comments and minified, this is highly configurable, if you know how to use <a href='http://developer.yahoo.com/yui/compressor/'>YUI Compressor</a> (and you should know this).</p>
+
+<h3 id='bonus_features'>Bonus features</h3>
+
+<ul>
+<li>Builtin use of <a href='http://www.jslint.com/'>JsLint</a></li>
+
+<li>Builtin use of <a href='http://developer.yahoo.com/yui/compressor/'>YUI Compressor</a></li>
+
+<li>Can merge CSS files</li>
+
+<li>Can create cache buster urls for assets referenced by css files</li>
+
+<li>Can cycle asset hostnames for asset urls in css files</li>
+</ul>
+
+<h2 id='sprockets'>Sprockets</h2>
+
+<p>License: MIT</p>
+
+<p>URL: <a href='http://getsprockets.org'>http://getsprockets.org</a></p>
+
+<p>To my knowledge, Sprockets was released at around the same time as Juicer, both projects seemed to be blissfully unaware of each other. Sprockets is created by Sam Stephenson of Prototype fame.</p>
+
+<h3 id='installation'>Installation</h3>
+
+<p>Installing Sprockets is a no brainer, if you have ruby</p>
+<div class='highlight'><pre><code class='bash'><span class='nv'>$ </span>gem install --remote sprockets
+</code></pre>
+</div>
+<p>This will give you a gem, with all you need to run Sprockets, including a &#8220;sprocketize&#8221; command.</p>
+
+<h3 id='usage'>Usage</h3>
+
+<p>Using Sprockets for JavaScript dependency management is very easy, you specify dependencies in your source code with the <code>//= require</code> notation, and it will resolve the dependencies for you.</p>
+<div class='highlight'><pre><code class='javascript'><span class='c1'>//= require &quot;jquery-1.2.0&quot;</span>
+<span class='cm'>/**</span>
+<span class='cm'>  * My script file</span>
+<span class='cm'>  */</span>
+  <span class='kd'>var</span> <span class='nx'>myNS</span> <span class='o'>=</span> <span class='p'>{</span>
+    <span class='nx'>myObject</span> <span class='o'>=</span> <span class='p'>{}</span>
+  <span class='p'>};</span>
+</code></pre>
+</div>
+<p>To merge the dependencies in, you simply run the <code>sprocketize</code> command on the file, specifying where the output should go.</p>
+<div class='highlight'><pre><code class='bash'><span class='nv'>$ </span>sprocketize myfile.js &gt; myfile.combined.js
+</code></pre>
+</div>
+<p>This creates the merged file, with all dependencies merged in, neat and to the point. Sprockets has many subtleties that allows for greater control and for easier reading of the dependency directives. Luckily, it&#8217;s very well documented, reading the documentation for the finer points is recommended.</p>
+
+<h3 id='bonus_features'>Bonus features</h3>
+
+<ul>
+<li>Bundling of assets, to create release builds with all dependencies like CSS, images, flash files. Very neat.</li>
+
+<li>Support for insertion of constants into the code (like version numbers, authors, i18n, etc)</li>
+
+<li>Sprockets is really a well structured Ruby library, so you can just keep extending and building on it</li>
+
+<li>Rails plugin (well, only a bonus if you use Rails)</li>
+
+<li>CGI script for serving outside Rails</li>
+</ul>
+
+<p>Sprockets does not come with JsLint or YUI Compressor builtin, you will have to add this to your build script yourself. This should not be that much of an issue, as you will probably want to be able to create several diffent builds for yourself anyway.</p>
+
+<h2 id='the_verdict'>The verdict</h2>
+
+<p>Sprockets seem very well suited for framework authors, not surprising since it originated from the Prototype JS framework.</p>
+
+<p>Juicer has some very compelling features for optimizing the use of CSS files and resources referenced by these files.</p>
+
+<p>Both Juicer and Sprockets are carefully crafted tools and show great maturity. Both projects encourage contributions and are both hosted on GitHub, so collaboration is really easy.</p>
+
+<p>Setting up each tool and using it for merging dependencies for a large project with many JavaScript files took me about half an hour.</p>
+
+<p>I can only recommend that you try out both tools and see which one fits best with YOUR plans for World Domination&#8482;.</p>
+		
+		
+	</article>
+</div>
+		</div>
+		<footer>
+			&copy;Morgan Roderick, unless otherwise noted.
+		</footer>
+	  </div>
+
+	  <!-- mathiasbynens.be/notes/async-analytics-snippet Change UA-XXXXX-X to be your site's ID -->
+	  <script>
+		var _gaq=[["_setAccount","UA-869742-1"],["_trackPageview"]];
+		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+		g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+		s.parentNode.insertBefore(g,s)}(document,"script"));
+	  </script>
+	</body>
+</html>

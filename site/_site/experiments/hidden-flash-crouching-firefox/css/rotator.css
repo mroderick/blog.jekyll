@@ -1,0 +1,108 @@
+
+/** 
+ file: rotator.css
+ 
+ .g_rotator_t3
+ 
+*/
+
+.g_rotator {
+
+}
+
+.g_block_content.g_rotator {
+	overflow: visible; /*overwrite from g_block_content, to make sure the current tab arrow is shown correctly */
+}
+
+    .g_rotator .g_rotator_item {
+    	display: none;
+    	height: 372px;
+    	overflow: hidden;
+    }
+
+    .g_rotator .g_rotator_item:first-child {
+    	display: block;
+    }
+
+    .g_rotator ul.g_rotator_controls {
+    	height: 25px;
+    	background: transparent;
+    	padding: 0;
+    	border: 0;
+    	white-space: nowrap;
+    }
+    
+    /* make sure we show the background image decoration for 12 column */
+    .g_rotator_c12 ul.g_rotator_controls {
+        background-position: 0 -310px;
+    }
+
+    /* make sure we show the background image decoration for 8 column */
+    .g_rotator_c8 ul.g_rotator_controls {
+        background-position: 0 -190px;
+    }
+
+        .g_rotator .g_rotator_controls li {
+        	border: 0;
+        	height: 25px;
+        	margin: 0;
+        	padding: 0;
+        	text-align: center;
+        	position: relative;
+        	display: inline-block;
+        }
+        
+        /* needed to get IE7 to understand inline-block from previous selector */
+        .g_rotator .g_rotator_controls li {
+            *display: inline;
+        }
+
+        /* define the widths for the controls */
+        .g_rotator_t3 .g_rotator_controls li {
+            width: 33%;
+        }
+            .g_rotator_t3 .g_rotator_controls li:first-child {
+                width: 34%;
+            }
+
+        .g_rotator_t2 .g_rotator_controls li {
+            width: 50%;
+        }
+
+        .g_rotator ul.g_rotator_controls a {
+        	line-height: 22px;
+        	color: #b4b4b4;
+        	display: block;
+        	overflow: hidden;
+        }
+
+        .g_rotator ul.g_rotator_controls .ui-tabs-selected {
+        	background-color: transparent;
+        }
+
+            .g_rotator ul.g_rotator_controls .ui-tabs-selected a {
+            	color: #828385;
+            }
+
+            .g_rotator ul.g_rotator_controls .ui-tabs-selected span {
+            	background: transparent url("../gfx/rotator_current.png") no-repeat 0 0;
+            	position: absolute;
+            	bottom: -2px;
+            	left: 50%;
+            	width: 22px;
+            	margin-left: -11px;
+            	height: 8px;
+            }
+
+/* overrides for ui-tabs from jQuery UI */
+.g_rotator .ui-tabs-panel {
+	display: block !important; /* FIXME [Morgan Roderick]: why is this override needed? */
+}
+
+.g_rotator .ui-tabs-hide {
+	display: none !important; /* FIXME [Morgan Roderick]: why is this override needed? */
+}
+
+.g_rotator ul.ui-tabs-nav > li {
+	background-color: transparent;
+}

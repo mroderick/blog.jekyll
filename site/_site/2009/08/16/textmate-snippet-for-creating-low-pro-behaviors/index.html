@@ -1,0 +1,99 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>	   <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>	   <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>TextMate snippet for creating Low Pro Behaviors | roderick.dk</title>
+		
+		<meta name="author" content="Morgan Roderick" />
+
+		<!-- Mobile viewport optimized: j.mp/bplateviewport -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- CSS: implied media="all" -->
+		<link rel="stylesheet" href="/stylesheets/style.css?v=2" />
+
+		<!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+	</head>
+	<body>
+	  <div id="container">
+		<header>
+			<a href="/" class="home">roderick.dk</a>
+			<ul class="nav">
+				<li><a href="/">Blog</a></li>
+				<li><a href="/archives.html">Archives</a></li>
+				<li><a href="/about/">About</a></li>
+				<li><a href="/contact/">Contact</a></li>
+			</ul>
+			<a href="/atom.xml" class="feed">Subscribe to the feed</a>
+		</header>
+		<div id="main" role="main">
+			<div class="article">
+	<article>
+		<h1>TextMate snippet for creating Low Pro Behaviors</h1>
+		<h2 id='behaviours'>Behaviours</h2>
+
+<p>To encapsulate complex javascript behaviour on websites, I have been using <a href='http://www.danwebb.net/lowpro'>Dan Webb&#8217;s Low Pro</a> library for several years. Low Pro allows you to create self-contained Behavior classes, which avoids polluting the global namespace with variables and makes for very easy re-use of code.</p>
+
+<p>I&#8217;ve previously given a little <a href='http://roderick.dk/blog/2009/05/07/introduction-to-low-pro-for-prototype/'>introduction to Low Pro for Prototype</a> at a local Meetup event, where I show an example of creating your own behaviours.</p>
+
+<h2 id='textmate_snippet'>Textmate snippet</h2>
+
+<p>Today, I finally got around to creating a <a href='http://gist.github.com/168604'>TextMate snippet for creating new Behaviors</a>.</p>
+
+<p><a href='http://manual.macromates.com/en/snippets'>TextMate snippets</a> are an easy way of optimising your daily coding, by automating the writing of some of your code. They&#8217;re surprisingly simple to work with.</p>
+
+<blockquote>
+<p>In the simplest case, you can use snippets to insert text that you do not want to type again and again, either because you type it a lot, or because the actual text to insert is hard to remember (like your bank account details or the HTML entities for the Apple modifier keys).</p>
+</blockquote>
+
+<p>Activating the snippet and filling in the options (class name, default options, etc) will give you something like this:</p>
+<div class='highlight'><pre><code class='javascript'><span class='cm'>/**</span>
+<span class='cm'> * class MyBehavior</span>
+<span class='cm'> * Behavior class for managing behavior of ...</span>
+<span class='cm'> * See http://www.danwebb.net/2006/9/3/low-pro-unobtrusive-scripting-for-prototype</span>
+<span class='cm'> **/</span>
+<span class='kd'>var</span> <span class='nx'>MyBehavior</span> <span class='o'>=</span> <span class='nx'>Behavior</span><span class='p'>.</span><span class='nx'>create</span><span class='p'>({</span>
+  <span class='nx'>options</span> <span class='o'>:</span> <span class='p'>{</span>
+    <span class='nx'>myOption</span> <span class='o'>:</span> <span class='s1'>&#39;myOptionDefaultValue&#39;</span>
+  <span class='p'>},</span>
+
+  <span class='cm'>/**</span>
+<span class='cm'>   * MyBehavior#initialize( [ opts = { myOption : &#39;myOptionDefaultValue&#39; }] )</span>
+<span class='cm'>   * - options (Object): Will be merged with the default options, good for </span>
+<span class='cm'>   *   overriding texts, urls, dom references, etc</span>
+<span class='cm'>   * Gets called when the element is loaded	</span>
+<span class='cm'>   **/</span>
+  <span class='nx'>initialize</span> <span class='o'>:</span> <span class='kd'>function</span><span class='p'>(</span> <span class='nx'>opts</span> <span class='p'>){</span>
+    <span class='k'>this</span><span class='p'>.</span><span class='nx'>options</span> <span class='o'>=</span> <span class='p'>(</span><span class='k'>this</span><span class='p'>.</span><span class='nx'>options</span><span class='p'>).</span><span class='nx'>merge</span><span class='p'>(</span> <span class='nx'>opts</span> <span class='p'>).</span><span class='nx'>toObject</span><span class='p'>();</span>
+    <span class='c1'>// alert( this.options.myOption )</span>
+  <span class='p'>}</span>
+<span class='p'>);</span>
+</code></pre>
+</div>
+<p>The snippet is <a href='http://gist.github.com/168604'>available on github</a>, should you feel the need to customize or improve it.</p>
+<a href='http://creativecommons.org/licenses/by-sa/2.5/dk/' rel='license'><img src='http://i.creativecommons.org/l/by-sa/2.5/dk/80x15.png' alt='Creative Commons License' style='border-width:0' /></a>
+		
+		
+	</article>
+</div>
+		</div>
+		<footer>
+			&copy;Morgan Roderick, unless otherwise noted.
+		</footer>
+	  </div>
+
+	  <!-- mathiasbynens.be/notes/async-analytics-snippet Change UA-XXXXX-X to be your site's ID -->
+	  <script>
+		var _gaq=[["_setAccount","UA-869742-1"],["_trackPageview"]];
+		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+		g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+		s.parentNode.insertBefore(g,s)}(document,"script"));
+	  </script>
+	</body>
+</html>

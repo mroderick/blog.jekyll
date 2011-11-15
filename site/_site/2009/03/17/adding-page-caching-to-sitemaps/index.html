@@ -1,0 +1,159 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>	   <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>	   <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Adding Page Caching to Sitemaps | roderick.dk</title>
+		
+		<meta name="author" content="Morgan Roderick" />
+
+		<!-- Mobile viewport optimized: j.mp/bplateviewport -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- CSS: implied media="all" -->
+		<link rel="stylesheet" href="/stylesheets/style.css?v=2" />
+
+		<!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+	</head>
+	<body>
+	  <div id="container">
+		<header>
+			<a href="/" class="home">roderick.dk</a>
+			<ul class="nav">
+				<li><a href="/">Blog</a></li>
+				<li><a href="/archives.html">Archives</a></li>
+				<li><a href="/about/">About</a></li>
+				<li><a href="/contact/">Contact</a></li>
+			</ul>
+			<a href="/atom.xml" class="feed">Subscribe to the feed</a>
+		</header>
+		<div id="main" role="main">
+			<div class="article">
+	<article>
+		<h1>Adding Page Caching to Sitemaps</h1>
+		<p>The shortest distance between two points is not a straight line. The shortest distance is zero. Admittedly, we&#8217;re not about to fold space or do time travel, but you get the idea.</p>
+
+<p>Likewise, for any web framework, the fastest way to deliver content to clients is to not use the framework at all, but let the webserver serve static files to clients.</p>
+
+<p>In Rails this means using page caching and leave the heavy lifting to the webserver. Keeping your cache fresh and still maintaining stellar performance might seem like a daunting task, but Rails gives you quite a bit of help, so it is actually not that hard to do.</p>
+
+<p>In this post I will take you through the steps to add page caching to our Sitemap, that we created in <a href='/blog/2009/03/16/creating-sitemaps-with-comatose-cms.html.'>Creating Sitemaps with Comatose CMS</a></p>
+
+<h2 id='enable_page_caching_for_our_sitemap'>Enable page caching for our Sitemap</h2>
+
+<p>As you can see below, enabling page caching is as simple as just adding one extra line in a controller</p>
+<div class='highlight'><pre><code class='ruby'><span class='c1'>## app/controllers/info_controller.rb</span>
+<span class='k'>class</span> <span class='nc'>InfoController</span> <span class='o'>&lt;</span> <span class='no'>ApplicationController</span>
+	<span class='n'>caches_page</span> <span class='ss'>:sitemap</span>
+	<span class='k'>def</span> <span class='nf'>sitemap</span>
+		<span class='n'>respond_to</span> <span class='k'>do</span> <span class='o'>|</span><span class='nb'>format</span><span class='o'>|</span>
+      <span class='nb'>format</span><span class='o'>.</span><span class='n'>xml</span> <span class='k'>do</span>
+				<span class='vi'>@website_url</span> <span class='o'>=</span> <span class='s1'>&#39;http://example.com&#39;</span>
+				<span class='vi'>@pages</span> <span class='o'>=</span> <span class='no'>ComatosePage</span><span class='o'>.</span><span class='n'>find</span><span class='p'>(</span><span class='ss'>:all</span><span class='p'>,</span> <span class='ss'>:conditions</span> <span class='o'>=&gt;</span> <span class='s2'>&quot;full_path not like &#39;&#39;&quot;</span><span class='p'>)</span>
+				<span class='n'>render</span> <span class='ss'>:action</span> <span class='o'>=&gt;</span> <span class='s1'>&#39;sitemap&#39;</span><span class='p'>,</span> <span class='ss'>:layout</span> <span class='o'>=&gt;</span> <span class='kp'>false</span>
+			<span class='k'>end</span>
+		<span class='k'>end</span>
+	<span class='k'>end</span>
+<span class='k'>end</span>
+</code></pre>
+</div>
+<h3 id='verify_caching'>Verify caching</h3>
+
+<p>To verify that we are have succesfully enabled page cache, let&#8217;s update the development environment to mimick the production environment.</p>
+<div class='highlight'><pre><code class='ruby'><span class='c1'>## config/environments/development.rb</span>
+<span class='n'>config</span><span class='o'>.</span><span class='n'>action_controller</span><span class='o'>.</span><span class='n'>perform_caching</span> <span class='o'>=</span> <span class='kp'>true</span>
+</code></pre>
+</div>
+<p>Then we need to restart the server, do a request to <a href='http://localhost:3000/sitemap.xml'>http://localhost:3000/sitemap.xml</a> and you should see something like the following in your log.</p>
+<div class='highlight'><pre><code class='bash'>Processing InfoController#sitemap <span class='o'>(</span><span class='k'>for </span>127.0.0.1 at 2009-03-17 17:04:26<span class='o'>)</span> <span class='o'>[</span>GET<span class='o'>]</span>
+  Parameters: <span class='o'>{</span><span class='s2'>&quot;action&quot;</span><span class='o'>=</span>&gt;<span class='s2'>&quot;sitemap&quot;</span>, <span class='s2'>&quot;controller&quot;</span><span class='o'>=</span>&gt;<span class='s2'>&quot;info&quot;</span><span class='o'>}</span>
+  SQL <span class='o'>(</span>0.2ms<span class='o'>)</span>   SET NAMES <span class='s1'>&#39;utf8&#39;</span>
+  SQL <span class='o'>(</span>0.1ms<span class='o'>)</span>   SET <span class='nv'>SQL_AUTO_IS_NULL</span><span class='o'>=</span>0
+  ComatosePage Load <span class='o'>(</span>1.5ms<span class='o'>)</span>   SELECT * FROM <span class='sb'>`</span>comatose_pages<span class='sb'>`</span> WHERE full_path not like <span class='s1'>&#39;&#39;</span>
+Rendering info/sitemap
+  ComatosePage Columns <span class='o'>(</span>2.0ms<span class='o'>)</span>   SHOW FIELDS FROM <span class='sb'>`</span>comatose_pages<span class='sb'>`</span>
+Cached page: /sitemap.xml <span class='o'>(</span>0.7ms<span class='o'>)</span>
+Completed in 16ms <span class='o'>(</span>View: 9, DB: 4<span class='o'>)</span> | 200 OK <span class='o'>[</span>http://localhost/sitemap.xml<span class='o'>]</span>
+</code></pre>
+</div>
+<p>The line we&#8217;re looking for is <code>Cached page: /sitemap.xml (0.7ms)</code></p>
+
+<p>In your public folder you should also see a <code>sitemap.xml</code> file.</p>
+
+<p>If everything is configured correctly, subsequent requests to <code>/sitemap.xml</code> should not show up in the applications log, as the webserver is now serving the static file and not using Rails at all :-)</p>
+
+<h2 id='add_a_cache_sweeper'>Add a cache sweeper</h2>
+
+<p>Now that we can succesfully cache the sitemap, we need to make sure it stays fresh, when content in Comatose is updated.</p>
+
+<p>Rails provides us with Cache Sweepers, which is kind of like an observer, but specialised. Let&#8217;s create a cache sweeper that observes ComatosePage, and deletes the cached sitemap.xml when pages are saved or destroyed.</p>
+<div class='highlight'><pre><code class='ruby'><span class='c1'>## app/sweepers/comatose_sweeper.rb</span>
+<span class='k'>class</span> <span class='nc'>ComatoseSweeper</span> <span class='o'>&lt;</span> <span class='no'>ActionController</span><span class='o'>::</span><span class='no'>Caching</span><span class='o'>::</span><span class='no'>Sweeper</span>
+	<span class='n'>observe</span> <span class='no'>ComatosePage</span>
+  
+	<span class='k'>def</span> <span class='nf'>after_save</span><span class='p'>(</span><span class='n'>page</span><span class='p'>)</span>
+		<span class='n'>expire_cache</span><span class='p'>(</span><span class='n'>page</span><span class='p'>)</span>
+	<span class='k'>end</span>
+  
+	<span class='k'>def</span> <span class='nf'>after_destroy</span><span class='p'>(</span><span class='n'>page</span><span class='p'>)</span>
+		<span class='n'>expire_cache</span><span class='p'>(</span><span class='n'>page</span><span class='p'>)</span>
+	<span class='k'>end</span>
+  
+	<span class='k'>def</span> <span class='nf'>expire_cache</span><span class='p'>(</span><span class='n'>page</span><span class='p'>)</span>
+		<span class='c1'># Use the ApplicationController, as were outside the scope </span>
+		<span class='c1'># of the executing controller		</span>
+		<span class='no'>ApplicationController</span><span class='o'>.</span><span class='n'>expire_page</span><span class='p'>(</span> <span class='s2'>&quot;/sitemap.xml&quot;</span> <span class='p'>)</span>
+  <span class='k'>end</span>
+<span class='k'>end</span>
+</code></pre>
+</div>
+<p>Finally, we need to tell Comatose to use the sweeper.</p>
+<div class='highlight'><pre><code class='ruby'><span class='c1'>## config/initializers/comatose.rb</span>
+<span class='c1'># set a cache sweeper to react when comatose expires pages from it&#39;s page caching</span>
+<span class='no'>ComatoseAdminController</span><span class='o'>.</span><span class='n'>send</span> <span class='ss'>:cache_sweeper</span><span class='p'>,</span> 
+	<span class='ss'>:comatose_sweeper</span><span class='p'>,</span> <span class='ss'>:only</span> <span class='o'>=&gt;</span> <span class='s1'>&#39;expire_cms_page&#39;</span>
+</code></pre>
+</div>
+<h3 id='verify_cache_sweeper'>Verify cache sweeper</h3>
+
+<p>To verify that your cache sweeper is working, all you need to is to is to save a page in Comatose and then verify the absense of <code>sitemap.xml</code> from the public folder.</p>
+
+<h2 id='finally'>Finally</h2>
+
+<p>That&#8217;s it! You know have a Comatose based Sitemap that will only be generated when there are changes.</p>
+
+<p>P.S. Don&#8217;t forget to set your development environment to NOT use caching anymore.</p>
+
+<h2 id='resources'>Resources</h2>
+
+<ul>
+<li><a href='http://www.railsenvy.com/2007/2/28/rails-caching-tutorial'>Rails Envy: Ruby on Rails Caching Tutorial</a></li>
+
+<li><a href='http://www.railsenvy.com/2007/3/20/ruby-on-rails-caching-tutorial-part-2'>Rails Envy: Ruby on Rails Caching Tutorial - Part 2</a></li>
+
+<li><a href='http://railslab.newrelic.com/scaling-rails'>Scaling Rails Screencasts</a></li>
+</ul>
+		
+		
+	</article>
+</div>
+		</div>
+		<footer>
+			&copy;Morgan Roderick, unless otherwise noted.
+		</footer>
+	  </div>
+
+	  <!-- mathiasbynens.be/notes/async-analytics-snippet Change UA-XXXXX-X to be your site's ID -->
+	  <script>
+		var _gaq=[["_setAccount","UA-869742-1"],["_trackPageview"]];
+		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+		g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+		s.parentNode.insertBefore(g,s)}(document,"script"));
+	  </script>
+	</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>DOM id in JavaScript scope in WebKit</title>	
+	</head>
+	<body>
+	    <p id="myVeryUniqueId">This is a test page to show whether or not a WebKit based browser has a bug where it leaks DOM id's into JavaScript scope.</p>
+	    <script type="text/javascript">
+	        if ( typeof myVeryUniqueId !== 'undefined' ){
+	            document.write( "<p>TEST RESULT: This browser has DOM id's leaked into JavaScript scope :-(</p>")
+	        }
+	    </script>
+	</body>
+</html>

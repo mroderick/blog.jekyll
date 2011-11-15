@@ -1,0 +1,1022 @@
+/* Container that contains the entire form */
+.f_container{
+	margin-bottom:18px;
+	padding:10px 0 0;
+	
+}
+
+/* If the container is the first element in the block, set a top padding */
+.f_container:first-child{
+	padding-top:24px;
+}
+
+/* Special handling of forms when inside a hightlight (highlight, highlight2, alert) text block */
+.g_highlight .f_container,
+.g_highlight2 .f_container,
+.g_alert .f_container{
+	padding:0;
+}
+
+.g_highlight .f_section,
+.g_highlight2 .f_section,
+.g_alert .f_section{
+	padding-left:0;
+	padding-right:0;
+}
+/* special handling end */
+
+/* Container used for buttons */
+.f_footer{
+	margin-top:-3px;
+	text-align:right;
+	padding:0 19px 0 24px;
+	overflow:hidden;
+	color:#90979b;
+}
+
+.g_block_c3 .f_footer,
+.g_block_c4 .f_footer,
+.g_block_c5 .f_footer,{
+	padding:0 12px 0 18px;
+	margin-top:-6px;
+}
+
+.f_footer .f_left{
+	float:left;
+	text-align:left;
+}
+
+.f_footer .f_right{
+	float:right;
+}
+
+/* Padding on smaller blocks */
+.g_block_c3 .f_container,
+.g_block_c4 .f_container,
+.g_block_c5 .f_container{
+	padding:18px 0 0 0;
+}
+
+/* A section */
+.f_section{
+	margin-bottom:18px;
+	background:transparent url("/gfx/grd/common/sprite_cuts.png") no-repeat 0 0;
+	padding:20px 24px 0 24px;
+}
+
+.g_block_c5 .f_section,
+.g_block_c4 .f_section,
+.g_block_c3 .f_section{
+	padding:20px 18px 0 18px;	
+}
+
+/* Turn off upper cut for the first section */
+.f_section:first-child{
+	padding-top:0;
+	background-image:none;	
+}
+
+/* Place a cut top aligned in each section */
+.g_block_c12 .f_section{background-position:-3419px -7px;}
+.g_block_c9 .f_section{	background-position:-2697px -7px;}
+.g_block_c8 .f_section{	background-position:-2049px -7px;}
+.g_block_c7 .f_section{	background-position:-1487px -7px;}
+.g_block_c6 .f_section{	background-position:-1005px -7px;}
+.g_block_c5 .f_section{	background-position:-605px -7px;}
+.g_block_c4 .f_section{	background-position:-287px -7px;}
+.g_block_c3 .f_section{	background-position:-48px -7px;}
+
+.f_group{
+	overflow:hidden;
+}
+
+/* A row in a section */
+.f_row{
+	clear:left;
+	overflow:hidden;
+	position:relative;
+	margin-bottom:14px;
+}
+
+.f_row_txt{
+	margin-bottom:0;
+}
+
+.f_row_txt h3{
+	font-size:15px;	
+}
+
+.f_container .f_element{
+	float:left;
+}
+
+div.f_row_checkbox .f_txt,
+div.f_row_radio .f_txt{
+	padding-left:28px;
+	margin-top:5px;
+	width:576px;
+}
+
+.f_row_input .f_element{
+	padding-right:6px;
+}
+/* When we have an input field with a button immidiately to the right */
+.f_row_inputbutton button{
+	top:-5px;
+	margin-left:6px;
+}
+
+.f_row_datepicker .f_element{
+	padding-right:59px;
+	position:relative; /* we need to position the datepicker icon */
+}
+
+.f_row_datepicker .f_element .f_icon_datepicker{
+	position:absolute;
+	top:17px;
+	left:106px;
+}
+
+/* Text below fields etc.*/
+div.f_txt {
+	float:left;
+	clear:left;
+	width:312px; /* to match the width of inputs */
+}
+
+/* Radiobuttons and checkboxes */
+/* This section might need a rewamp when the javascriptreplace graphics are implemented */
+.f_row_radio .f_element,
+.f_row_checkbox .f_element{
+	position:relative;
+	float:left;
+	
+}
+.f_container .f_row_radio .f_element label,
+.f_container .f_row_checkbox .f_element label{
+	margin-left:28px;
+	margin-top:2px;
+	float:left;
+	width:auto; /* To reset the default width limit on labels */
+	height:auto;	/* Reset normal label height for checkbox and radios */
+}
+
+.f_row_radio .f_element ~ .f_icon,
+.f_row_checkbox .f_element ~ .f_icon{
+	top:0;
+}
+
+.f_row_radio .f_element input[type="radio"],
+.f_row_checkbox .f_element input[type="checkbox"]{
+	/* exception in ie7 stylesheet */
+	position:absolute;
+	top:3px;
+	left:0;	
+}
+
+.f_row_checkbox .f_element input[type="checkbox"]{
+	/* exception in ie7 stylesheet */
+	top:2px;
+}
+
+/* Forced width to place help icon correctly */
+.g_block_c8 .f_row_radio .f_element,
+.g_block_c8 .f_row_checkbox .f_element{	width:572px;}
+.g_block_c7 .f_row_radio .f_element,
+.g_block_c7 .f_row_checkbox .f_element{	width:492px;}
+.g_block_c6 .f_row_radio .f_element,
+.g_block_c6 .f_row_checkbox .f_element{	width:410px;}
+.g_block_c5 .f_row_radio .f_element,
+.g_block_c5 .f_row_checkbox .f_element{	width:340px;}
+.g_block_c4 .f_row_radio .f_element,
+.g_block_c4 .f_row_checkbox .f_element{	width:258px;}
+.g_block_c3 .f_row_radio .f_element,
+.g_block_c3 .f_row_checkbox .f_element{	width:164px;}
+
+/* Limit width of radiobutton labeltext to 8 col width (-24px padding)*/
+.g_block_c9 .f_row_radio .f_element,
+.g_block_c12 .f_row_radio .f_element,
+.g_block_c9 .f_row_checkbox .f_element,
+.g_block_c12 .f_row_checkbox .f_element{
+	width:598px;	
+}
+
+/* Width of the f_element minus the padding-left of 18px */
+.g_block_c8 .f_row_radio .f_txt,
+.g_block_c8 .f_row_checkbox .f_txt{ width:554px;}
+.g_block_c7 .f_row_radio .f_txt,
+.g_block_c7 .f_row_checkbox .f_txt{ width:474px;}
+.g_block_c6 .f_row_radio .f_txt,
+.g_block_c6 .f_row_checkbox .f_txt{ width:392px;}
+.g_block_c5 .f_row_radio .f_txt,
+.g_block_c5 .f_row_checkbox .f_txt{ width:322px;}
+.g_block_c4 .f_row_radio .f_txt,
+.g_block_c4 .f_row_checkbox .f_txt{ width:240px;}
+.g_block_c3 .f_row_radio .f_txt,
+.g_block_c3 .f_row_checkbox .f_txt{ width:146px;}
+
+
+.f_row_select .f_element{
+	padding-right:6px;	
+}
+
+.f_container select{
+	width:310px;
+	background-color:#f0f3f5;
+	/*background-color exception in ie7 css*/
+	border:1px solid #cbcbcb;
+	height:24px;
+}
+.f_row_textarea .f_element{
+	float:left;
+	padding-right:6px;
+}
+
+.f_container textarea{
+	/*font-family exception in ie7 css*/
+	border:1px solid #cbcbcb;
+	background-color:#f0f3f5;
+	width:302px;
+	min-height:60px;
+	padding:4px;
+}
+
+.f_container label{
+	display:block;
+}
+
+.f_container input[type="text"],
+.f_container input[type="password"]{
+	/* font-family exception in ie7 css */
+	width:10px; /* Set to be waaay to small, because all inputs needs a class to define their width (f_small, f_medium or f_large) */
+	height:24px;
+	line-height:24px;
+	font-size:1.18em;	/*13px based on a basefont of 11px */
+	float:left;
+	padding:0 4px;
+	background-color:#f0f3f5;
+	border:1px solid #cbcbcb;
+}
+
+/* needs to be 100px, 98 + 2px border+ 8px padding */
+.f_container .f_row_input .f_element.f_small input[type="text"],
+.f_container .f_row_input .f_element.f_small input[type="password"]{	width:90px;}
+
+/* needs to be 206px, 206 + 2px border + 8px padding */
+.f_container .f_row_input .f_element.f_medium input[type="text"],
+.f_container .f_row_input .f_element.f_medium input[type="password"]{	width:196px;}
+
+/* needs to be 312px, 312 + 2px border + 8px padding */
+.f_container .f_row_input .f_element.f_large input[type="text"],
+.f_container .f_row_input .f_element.f_large input[type="password"]{	width:302px;}
+
+
+.f_container .f_row_input .f_element.f_large .g_btn_search{
+	top:-5px;
+	left:2px;
+}
+
+.f_container .f_row_input .f_element.f_large label{
+	width:302px;
+}
+
+.f_container .f_element label {
+    width: 312px;
+    margin-bottom: 1px;
+    height: 14px;	/* Force text to only be one line, excess text is hidden with forced height and overflow */
+    overflow:hidden;
+}
+
+.f_container .f_element.f_medium label{
+	width:206px;	
+}
+.f_container .f_element.f_small label{
+	width:100px;	
+}
+
+/* Datepicker can only be of type small, and does not need a class */
+.f_container .f_row_datepicker .f_element input[type="text"]{	width:90px;	}
+
+
+.f_container .f_row_multipleselect .f_element{
+	float:left;
+}
+
+.f_container .f_row_multipleselect select {
+	height:auto; /* reset default forced select height */
+	float:left;
+}
+
+.f_container .f_row_multipleselect .f_icon{
+	left:12px;	
+}
+
+.f_container .f_row_txt .f_icon{
+	top:1px;
+}
+
+/* Default limiter on width of text type elements */
+.f_container .f_row_txt .f_element {
+	width:598px;
+}
+
+.g_block_c8 .f_container .f_row_txt .f_element{	width:572px;}
+.g_block_c7 .f_container .f_row_txt .f_element{	width:492px;}
+.g_block_c6 .f_container .f_row_txt .f_element{	width:410px;}
+.g_block_c5 .f_container .f_row_txt .f_element{	width:340px;}
+.g_block_c4 .f_container .f_row_txt .f_element{	width:258px;}
+.g_block_c3 .f_container .f_row_txt .f_element{	width:164px;}
+
+
+.f_row_multipleselect .f_element.f_small select{	width:100px;	}
+.f_row_multipleselect .f_element.f_medium select{	width:206px;	}
+
+
+.f_row_multipleselect .f_element .jqxs ul {
+	background-color:#f0f3f5;
+	border:1px solid #cbcbcb;
+	min-height:50px;
+}
+
+.f_row_multipleselect .f_element .jqxs li {
+	background-color:transparent;
+	color:#192228;
+}
+
+.f_row_multipleselect .f_element .jqxs_buttons{
+	width:99px;
+	padding-left:3px;
+}
+
+.f_row_multipleselect .f_element .jqxs ul, .f_row_multipleselect .f_element .jqxs div{
+	margin:0;
+}
+.f_row_multipleselect .f_element .jqxs_optionsList{
+	margin-right:6px !important;
+}
+
+.f_row_multipleselect .f_element .jqxs li.jqxs_focused{
+	background-color:#29a3ca;
+}
+
+.f_row_multipleselect .f_element .f_txt{
+	color:blue;
+}
+
+/* Icons */
+.f_icon {
+	overflow:hidden;
+	position:relative; /* To position it next to the floated input field */
+	top:17px;
+	left:6px;
+	width:18px;
+}
+
+.f_icon a{
+	background:transparent url("/gfx/grd/common/form/sprite_form.png") no-repeat 0 0;
+	display:block;
+	width:100%;
+	height:18px;
+	text-indent:-9999px;
+}
+
+.f_icon.f_icon_datepicker,
+div.f_ok .f_icon.f_icon_datepicker,
+div.f_error .f_icon.f_icon_datepicker{
+	width:24px;
+	height:20px;
+	background:transparent url("/gfx/grd/common/form/sprite_form.png") no-repeat -60px 0;
+	text-indent:-9999px;
+}
+
+span.f_required{
+	color:#006cb8;
+	font-weight:bold;
+}
+
+/* Handling of c4 */
+/* ==============
+ * Fields have a width of 252px, but because of borders and padding/margin, they have the widths defined below
+ */
+
+.g_block_c4 div.f_txt{
+	width:252px;	
+}
+.g_block_c4 .f_container input[type="text"].f_small,
+.g_block_c4 .f_container input[type="password"].f_small {	width:70px;}
+.g_block_c4 .f_container input[type="text"].f_medium,
+.g_block_c4 .f_container input[type="password"].f_medium {	width:156px;}
+.g_block_c4 .f_container input[type="text"].f_large,
+.g_block_c4 .f_container input[type="password"].f_large {	width:242px;}
+
+.g_block_c4 .f_container select{			width:250px; }
+.g_block_c4 .f_container select.f_small{	width:80px;	 }
+.g_block_c4 .f_container select.f_medium{	width:166px; }
+.g_block_c4 .f_container select.f_large{	width:252px; }
+.g_block_c4 .f_container textarea{	width:242px;	}
+.g_block_c4 .f_container .f_row_multipleselect .f_element .f_button{	width:80px;	}
+
+.g_block_c4 .f_row_datepicker .f_element{	padding-right: 49px;}
+.g_block_c4 .f_row_datepicker .f_element .f_icon_datepicker {	left:86px;}
+
+.g_block_c4 .f_container .f_row_datepicker .f_element input[type="text"]{	width:70px;}
+
+/* Handling of input width */
+.g_block_c4 .f_container .f_row_input .f_element.f_small input[type="text"],
+.g_block_c4 .f_container .f_row_input .f_element.f_small input[type="password"] {	width:66px;	}
+.g_block_c4 .f_container .f_row_input .f_element.f_medium input[type="text"],
+.g_block_c4 .f_container .f_row_input .f_element.f_medium input[type="password"]{	width:148px;}
+.g_block_c4 .f_container .f_row_input .f_element.f_large input[type="text"],
+.g_block_c4 .f_container .f_row_input .f_element.f_large input[type="password"]{	width:232px;}
+
+.g_block_c4 .f_container .f_element label,
+.g_block_c4 .f_container .f_element.f_large label{width:232px;}
+.g_block_c4 .f_container .f_element.f_medium label{	width:148px;	}
+.g_block_c4 .f_container .f_element.f_small label{	width:66px;	}
+
+
+/* Handling of c3 */
+
+.g_block_c3 .f_container input[type="text"].f_small,
+.g_block_c3 .f_container input[type="text"].f_medium,
+.g_block_c3 .f_container input[type="text"].f_large,
+.g_block_c3 .f_container input[type="password"].f_small,
+.g_block_c3 .f_container input[type="password"].f_medium,
+.g_block_c3 .f_container input[type="password"].f_large {
+	width:160px;
+}
+
+.g_block_c3 .f_container .f_txt,
+.g_block_c3 .f_row_input .f_txt{
+	width:170px;	
+}
+.g_block_c3 .f_container textarea,
+.g_block_c3 .f_container select {
+	width:160px;	
+}
+
+.g_block_c3 .f_container .f_row_datepicker .f_element input[type="text"]{
+	width:107px;
+}
+
+.g_block_c3 .f_row_datepicker .f_element .f_icon_datepicker {
+    left: 123px;
+}
+
+/* If a row is marked in error */
+.f_row.f_error div.f_txt{
+	color:#801914;
+}
+
+/* Color labels of fields in error */
+.f_element.f_error label,
+.f_element.f_error .f_required{
+	color:#801914;
+}
+
+/* Do not color labels of checkboxes and radios when in error */
+.f_row_radio .f_element.f_error label,
+.f_row_radio .f_element.f_error .f_required,
+.f_row_checkbox .f_element.f_error label,
+.f_row_checkbox .f_element.f_error .f_required{
+	color:#192228;	
+}
+
+.f_row.f_error .f_icon a {
+	background-position:-40px 0;	/* Red icon */
+}
+
+/* If a row is marked as OK */
+.f_row.f_ok .f_icon a {
+	background-position:-20px 0;	/* Green icon */
+}
+
+/* If a field is marked f_error */
+.f_row_input .f_element.f_error input[type="text"],
+.f_row_input .f_element.f_error input[type="password"],
+.f_row_select .f_element.f_error select,
+.f_row_textarea .f_element.f_error textarea,
+.f_row_datepicker .f_element.f_error input[type="text"],
+.f_row_datepicker .f_element.f_error input[type="password"],
+.f_row_multipleselect.f_element.f_error .jqxs ul {
+	background-color:#fbf3f1;
+}
+
+/** Replaced selects **/
+.f_replaced_select{
+	width:10px; /* Set waaay too small, should be set wider via javascript on replace */
+	height:24px;
+	position:relative;
+	border:1px solid #cbcbcb;
+	background-color:#f0f3f5;
+}
+
+.f_replaced_select select{
+	width:100%;
+	height:26px;
+	position:relative;
+	z-index:10;
+}
+
+.f_replaced_select span{
+	position:absolute;
+	top:-1px;
+	left:0;
+	display:block;
+	width:100%;
+	height:26px;
+	line-height:26px;
+	text-indent:6px;
+	z-index:5;
+}
+
+.f_replaced_select span span{
+	background:transparent url("/gfx/grd/common/form/sprite_form.png") no-repeat -86px 0;
+	width:27px;
+	height:26px;
+	display:block;
+	position:absolute;
+	left:auto;
+	right:-1px;
+	top:0;
+}
+
+.f_replaced_select:hover span span,
+.f_replaced_select.f_current span span{
+	background-position:-86px -28px;
+}
+
+.f_replaced_select:hover,
+.f_replaced_select.f_current{
+	border:1px solid #90979b;
+}
+
+.f_replaced_checkbox{
+	background:transparent url("/gfx/grd/common/form/sprite_form.png") no-repeat 0 -22px;
+	width:18px;
+	height:18px;	
+}
+
+.f_row_radio .f_element input.ui-helper-hidden-accessible,
+.f_row_checkbox .f_element input.ui-helper-hidden-accessible{
+    left: -999em;
+}
+
+/* Color of label text when button disabled */
+.ui-checkbox-state-disabled,
+.ui-checkbox-state-checked-disabled,
+.ui-checkbox-state-disabled-hover,
+.ui-checkbox-state-checked-disabled-hover,
+.ui-radio-state-disabled,
+.ui-radio-state-checked-disabled,
+.ui-radio-state-disabled-hover,
+.ui-radio-state-checked-disabled-hover { color: #797979}
+
+span.ui-checkbox,
+span.ui-radio {
+	display: block;
+	width: 18px;
+	height: 18px;
+	background:transparent url("/gfx/grd/common/form/sprite_form.png") no-repeat 0 -22px;
+	/* Exception in ie7.css 
+	 * position:absolute;
+	 * left:0;
+	*/
+}
+span.ui-radio{
+	background-position:0 -42px;	
+}
+
+span.ui-helper-hidden {
+	display: none;
+}
+
+span.ui-checkbox-state-hover {				background-position:0 -22px;}
+span.ui-checkbox-state-checked {			background-position:-20px -22px;}
+span.ui-checkbox-state-checked-hover {		background-position:-20px -22px;}
+
+span.ui-checkbox-state-disabled,
+span.ui-checkbox-state-disabled-hover,
+span.ui-checkbox-state-checked-disabled-hover,
+span.ui-checkbox-state-checked-disabled { 	background-position:-60px -22px;}
+
+
+span.ui-radio-state-hover{					background-position: 0 -42px;}
+span.ui-radio-state-checked {				background-position:-20px -42px;}
+span.ui-radio-state-checked-hover {			background-position:-20px -42px;}
+
+span.ui-radio-state-disabled,
+span.ui-radio-state-disabled-hover,
+span.ui-radio-state-checked-disabled-hover,
+span.ui-radio-state-checked-disabled{		background-position:-60px -42px;}
+
+
+/** Styling for CrossSelect (multipleselect replacement script **/
+.jqxs span {
+	visibility:none;
+	position:absolute;
+}
+
+.jqxs ul, 
+.jqxs div{
+	float:left;
+	margin:4px;
+	padding:0;
+	background:#ffffff;
+}
+
+/* ie6 fix for float margin bug */
+/*
+* html .jqxs ul, 
+* html .jqxs div{
+	margin:4px 2px;
+}
+*/
+
+.jqxs ul{
+	border-top:2px solid gray;
+	border-left:2px solid gray;
+	border-bottom:2px solid silver;
+	border-right:2px solid silver;
+	overflow: auto;
+}
+
+.jqxs ul, 
+.jqxs li {
+	padding:0;
+	list-style:none;
+	text-indent:0;
+}
+
+.jqxs li {
+	padding: 0 2px;
+	color:black;
+	background:white;
+	margin:0;
+	cursor: pointer;
+	overflow:hidden;
+}
+
+.jqxs li span {
+	display:none;
+}
+
+.jqxs_optionsList li.jqxs_selected{
+	display:none;
+} 
+
+.jqxs li.jqxs_focused {
+	color:white; 
+	background:navy;
+}
+
+.jqxs input {
+	width:90px;
+	display:block;
+}
+
+/* not used in default style, but useful for applying custom button designs */
+.jqxs input.jqxs_active{}
+/** CrossSelect styling end **/
+
+
+
+/** Datepicker **/
+/* Default styling for jQuery Datepicker v4.0.5. */
+.datepick {
+	background-color: #fff;
+	color: #000;
+	border: 1px solid #444;
+    border-radius: 0.25em;
+    -moz-border-radius: 0.25em;
+    -webkit-border-radius: 0.25em;
+	font-family: Arial,Helvetica,Sans-serif;
+	font-size: 90%;
+}
+.datepick-rtl {
+	direction: rtl;
+}
+.datepick-popup {
+	z-index: 1000;
+}
+.datepick-disable {
+	position: absolute;
+	z-index: 100;
+	background-color: white;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+}
+.datepick a {
+	color: #fff;
+	text-decoration: none;
+}
+.datepick a.datepick-disabled {
+	color: #888;
+	cursor: auto;
+}
+.datepick button {
+    margin: 0.25em;
+    padding: 0.125em 0em;
+    background-color: #fcc;
+    border: none;
+    border-radius: 0.25em;
+    -moz-border-radius: 0.25em;
+    -webkit-border-radius: 0.25em;
+    font-weight: bold;
+}
+.datepick-nav, .datepick-ctrl {
+	float: left;
+	width: 100%;
+	background-color: #000;
+	color: #fff;
+	font-size: 90%;
+	font-weight: bold;
+}
+.datepick-ctrl {
+	background-color: #600;
+}
+.datepick-cmd {
+	width: 30%;
+}
+.datepick-cmd:hover {
+	background-color: #777;
+}
+.datepick-ctrl .datepick-cmd:hover {
+	background-color: #f08080;
+}
+.datepick-cmd-prevJump, .datepick-cmd-nextJump {
+	width: 8%;
+}
+a.datepick-cmd {
+	height: 1.5em;
+}
+button.datepick-cmd {
+	text-align: center;
+}
+.datepick-cmd-prev, .datepick-cmd-prevJump, .datepick-cmd-clear {
+	float: left;
+	padding-left: 2%;
+}
+.datepick-cmd-current, .datepick-cmd-today {
+	float: left;
+	width: 35%;
+	text-align: center;
+}
+.datepick-cmd-next, .datepick-cmd-nextJump, .datepick-cmd-close {
+	float: right;
+	padding-right: 2%;
+	text-align: right;
+}
+.datepick-rtl .datepick-cmd-prev, .datepick-rtl .datepick-cmd-prevJump,
+.datepick-rtl .datepick-cmd-clear {
+	float: right;
+	padding-left: 0%;
+	padding-right: 2%;
+	text-align: right;
+}
+.datepick-rtl .datepick-cmd-current, .datepick-rtl .datepick-cmd-today {
+	float: right;
+}
+.datepick-rtl .datepick-cmd-next, .datepick-rtl .datepick-cmd-nextJump,
+.datepick-rtl .datepick-cmd-close {
+	float: left;
+	padding-left: 2%;
+	padding-right: 0%;
+	text-align: left;
+}
+.datepick-month-nav {
+	float: left;
+	background-color: #777;
+	text-align: center;
+}
+.datepick-month-nav div {
+	float: left;
+	width: 12.5%;
+	margin: 1%;
+	padding: 1%;
+}
+.datepick-month-nav span {
+	color: #888;
+}
+.datepick-month-row {
+	clear: left;
+}
+.datepick-month {
+	float: left;
+	width: 15em;
+	border: 1px solid #444;
+	text-align: center;
+}
+
+.datepick-month-header,
+.datepick-month-header select,
+.datepick-month-header input {
+	height: 1.5em;
+	background-color: #444;
+	color: #fff;
+	font-weight: bold;
+}
+
+.datepick-month-header select,
+.datepick-month-header input {
+	height: 1.4em;
+	border: none;
+}
+.datepick-month-header input {
+	position: absolute;
+	display: none;
+}
+.datepick-month table {
+	width: 100%;
+	border-collapse: collapse;
+}
+.datepick-month thead {
+	border-bottom: 1px solid #aaa;
+}
+.datepick-month th, .datepick-month td {
+	margin: 0em;
+	padding: 0em;
+	font-weight: normal;
+	text-align: center;
+}
+.datepick-month th {
+	border: 1px solid #777;
+}
+.datepick-month th, .datepick-month th a {
+	background-color: #777;
+	color: #fff;
+}
+.datepick-month td {
+	background-color: #eee;
+	border: 1px solid #aaa;
+}
+.datepick-month td.datepick-week {
+	border: 1px solid #777;
+}
+.datepick-month td.datepick-week * {
+	background-color: #777;
+	color: #fff;
+	border: none;
+}
+.datepick-month a {
+	display: block;
+	width: 100%;
+	padding: 0.125em 0em;
+	background-color: #eee;
+	color: #000;
+	text-decoration: none;
+}
+.datepick-month span {
+	display: block;
+	width: 100%;
+	padding: 0.125em 0em;
+}
+.datepick-month td span {
+	color: #888;
+}
+.datepick-month td .datepick-other-month {
+	background-color: #fff;
+}
+.datepick-month td .datepick-weekend {
+	background-color: #ddd;
+}
+.datepick-month td .datepick-today {
+	background-color: #f0c0c0;
+}
+.datepick-month td .datepick-highlight {
+	background-color: #f08080;
+}
+.datepick-month td .datepick-selected {
+	background-color: #777;
+	color: #fff;
+}
+.datepick-month th.datepick-week {
+	background-color: #777;
+	color: #fff;
+}
+.datepick-status {
+	clear: both;
+	background-color: #ddd;
+	text-align: center;
+}
+.datepick-clear-fix {
+	clear: both;
+}
+.datepick-cover {
+	display: none;
+	display/**/: block;
+	position: absolute;
+	z-index: -1;
+	filter: mask();
+	top: -1px;
+	left: -1px;
+	width: 100px;
+	height: 100px;
+}
+
+.f_dp {
+	background-color:#fff;
+}
+.datepick-popup .f_dp {
+	margin-top:6px;
+}
+
+.f_dp .datepick-cmd{
+	background:transparent url("/gfx/grd/common/form/sprite_form.png") no-repeat -1000px -1000px;
+	position:absolute;
+	top:0;
+	height:18px;
+	width:18px;
+	display:block;
+	text-indent:9999px;
+	padding-right:0;
+	overflow:hidden;
+}
+
+.f_dp_header{
+	position:relative;
+}
+
+.f_dp .datepick-month table{
+	margin-bottom:12px;
+}
+
+.f_dp .f_dp_header a.datepick-cmd-next{
+	background-position:-115px 0;
+	right:0;
+	
+}
+.f_dp .f_dp_header a.datepick-cmd-prev{
+	background-position:-115px -20px;
+}
+
+.f_dp .f_dp_month{
+	float:left;
+}
+
+.f_dp .g_block_txt.f_dp_content{
+	margin:0 !important;
+	width:400px;
+}
+
+.f_dp .datepick-month{
+	border:0;
+	margin-left:18px;
+	margin-right:13px;
+}
+
+.f_dp .datepick-month-row{
+	float:left;
+}
+
+.f_dp .datepick-month.last .datepick-month-header{
+	padding-left:0;
+	padding-right:31px;
+	text-align:right;
+}
+
+.f_dp .datepick-month-header{
+	background-color:#fff;
+	color:#192228;
+	height:2em;
+	line-height:1.7em;
+	text-align:left;
+	padding-left:31px;
+	margin-bottom:3px;
+}
+.f_dp .f_dp_month td,
+.f_dp .f_dp_month th{
+	border:1px solid #c0c0c0;
+}
+
+.f_dp .datepick-month th,
+.f_dp .datepick-month td{
+	border:1px solid #ececec;
+	background-color:#fff;
+	color:#192228;
+}
+
+.f_dp .datepick-month th{
+	padding:2px 4px;
+}
+
+.f_dp .datepick-month td{
+	text-align:right;
+}
+
+.f_dp .datepick-month th a,
+.f_dp .datepick-month td a{
+	background-color:#fff;
+	color:#192228;
+	padding:2px 4px;
+	width:auto;
+	
+}
+.f_dp .datepick-month td .datepick-other-month{
+	color:#b9c2c7;
+}
+
+.f_dp .datepick-month td .datepick-selected{
+	background:#5bb8d6 url("/gfx/grd/common/form/datepicker_bg.png") repeat-x 0 100%;
+	color:#fff;
+}

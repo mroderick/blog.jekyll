@@ -1,0 +1,121 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>	   <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>	   <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Introducing FailFast, a JavaScript library for failure | roderick.dk</title>
+		
+		<meta name="author" content="Morgan Roderick" />
+
+		<!-- Mobile viewport optimized: j.mp/bplateviewport -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- CSS: implied media="all" -->
+		<link rel="stylesheet" href="/stylesheets/style.css?v=2" />
+
+		<!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+	</head>
+	<body>
+	  <div id="container">
+		<header>
+			<a href="/" class="home">roderick.dk</a>
+			<ul class="nav">
+				<li><a href="/">Blog</a></li>
+				<li><a href="/archives.html">Archives</a></li>
+				<li><a href="/about/">About</a></li>
+				<li><a href="/contact/">Contact</a></li>
+			</ul>
+			<a href="/atom.xml" class="feed">Subscribe to the feed</a>
+		</header>
+		<div id="main" role="main">
+			<div class="article">
+	<article>
+		<h1>Introducing FailFast, a JavaScript library for failure</h1>
+		<p>Tomorrow I will be attending <a href='http://2010.dconstruct.org/'>dConstruct 2010</a>, which I am very excited about. I flew in a day early, so I could get some time to enjoy Brighton. One of the first stops has been <a href='http://theskiff.org/'>The Skiff</a>, &#8220;a nice little place to work in the middle of Brighton&#8221;.</p>
+
+<p>The Skiff is indeed a very nice place: very few interruptions and very friendly people. While sitting at my visitors desk, I&#8217;ve managed to finally finish a little JavaScript library, that has been a very long time in the making: <a href='http://github.com/mroderick/FailFast'>FailFast</a>. All it took was tidying up the documentation and writing the last few missing unit tests.</p>
+
+<h2 id='the_idea_behind_failfast'>The idea behind FailFast</h2>
+
+<p>The goal of FailFast is to help you provide immediate and visible failure.</p>
+
+<blockquote>
+<p>Failfast refers to a lightweight form of FaultTolerance, whereby an application or system service terminates itself immediately upon encountering an error. This is done upon encountering an error so serious that it is possible that the process state is corrupt or inconsistent, and immediate exit is the best way to ensure that no (more) damage is done. Common errors that cause failfast include access violations and numeric exceptions, but may also involve internal consistency checks. This is an easy way to increase the reliability and predictability of a system.</p>
+</blockquote>
+
+<p>I&#8217;ve been working on FailFast as a library for a few years now (yeah, I know), but the ideas are far from new. These are some of the resources that have influenced me to write this little library.</p>
+
+<ul>
+<li><a href='http://martinfowler.com/ieeeSoftware/failFast.pdf'>Fail Fast by Jim Shore</a></li>
+
+<li><a href='http://www.c2.com/cgi/wiki?FailFast'>Failfast on C2 wiki</a></li>
+
+<li><a href='http://en.wikipedia.org/wiki/Fail-fast'>Fail-fast on Wikipedia</a></li>
+</ul>
+
+<h2 id='how_to_use_failfast'>How to use FailFast</h2>
+
+<p>As with most programming practices, using a library such as FailFast, you should strive keep your code expressive and must consider future maintenance of the system you&#8217;re building. Just as with writing unit tests, if you go completely overboard and test everything you can possibly think of into minute detail, you will find yourself with some very <em>in</em>-flexible code that will resist your best refactoring efforts.</p>
+
+<p>As a rule of thumb, I use FailFast to give precise and early feedback on failures when working with other developers (or just future-me, who thinks that past-me is somewhat retarded).</p>
+
+<p>You could use it for all the public methods of a library, or even just a component of a system, where other developers might not have in-depth understanding of the underlying complexities or external dependencies. By building an abraction to an underlying system, you should also protect the users of that abstraction from the weird errors it might produce.</p>
+
+<p>Let&#8217;s get you started with writing (fast) failing code!</p>
+<div class='highlight'><pre><code class='javascript'><span class='kd'>function</span> <span class='nx'>divide</span><span class='p'>(</span> <span class='nx'>dividend</span><span class='p'>,</span> <span class='nx'>divisor</span> <span class='p'>){</span>
+    <span class='nx'>FailFast</span><span class='p'>.</span><span class='nx'>assertNumber</span><span class='p'>(</span> <span class='nx'>dividend</span><span class='p'>,</span> <span class='s1'>&#39;divide: you must pass a number as the &quot;dividend&quot; argument&#39;</span> <span class='p'>);</span>
+    <span class='nx'>FailFast</span><span class='p'>.</span><span class='nx'>assertNumber</span><span class='p'>(</span> <span class='nx'>divisor</span><span class='p'>,</span> <span class='s1'>&#39;divide: you must pass a number as the &quot;divisor&quot; argument&#39;</span> <span class='p'>);</span>
+    <span class='nx'>FailFast</span><span class='p'>.</span><span class='nx'>assert</span><span class='p'>(</span> <span class='nx'>divisor</span> <span class='o'>!==</span> <span class='mi'>0</span><span class='p'>,</span> <span class='s1'>&#39;divide: cannot divide with a divisor of zero&#39;</span> <span class='p'>);</span>
+    <span class='k'>return</span> <span class='nx'>dividend</span> <span class='o'>/</span> <span class='nx'>divisor</span><span class='p'>;</span>
+<span class='p'>}</span>
+
+<span class='nx'>divide</span><span class='p'>(</span> <span class='s2'>&quot;1&quot;</span><span class='p'>,</span> <span class='mi'>2</span> <span class='p'>)</span> <span class='c1'>// will throw exception</span>
+<span class='nx'>divide</span><span class='p'>(</span> <span class='mi'>1</span><span class='p'>,</span> <span class='mi'>0</span> <span class='p'>)</span> <span class='c1'>// will throw exception</span>
+<span class='nx'>divide</span><span class='p'>(</span> <span class='mi'>1</span><span class='p'>,</span> <span class='mi'>2</span> <span class='p'>)</span> <span class='c1'>// will return 0.5</span>
+</code></pre>
+</div>
+<p>Our <code>divide</code> function will free us from unusable error messages and long stack traces, by throwing errors whenever bad input values are being passed. If a console (like Firebug, Safari, Chrome) is available, the error will also be logged to the console.</p>
+
+<p>FailFast has a number of different assertions to help us write better code:</p>
+<div class='highlight'><pre><code class='javascript'><span class='nx'>assert</span> <span class='o'>:</span> <span class='kd'>function</span><span class='p'>(</span> <span class='nx'>exp</span><span class='p'>,</span> <span class='nx'>msg</span> <span class='p'>)</span>
+<span class='nx'>assertBoolean</span> <span class='o'>:</span> <span class='kd'>function</span><span class='p'>(</span> <span class='nx'>exp</span><span class='p'>,</span> <span class='nx'>msg</span> <span class='p'>)</span>
+<span class='nx'>assertNotNull</span> <span class='o'>:</span> <span class='kd'>function</span><span class='p'>(</span> <span class='nx'>exp</span><span class='p'>,</span> <span class='nx'>msg</span> <span class='p'>)</span>
+<span class='nx'>assertNumber</span> <span class='o'>:</span> <span class='kd'>function</span> <span class='p'>(</span> <span class='nx'>exp</span><span class='p'>,</span> <span class='nx'>msg</span> <span class='p'>)</span>
+<span class='nx'>assertNormalNumber</span> <span class='o'>:</span> <span class='kd'>function</span><span class='p'>(</span> <span class='nx'>exp</span><span class='p'>,</span> <span class='nx'>msg</span> <span class='p'>)</span>
+<span class='nx'>assertObject</span> <span class='o'>:</span> <span class='kd'>function</span><span class='p'>(</span> <span class='nx'>exp</span><span class='p'>,</span> <span class='nx'>msg</span> <span class='p'>)</span>
+<span class='nx'>assertInstanceOf</span> <span class='o'>:</span> <span class='kd'>function</span> <span class='p'>(</span> <span class='nx'>klass</span><span class='p'>,</span> <span class='nx'>exp</span><span class='p'>,</span> <span class='nx'>msg</span> <span class='p'>)</span>
+<span class='nx'>assertHasProperty</span> <span class='o'>:</span> <span class='kd'>function</span><span class='p'>(</span> <span class='nx'>object</span><span class='p'>,</span> <span class='nx'>propertyName</span><span class='p'>,</span> <span class='nx'>msg</span> <span class='p'>)</span>
+<span class='nx'>assertString</span> <span class='o'>:</span> <span class='kd'>function</span><span class='p'>(</span> <span class='nx'>exp</span><span class='p'>,</span> <span class='nx'>msg</span> <span class='p'>)</span>
+<span class='nx'>assertArray</span> <span class='o'>:</span> <span class='kd'>function</span><span class='p'>(</span> <span class='nx'>exp</span><span class='p'>,</span> <span class='nx'>msg</span> <span class='p'>)</span>
+<span class='nx'>assertFunction</span> <span class='o'>:</span> <span class='kd'>function</span><span class='p'>(</span> <span class='nx'>exp</span><span class='p'>,</span> <span class='nx'>msg</span> <span class='p'>)</span>
+</code></pre>
+</div>
+<p>Most of these are really just convinience wrappers for the <code>assert</code> function, but they do help make the code that uses FailFast much more expressive.</p>
+
+<h2 id='get_involved'>Get involved</h2>
+
+<p>If you find flaws, or have ideas for improving FailFast, please fork the repository on GitHub and get involved.</p>
+		
+		
+	</article>
+</div>
+		</div>
+		<footer>
+			&copy;Morgan Roderick, unless otherwise noted.
+		</footer>
+	  </div>
+
+	  <!-- mathiasbynens.be/notes/async-analytics-snippet Change UA-XXXXX-X to be your site's ID -->
+	  <script>
+		var _gaq=[["_setAccount","UA-869742-1"],["_trackPageview"]];
+		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+		g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+		s.parentNode.insertBefore(g,s)}(document,"script"));
+	  </script>
+	</body>
+</html>

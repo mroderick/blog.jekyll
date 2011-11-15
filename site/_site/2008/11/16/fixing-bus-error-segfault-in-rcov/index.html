@@ -1,0 +1,78 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>	   <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>	   <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Fixing Bus Error / Segfault in Rcov | roderick.dk</title>
+		
+		<meta name="author" content="Morgan Roderick" />
+
+		<!-- Mobile viewport optimized: j.mp/bplateviewport -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- CSS: implied media="all" -->
+		<link rel="stylesheet" href="/stylesheets/style.css?v=2" />
+
+		<!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+	</head>
+	<body>
+	  <div id="container">
+		<header>
+			<a href="/" class="home">roderick.dk</a>
+			<ul class="nav">
+				<li><a href="/">Blog</a></li>
+				<li><a href="/archives.html">Archives</a></li>
+				<li><a href="/about/">About</a></li>
+				<li><a href="/contact/">Contact</a></li>
+			</ul>
+			<a href="/atom.xml" class="feed">Subscribe to the feed</a>
+		</header>
+		<div id="main" role="main">
+			<div class="article">
+	<article>
+		<h1>Fixing Bus Error / Segfault in Rcov</h1>
+		<p>We have recently run into problems with &#8220;rcov&#8221;:http://eigenclass.org/hiki/rcov crashing with seemingly random errors, like</p>
+<div class='highlight'><pre><code class='bash'>/Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/core_ext/symbol.rb:11: <span class='o'>[</span>BUG<span class='o'>]</span> Bus Error ruby 1.8.6 <span class='o'>(</span>2008-03-03<span class='o'>)</span> <span class='o'>[</span>universal-darwin9.0<span class='o'>]</span>
+</code></pre>
+</div>
+<p>Having CruiseControl.rb suddenly claim that all builds are broken, get&#8217;s to be very annoying. Working on a large project without coverage reports is just not the same, once you get hooked on thoroughly testing the application you&#8217;re working on.</p>
+
+<p>After some hunting around on Google, it turns out that <a href='http://eigenclass.org/hiki/rcov-0.8.1'>others</a> have run into <a href='http://rspec.lighthouseapp.com/projects/5645/tickets/309-fix-for-rcov-segfault'>similar problems</a>.</p>
+
+<p>Chad Humphries has kindly put together a <a href='http://github.com/spicycode/rcov/tree/master'>replacement rcov gem (spicycode-rcov)</a> to use, while we wait for <a href='http://eigenclass.org/hiki/rcov'>the original rcov</a> to be updated.</p>
+
+<p>To use the spicycode-rcov gem, you must first get rid of your old rcov gem:</p>
+<div class='highlight'><pre><code class='bash'>  sudo gem uninstall rcov
+</code></pre>
+</div>
+<p>And then just install spicycode-rcov</p>
+<div class='highlight'><pre><code class='bash'>  sudo gem install spicycode-rcov
+</code></pre>
+</div>
+<p>The requirements for building spicycode-rcov should be the same as building the original rcov, so if you got that working already, you should have no problems.</p>
+
+<p>This was originally posted by me on the Gazebo blog at 2008-11-16 at 07:36. That blog is no longer updated, so I have moved the post here.</p>
+		
+		
+	</article>
+</div>
+		</div>
+		<footer>
+			&copy;Morgan Roderick, unless otherwise noted.
+		</footer>
+	  </div>
+
+	  <!-- mathiasbynens.be/notes/async-analytics-snippet Change UA-XXXXX-X to be your site's ID -->
+	  <script>
+		var _gaq=[["_setAccount","UA-869742-1"],["_trackPageview"]];
+		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+		g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+		s.parentNode.insertBefore(g,s)}(document,"script"));
+	  </script>
+	</body>
+</html>

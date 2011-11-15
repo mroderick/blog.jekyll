@@ -1,0 +1,94 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>	   <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>	   <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>How to create un-indexable content for missing javascript warnings | roderick.dk</title>
+		
+		<meta name="author" content="Morgan Roderick" />
+
+		<!-- Mobile viewport optimized: j.mp/bplateviewport -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- CSS: implied media="all" -->
+		<link rel="stylesheet" href="/stylesheets/style.css?v=2" />
+
+		<!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+	</head>
+	<body>
+	  <div id="container">
+		<header>
+			<a href="/" class="home">roderick.dk</a>
+			<ul class="nav">
+				<li><a href="/">Blog</a></li>
+				<li><a href="/archives.html">Archives</a></li>
+				<li><a href="/about/">About</a></li>
+				<li><a href="/contact/">Contact</a></li>
+			</ul>
+			<a href="/atom.xml" class="feed">Subscribe to the feed</a>
+		</header>
+		<div id="main" role="main">
+			<div class="article">
+	<article>
+		<h1>How to create un-indexable content for missing javascript warnings</h1>
+		<p>At Gazebo we love to use unobtrusive enhancement to make our solutions available to the biggest possible audience, and greatly improve the experience for users with sophisticated user-agents.</p>
+
+<p>This usually means:</p>
+
+<ul>
+<li>Create semantic, valid markup, which can be read by any browser, including phones</li>
+
+<li>Add styling via CSS, to make it look nice in modern, sophisticated browsers</li>
+
+<li>Sprinkle a little javascript, to make it all <em>behave</em> nicely for supported user-agents</li>
+</ul>
+
+<p>To control decoration, when javascript IS available, I usually add <code>js-enabled</code> or something similar to the classname of the <code>&lt;body&gt;</code> element. This allows me differentiate the styling of widgets for when javascript is available, and allows a controlled fallback decoration, for when it is not.</p>
+
+<p>This is all nice and dandy, but sometimes javascript IS a fundamental requirement of your application, and then it&#8217;s a whole different mess of issues. This post will give you the details on how to deal with one of these issues.</p>
+
+<h2 id='avoiding_getting_your_warnings_indexed_by_search_engines'>Avoiding getting your warnings indexed by search engines</h2>
+
+<p>One project we&#8217;re currently working on, is entirely depending on javascript to allow the user interaction with the application. Because of this requirement, we wanted to play nice, and tell users without javascript, that it is a requirement to use the web app.</p>
+
+<p>But, and here&#8217;s the kicker, I didn&#8217;t want every page on the site indexed by Google to have a big fat warning, telling users to go elsewhere.</p>
+
+<p>So, how does one go about providing users with nice friendly warnings, without spamming the search engine indexes with useless warnings, that say absolutely nothing about your site?</p>
+
+<p>So far, the only solution I have been able to come up with is this:</p>
+
+<ul>
+<li>Add a &#60;noscript&#62; element to the page to contain the warning(s). This takes care of the visiblity problems, as it is only visible to users without javascript. But unfortunately, search engines will still index it as regular content.</li>
+
+<li>To prevent indexing, place the content in a separate file, and load that file using an iframe inside the noscript tag, thus: <code>&lt;noscript&gt;&lt;iframe src=&quot;fancy-javascript-required-warning.html&quot; /&gt;&lt;/noscript&gt;</code></li>
+
+<li>Lastly, don&#8217;t forget to modify your robots.txt to make sure search engines will know to exclude the warning message from the index</li>
+</ul>
+
+<p>And that&#8217;s it &#8230; you can now create nice, user-friendly warnings about javascript being a requirements for your application, without ruining your SEO efforts :-)</p>
+
+<p>This a repost from the Gazebo blog, as it is no longer maintained, and I didn&#8217;t want my posts from that blog to disappear.</p>
+		
+		
+	</article>
+</div>
+		</div>
+		<footer>
+			&copy;Morgan Roderick, unless otherwise noted.
+		</footer>
+	  </div>
+
+	  <!-- mathiasbynens.be/notes/async-analytics-snippet Change UA-XXXXX-X to be your site's ID -->
+	  <script>
+		var _gaq=[["_setAccount","UA-869742-1"],["_trackPageview"]];
+		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+		g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+		s.parentNode.insertBefore(g,s)}(document,"script"));
+	  </script>
+	</body>
+</html>

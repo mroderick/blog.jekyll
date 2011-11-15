@@ -1,0 +1,109 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>	   <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>	   <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Reclaim Disk Space From Safari 4 | roderick.dk</title>
+		
+		<meta name="author" content="Morgan Roderick" />
+
+		<!-- Mobile viewport optimized: j.mp/bplateviewport -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- CSS: implied media="all" -->
+		<link rel="stylesheet" href="/stylesheets/style.css?v=2" />
+
+		<!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+	</head>
+	<body>
+	  <div id="container">
+		<header>
+			<a href="/" class="home">roderick.dk</a>
+			<ul class="nav">
+				<li><a href="/">Blog</a></li>
+				<li><a href="/archives.html">Archives</a></li>
+				<li><a href="/about/">About</a></li>
+				<li><a href="/contact/">Contact</a></li>
+			</ul>
+			<a href="/atom.xml" class="feed">Subscribe to the feed</a>
+		</header>
+		<div id="main" role="main">
+			<div class="article">
+	<article>
+		<h1>Reclaim Disk Space From Safari 4</h1>
+		<p>Having a MacBook Pro that seems to be continually low on disk space, I set out to tidy up a bit using the <a href='http://www.omnigroup.com/applications/omnidisksweeper/'>excellent and free OmniDiskSweeper</a>. It will help you identify where all your disk space is going. Use with caution though, and always have a recent backup.</p>
+
+<p>After tidying up all over the file system, I noticed that the Safari cache was enourmous &#8230; 1.2GB in my case. Further investigation revealed that most of that space was taken up by Webpage Previews, used by the top sites feature in Safari 4. As I don&#8217;t care for that feature, I have disabled it with the following command</p>
+<div class='highlight'><pre><code class='bash'><span class='nv'>$ </span>defaults write com.apple.Safari DebugSafari4IncludeTopSites -bool NO
+</code></pre>
+</div>
+<p>But, that doesn&#8217;t prevent Safari 4 from writing a lot of files into the filesystem. So either I would have to remove them manually at intervals &#8230; but most developers prefer to automate trivial tasks.</p>
+
+<h2 id='enter_scripting'>Enter scripting</h2>
+
+<p>OS X has excellent support for creating your own scripts and will allow you to do pretty much everything using the terminal, including creating your own scripts.</p>
+
+<p>So, to remove all the unwanted files from the filesystem, I created the following script, which I named <code>remove_webpage_previews</code></p>
+<div class='highlight'><pre><code class='bash'><span class='c'>#!/bin/bash</span>
+find ~/Library/Caches/com.apple.Safari/Webpage<span class='se'>\ </span>Previews -mtime +1 -and -not -type d -delete
+</code></pre>
+</div>
+<p>It finds all non-directory entries in the Webpage Previews folder with a modification time greater than one day. If you like using the top sites feature, you might want to use something like 14-30 days.</p>
+
+<p>I keep scripts such as these in <code>~/bin</code>, but you may keep them elsewhere.</p>
+
+<p>To make the script executable, you need to set it as executable in the filesystem using the following command:</p>
+<div class='highlight'><pre><code class='bash'><span class='nv'>$ </span>chmod +x ~/bin/remove_webpage_previews
+</code></pre>
+</div>
+<h3 id='testing_the_script'>Testing the script</h3>
+
+<p>First, measure how much space is currently being taken up by webpage previews</p>
+<div class='highlight'><pre><code class='bash'><span class='nv'>$ </span>du -h ~/Library/Caches/com.apple.Safari/Webpage<span class='se'>\ </span>Previews
+867M
+</code></pre>
+</div>
+<p>Run the cleanup script, this might take up to a few minutes to execute, if you have many files &#8230; I had a few thousand to begin with.</p>
+<div class='highlight'><pre><code class='bash'><span class='nv'>$ </span>bin/remove_webpage_previews
+</code></pre>
+</div>
+<p>Measure again, hopefully you should see a difference</p>
+<div class='highlight'><pre><code class='bash'><span class='nv'>$ </span>du -h ~/Library/Caches/com.apple.Safari/Webpage<span class='se'>\ </span>Previews
+252M
+</code></pre>
+</div>
+<h2 id='automation__enter_lingon'>Automation - Enter Lingon</h2>
+
+<p>If your script is succesful, you should register it with <code>launchd</code>, and have it run automatically at intervals.</p>
+
+<p>For this purpose, I use the very nice tool <a href='http://tuppis.com/lingon/'>Lingon</a> by Peter Borg.</p>
+
+<p>I&#8217;ve set up my script to run every 6 hours, when I am logged in.</p>
+
+<p><img src='/images/lingon-remove-webpage-previews.png' alt='Lingon Remove Webpage Previews' /></p>
+
+<p>That is it, your computer will now automatically cleanup webpage previews, and your disk won&#8217;t fill up as fast :-)</p>
+		
+		
+	</article>
+</div>
+		</div>
+		<footer>
+			&copy;Morgan Roderick, unless otherwise noted.
+		</footer>
+	  </div>
+
+	  <!-- mathiasbynens.be/notes/async-analytics-snippet Change UA-XXXXX-X to be your site's ID -->
+	  <script>
+		var _gaq=[["_setAccount","UA-869742-1"],["_trackPageview"]];
+		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+		g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+		s.parentNode.insertBefore(g,s)}(document,"script"));
+	  </script>
+	</body>
+</html>

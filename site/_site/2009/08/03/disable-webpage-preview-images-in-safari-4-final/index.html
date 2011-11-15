@@ -1,0 +1,99 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>	   <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>	   <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Disable Webpage Preview Images in Safari 4 Final | roderick.dk</title>
+		
+		<meta name="author" content="Morgan Roderick" />
+
+		<!-- Mobile viewport optimized: j.mp/bplateviewport -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- CSS: implied media="all" -->
+		<link rel="stylesheet" href="/stylesheets/style.css?v=2" />
+
+		<!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+	</head>
+	<body>
+	  <div id="container">
+		<header>
+			<a href="/" class="home">roderick.dk</a>
+			<ul class="nav">
+				<li><a href="/">Blog</a></li>
+				<li><a href="/archives.html">Archives</a></li>
+				<li><a href="/about/">About</a></li>
+				<li><a href="/contact/">Contact</a></li>
+			</ul>
+			<a href="/atom.xml" class="feed">Subscribe to the feed</a>
+		</header>
+		<div id="main" role="main">
+			<div class="article">
+	<article>
+		<h1>Disable Webpage Preview Images in Safari 4 Final</h1>
+		<p>I&#8217;ve finally managed to switch off the final remnant of the Top Sites feature in Safari 4, the automatic generation of &#8216;Webpage Previews&#8217;</p>
+
+<p>I&#8217;ve previously written about how to <a href='http://roderick.dk/blog/2009/07/02/reclaim-disk-space-from-safari-4/'>Reclaim Disk Space From Safari 4</a>, where I detailed how to set up a job to cleanup the Webpage Previews cache folder.</p>
+
+<p>Luckily, that exercise has now become obsolete, thanks to reports on several sites, which I can&#8217;t remember.</p>
+
+<p>Below are listed the Terminal commands to verify disk use and apply the changes to Safari.</p>
+
+<h2 id='verify_size_of_folder'>Verify size of folder</h2>
+
+<p>To make sure that our fix is in fact working, let&#8217;s measure the current size of the folder.</p>
+<div class='highlight'><pre><code class='bash'><span class='nv'>$ </span>du -h ~/Library/Caches/com.apple.Safari/Webpage<span class='se'>\ </span>Previews
+248M    /Users/morgan/Library/Caches/com.apple.Safari/Webpage Previews
+</code></pre>
+</div>
+<p>Then let&#8217;s empty the folder</p>
+<div class='highlight'><pre><code class='bash'><span class='nv'>$ </span>rm ~/Library/Caches/com.apple.Safari/Webpage<span class='se'>\ </span>Previews/*
+</code></pre>
+</div>
+<p>And let&#8217;s verify that the folder is indeed empty.</p>
+<div class='highlight'><pre><code class='bash'><span class='nv'>$ </span>du -h ~/Library/Caches/com.apple.Safari/Webpage<span class='se'>\ </span>Previews
+0B    /Users/morgan/Library/Caches/com.apple.Safari/Webpage Previews
+</code></pre>
+</div>
+<h2 id='apply_fix'>Apply fix</h2>
+
+<p>Apply the following fix to disable generation of Webpage Preview images.</p>
+<div class='highlight'><pre><code class='bash'><span class='nv'>$ </span>defaults write com.apple.Safari DebugSnapshotsUpdatePolicy -int 2
+</code></pre>
+</div>
+<p>And don&#8217;t forget to restart Safari (so, I suggest you bookmark this page)</p>
+
+<h2 id='verify_fix'>Verify fix</h2>
+
+<p>Browse around to your favorite websites for awhile, and then just re-run the command to measure disk use.</p>
+<div class='highlight'><pre><code class='bash'><span class='nv'>$ </span>du -h ~/Library/Caches/com.apple.Safari/Webpage<span class='se'>\ </span>Previews
+0B    /Users/morgan/Library/Caches/com.apple.Safari/Webpage Previews
+</code></pre>
+</div>
+<p>The fix has been applied and tested with Safari 4.0.2 on OS X Leopard.</p>
+
+<p>Please report successes and failures in the comments.</p>
+		
+		
+	</article>
+</div>
+		</div>
+		<footer>
+			&copy;Morgan Roderick, unless otherwise noted.
+		</footer>
+	  </div>
+
+	  <!-- mathiasbynens.be/notes/async-analytics-snippet Change UA-XXXXX-X to be your site's ID -->
+	  <script>
+		var _gaq=[["_setAccount","UA-869742-1"],["_trackPageview"]];
+		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+		g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+		s.parentNode.insertBefore(g,s)}(document,"script"));
+	  </script>
+	</body>
+</html>
