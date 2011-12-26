@@ -10,7 +10,7 @@ Vagrant::Config.run do |config|
   
   # Forward guest port 4000 to host port 4000 and name the mapping "jekyll"
   config.vm.forward_port("jekyll", 4000, 4000)
-  config.vm.forward_port("nginx", 80, 8080)
+  config.vm.forward_port("apache2", 80, 8080)
     
   # Enable and configure the chef solo provisioner
   config.vm.provision :chef_solo do |chef|
