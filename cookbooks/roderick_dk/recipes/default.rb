@@ -1,3 +1,7 @@
+# apt is needed for most recipes
+require_recipe "apt"
+require_recipe "build-essential"
+
 directory "/etc/profile.d" do
     action :create
     owner "root"
@@ -36,4 +40,19 @@ easy_install_package "Pygments" do
   action :install
 end
 
-require_recipe "nginx::default"
+# apache2
+require_recipe "apache2"
+require_recipe "apache2::mod_deflate"
+require_recipe "apache2::mod_rewrite"
+
+# configure sites
+execute "disable-default-site" do
+  command "sudo a2dissite default"
+  notifies :reload, resources(:service => "apache2"), :delayed
+end
+
+web_app "roderick_dk" do
+  template "roderick_dk.conf.erb"
+  notifies :reload, resources(:service => "apache2"), :delayed
+  docroot "#{node[:vagrant][:directory]}/site/_site"
+end
