@@ -45,6 +45,8 @@ require_recipe "apache2"
 require_recipe "apache2::mod_deflate"
 require_recipe "apache2::mod_rewrite"
 require_recipe "apache2::mod_expires"
+require_recipe "apache2::mod_setenvif"
+require_recipe "apache2::mod_headers"
 
 # configure sites
 execute "disable-default-site" do
