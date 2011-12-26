@@ -183,7 +183,7 @@ body {
 
 
 
-#container header {
+#container > header {
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
     box-sizing: border-box;         /* Opera/IE 8+ */	
@@ -197,40 +197,40 @@ body {
 	background: yellow;
 }
 
-#container header .home {
-	position: absolute;
-	top: 16px;
-	left: 32px;
-	font-size: 32px;
-}
+	#container > header .home {
+		position: absolute;
+		top: 16px;
+		left: 32px;
+		font-size: 32px;
+	}
 
-#container header .feed {
-	position: absolute;
-	top: 16px;
-	right: 32px;
-}
+	#container > header .feed {
+		position: absolute;
+		top: 16px;
+		right: 32px;
+	}
  
-#container header ul.nav {
-    list-style-type: none;    
-    overflow: auto;
-    clear: both;
-	position: absolute;
-	bottom: 0;
-	right: 32px;
-}
+	#container > header ul.nav {
+	    list-style-type: none;    
+	    overflow: auto;
+	    clear: both;
+		position: absolute;
+		bottom: 0;
+		right: 32px;
+	}
 
-    #container header ul.nav li {
-        float: left;
-    }
+	    #container > header ul.nav li {
+	        float: left;
+	    }
     
-        #container header ul.nav li a {
-            display: block;
-            padding: 8px 16px;
-            background: lime;
-            margin-right: 8px;
-        }
+	        #container > header ul.nav li a {
+	            display: block;
+	            padding: 8px 16px;
+	            background: lime;
+	            margin-right: 8px;
+	        }
 
-#container #main {
+#container > #main {
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
     box-sizing: border-box;         /* Opera/IE 8+ */	
@@ -242,23 +242,40 @@ body {
 	position: relative;
 }
 
-#main p {
-    margin: 0.5em 0 1em;
+	#main p {
+	    margin: 0.5em 0 1em;
+	}
+
+	#main h1 {
+	    font-size: 2em;
+	    margin: 1.2em 0 .5em;
+	}
+	#main h2 {
+	    font-size: 1.8em;
+	    margin: 1.2em 0 .5em;
+	}
+	#main h3 {
+	    font-size: 1.6em;
+	    margin: 1.2em 0 .5em;
+	}
+
+	#main blockquote {
+		padding: 0 2em;
+		font-family: monospace;
+	}
+
+#container footer {
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */	
+
+	width: 960px;
+	padding: 32px 32px 0;
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+	color: #999;
 }
-
-#main h1 {
-    font-size: 2em;
-}
-#main h2 {
-    font-size: 1.8em;
-}
-#main h3 {
-    font-size: 1.6em;
-}
-
-
-
-
 
 
 
