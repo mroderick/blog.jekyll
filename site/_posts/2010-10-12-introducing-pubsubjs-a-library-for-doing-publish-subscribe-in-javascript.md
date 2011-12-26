@@ -19,14 +19,14 @@ It get's messy, trust me.
 
 ## So why a new library?
 
-Well, there are actually a number of reasons, that ultimately led me to look for a better way of doing publish/subscribe messaging in "JavaScript":https://developer.mozilla.org/en/JavaScript.
+Well, there are actually a number of reasons, that ultimately led me to look for a better way of doing publish/subscribe messaging in [JavaScript](https://developer.mozilla.org/en/JavaScript).
 
 I wanted something that would meet most of these requirements:
 
 * Published under a reasonable software license ( CC, MIT, BSD, Apache, WTFPL, etc)
 * All messages should be passed async be default, anything else is just confusing
 * No use of DOM (it's slow, and storing state in something you have no control over is silly)
-* Pure "JavaScript":https://developer.mozilla.org/en/JavaScript, no library dependencies
+* Pure [JavaScript](https://developer.mozilla.org/en/JavaScript), no library dependencies
 * No side-effects, jQuery modifies subscribers (adding an "id" property to the functions)
 * Should be able to run outside browsers
 * Should have up to date documentation (or at least aligned with the codebase)
@@ -75,7 +75,7 @@ No! &hellip; Well, maybe &hellip;
 
 If you're building larger web applications where you need to have loose coupling between your modules / components / widgets / whatnots, then publish/subscribe *can* be the answer you're looking for.
 
-If you happen to build larger web applications with Dojo and need publish/subscribe, then I recommend you look at the implementation that's already IN Dojo, or get in touch with "Rebecca Murphey":http://www.rebeccamurphey.com/ ;-)
+If you happen to build larger web applications with Dojo and need publish/subscribe, then I recommend you look at the implementation that's already IN Dojo, or get in touch with [Rebecca Murphey](http://www.rebeccamurphey.com/) ;-)
 
 Consider this: publish/subscribe is a bit like explosives. In the hands of thoughtful experts, you can expect to have a sky scraper demolished safely and in a reasonable time frame. In the hands of amateurs, working with explosives, you'll end up with some very noisy and messy situations when you least expect it. And sure, every once in a while, even experts make mistakes.
 
