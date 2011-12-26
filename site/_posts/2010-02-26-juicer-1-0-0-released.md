@@ -2,7 +2,6 @@
 title: Juicer 1.0.0 Released
 layout: post
 topics: juicer
-comments_disabled: false
 ---
 
 Earlier today [Christian Johansen](http://cjohansen.no/en/) pushed the button and [published Juicer v1.0.0 as a gem](http://groups.google.com/group/juicer-dev/browse_thread/thread/1ce8b35ab2ccccae).

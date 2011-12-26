@@ -2,7 +2,7 @@
 title: How to create un-indexable content for missing javascript warnings
 layout: post
 topics: javascript
-comments_disabled: true
+disable_comments: true
 ---
 
 At Gazebo we love to use unobtrusive enhancement to make our solutions available to the biggest possible audience, and greatly improve the experience for users with sophisticated user-agents.

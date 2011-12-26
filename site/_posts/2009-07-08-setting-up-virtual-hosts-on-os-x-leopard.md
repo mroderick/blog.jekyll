@@ -2,7 +2,7 @@
 title: Setting Up Virtual Hosts on OS X Leopard
 layout: post
 topics: osx
-comments_disabled: true
+disable_comments: true
 ---
 
 Working with a new client and getting back to my roots of doing pure frontend development, I had to set up a virtual host for development on my MBP.

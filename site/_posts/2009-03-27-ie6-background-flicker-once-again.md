@@ -2,7 +2,7 @@
 title: IE6 Background flicker once again
 layout: post
 topics: IE6 javascript
-comments_disabled: true
+disable_comments: true
 ---
 
 Every once in awhile you come across one of those Internet Explorer 6 issues that tries it's hardest to be really annoying. Today was one of those days with IE.

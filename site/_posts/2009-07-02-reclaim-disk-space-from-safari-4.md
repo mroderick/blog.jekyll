@@ -2,7 +2,7 @@
 title: Reclaim Disk Space From Safari 4
 layout: post
 topics: safari osx
-comments_disabled: true
+idcomments_post_id: http://roderick.dk/blog/2009/07/02/reclaim-disk-space-from-safari-4/
 ---
 
 Having a MacBook Pro that seems to be continually low on disk space, I set out to tidy up a bit using the [excellent and free OmniDiskSweeper](http://www.omnigroup.com/applications/omnidisksweeper/). It will help you identify where all your disk space is going. Use with caution though, and always have a recent backup.

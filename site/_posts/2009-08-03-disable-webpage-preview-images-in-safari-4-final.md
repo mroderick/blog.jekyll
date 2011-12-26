@@ -2,7 +2,7 @@
 title: Disable Webpage Preview Images in Safari 4 Final
 layout: post
 topics: safari osx
-comments_disabled: false
+idcomments_post_id: http://roderick.dk/blog/2009/08/03/disable-webpage-preview-images-in-safari-4-final/
 ---
 
 I've finally managed to switch off the final remnant of the Top Sites feature in Safari 4, the automatic generation of 'Webpage Previews'

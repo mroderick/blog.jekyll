@@ -2,7 +2,7 @@
 title: Fixing Bus Error / Segfault in Rcov
 layout: post
 topics: ruby coverage rcov
-comments_disabled: true
+disable_comments: true
 ---
 
 We have recently run into problems with "rcov":http://eigenclass.org/hiki/rcov crashing with seemingly random errors, like

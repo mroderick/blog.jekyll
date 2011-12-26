@@ -2,7 +2,7 @@
 title: jQuery Data Link considered harmful
 layout: post
 topics: javascript
-comments_disabled: false
+idcomments_post_id: http://roderick.dk/blog/2010/11/03/jquery-data-link-considered-harmful/
 ---
 
 "Considered harmful" has always been good link bait. 

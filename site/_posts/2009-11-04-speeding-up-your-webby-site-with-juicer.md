@@ -2,7 +2,7 @@
 title: Speeding Up Your Webby Site With Juicer
 layout: post
 topics: webby juicer css performance
-comments_disabled: false
+disable_comments: true
 ---
 
 On this blog I use several stylesheets to keep things (somewhat) organised. This allows me to upgrade my `coderay.css` file or my [Tripoli CSS](http://devkick.com/lab/tripoli/) stylesheets without having to reorganise everything.

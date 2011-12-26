@@ -2,7 +2,7 @@
 title: Introduction to Low Pro for Prototype
 layout: post
 topics: javascript
-comments_disabled: true
+idcomments_post_id: http://roderick.dk/blog/2009/05/07/introduction-to-low-pro-for-prototype/
 ---
 
 Tonight I gave a lightweight introduction to [Low Pro](http://lowprojs.com) for Prototype at the [Öresund JavaScript meetup](http://www.meetup.com/The-Oresund-JavaScript-Meetup/).

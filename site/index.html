@@ -12,7 +12,24 @@ site_section: blog
 	<div class="post_content">
 	  {{ post.content }}
 	</div>
+	
+	{% unless post.disable_comments %}
+		<script>
+		var idcomments_post_id,
+			idcomments_post_url,
+			idcomments_acct = '4f0e1cb7e445080ae75ccf48cdd0252d';
+		{% if post.idcomments_post_id %}
+			// this IS needed for links, Intense Debate documentation is incorrect
+			idcomments_post_url = "{{post.idcomments_post_id}}";
+			idcomments_post_id = "{{post.idcomments_post_id}}";
+		{% endif %}			
+		</script>
+		<script type="text/javascript" src="http://www.intensedebate.com/js/genericLinkWrapperV2.js"></script>
+	{% endunless %}	
 </div>
 {% endfor %}
 
-<a class="archives" href="/archives/">Blog archive</a>
+<hr />
+<p>
+	<a class="archives" href="/archives/">Blog archive</a>
+</p>

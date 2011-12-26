@@ -2,7 +2,7 @@
 title: LowPro Updated for Firefox 3.5
 layout: post
 topics: javascript
-comments_disabled: true
+disable_comments: true
 ---
 
 Firefox 3.5 was recently released, and offers significant updates. If you have not upgraded yet, you should [do so now](http://mozilla.org/firefox).

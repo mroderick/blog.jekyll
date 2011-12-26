@@ -2,7 +2,7 @@
 title: Installing Mercurial With Bash Completion from MacPorts
 layout: post
 topics: osx mercurial
-comments_disabled: false
+idcomments_post_id: http://roderick.dk/blog/2009/08/28/installing-mercurial-with-bash-completion/
 ---
 
 Now that Snow Leopard is out, I ran into a few issues with some of my installed ports. Upgrading them to run on the new 64-bit OS also gave me some grief.

@@ -2,7 +2,7 @@
 title: TextMate snippet for creating Low Pro Behaviors
 layout: post
 topics: textmate javascript lowpro
-comments_disabled: false
+disable_comments: true
 ---
 ## Behaviours
 

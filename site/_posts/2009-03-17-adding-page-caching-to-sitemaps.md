@@ -2,7 +2,7 @@
 title: Adding Page Caching to Sitemaps
 layout: post
 topics: rails comatose sitemap cache
-comments_disabled: true
+disable_comments: true
 ---
 
 The shortest distance between two points is not a straight line. The shortest distance is zero. Admittedly, we're not about to fold space or do time travel, but you get the idea.

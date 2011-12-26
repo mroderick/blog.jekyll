@@ -2,7 +2,7 @@
 title: Sitemaps With Webby
 layout: post
 topics: webby sitemap
-comments_disabled: true
+disable_comments: true
 ---
 
 As a followup to my two part article about [Creating Sitemaps with Comatose CMS](/2009/03/16/creating-sitemaps-with-comatose-cms/), I wanted to share with you, how I am currently implementing Sitemaps on this blog.

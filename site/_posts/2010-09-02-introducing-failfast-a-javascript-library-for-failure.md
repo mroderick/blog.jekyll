@@ -2,7 +2,7 @@
 title: Introducing FailFast, a JavaScript library for failure
 layout: post
 topics: javascript
-comments_disabled: false
+idcomments_post_id: http://roderick.dk/blog/2010/09/02/introducing-failfast-a-javascript-library-for-failure/
 ---
 
 Tomorrow I will be attending [dConstruct 2010](http://2010.dconstruct.org/), which I am very excited about. I flew in a day early, so I could get some time to enjoy Brighton. One of the first stops has been [The Skiff](http://theskiff.org/), "a nice little place to work in the middle of Brighton".
