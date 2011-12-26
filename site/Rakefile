@@ -9,6 +9,10 @@ task :build do
   jekyll '--no-server --no-auto'
 end
 
+task :auto do
+  jekyll '--no-server --auto'
+end
+
 desc 'Build and start server with --auto'
 task :server do
   jekyll '--server --auto'
