@@ -114,4 +114,4 @@ In the very same comment, John also states
 
 This seems to suggest that we can talk Resig out of actively pushing Data Link, and focus his efforts on making jQuery itself the best it can be.
 
-p. What do you think?
+What do you think?
