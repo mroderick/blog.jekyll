@@ -130,11 +130,8 @@ input:invalid, textarea:invalid {
 /* These selection declarations have to be separate
    No text-shadow: twitter.com/miketaylr/status/12228805301
    Also: hot pink! */
-::-moz-selection{ background: #FF5E99; color:#fff; text-shadow: none; }
-::selection { background:#FF5E99; color:#fff; text-shadow: none; }
-
-/* j.mp/webkit-tap-highlight-color */
-a:link { -webkit-tap-highlight-color: #FF5E99; }
+::-moz-selection{ text-shadow: none; }
+::selection { text-shadow: none; }
 
 /* Make buttons play nice in IE:
    www.viget.com/inspire/styling-the-button-element-in-internet-explorer/ */
@@ -250,6 +247,21 @@ body {
 	    font-size: 2em;
 	    margin: 1.2em 0 .5em;
 	}
+
+	#main h1 > a {
+		color: #333;
+		text-decoration: none;
+	}
+	
+ 	#main h1 > a:hover {
+		text-decoration: underline;	
+	}
+
+	#main h1 > a:hover:after {
+		color: #999;
+		content: ' #';
+	}	
+	
 	#main h2 {
 	    font-size: 1.8em;
 	    margin: 1.2em 0 .5em;
