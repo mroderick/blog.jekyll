@@ -27,5 +27,5 @@ publish
 build/buildinfo.properties
 build/config/buildinfo.properties
 
-*/_site/
+site/_site
 .vagrant
