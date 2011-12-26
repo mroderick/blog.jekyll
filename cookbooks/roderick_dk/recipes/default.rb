@@ -44,6 +44,7 @@ end
 require_recipe "apache2"
 require_recipe "apache2::mod_deflate"
 require_recipe "apache2::mod_rewrite"
+require_recipe "apache2::mod_expires"
 
 # configure sites
 execute "disable-default-site" do
