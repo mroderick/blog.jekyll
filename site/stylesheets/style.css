@@ -275,6 +275,10 @@ body {
 		padding: 0 2em;
 		font-family: monospace;
 	}
+	
+	#main #idc-container-parent {
+		margin-top: 32px;
+	}
 
 #container footer {
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
