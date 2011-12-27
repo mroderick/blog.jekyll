@@ -9,7 +9,7 @@ On Saturday 2011-07-09 I attended [Code Retreat Berlin](coderetreat-berlin.de/),
 
 For those that have not been to or heard of code retreats, let me just quickly sketch out the concept. A code retreat is a place where programmers can practice their craft and improve their collaborative skills. Just like musicians need to practice, so do programmers.
 
-The day is divided up into six sessions of 45 minutes with a little retrospective break in between, and of course a lunch break. During the sessions you pair up with another programmer, and do pair programming, working on Conway's Game of Life. Not surprisingly, the sessions were over much too quickly, just as the going was getting good.
+The day is divided up into six sessions of 45 minutes with a little retrospective break in between, and of course a lunch break. During the sessions you pair up with another programmer, and do pair programming, working on [Conway's Game of Life](http://www.conwaylife.com/wiki/Conway's_Game_of_Life). Not surprisingly, the sessions were over much too quickly, just as the going was getting good.
 
 At the end of every session, you delete the code, and only keep the learnings.
 
