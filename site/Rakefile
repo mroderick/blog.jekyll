@@ -9,6 +9,7 @@ task :build do
   jekyll '--no-server --no-auto'
 end
 
+desc 'Automatically rebuild the site when there are changes, but don\' start a server'
 task :auto do
   jekyll '--no-server --auto'
 end
