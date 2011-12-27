@@ -10,14 +10,9 @@
 			<meta name="description" content="{{page.description}}">
 		{% endif %}
 		<meta name="author" content="Morgan Roderick" />
-
-		<!-- CSS: implied media="all" -->
 		<link rel="stylesheet" href="/stylesheets/style.css" />
 		<link rel="stylesheet" href="/stylesheets/pygments.css" />
-
-		<!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-		<link rel="shortcut icon" href="/favicon.ico" />
-		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+		<link rel="alternate" type="application/atom+xml" href="http://feeds2.feedburner.com/roderick" title="Atom Feed" />
 	</head>
 	<body class="{{page.site_section}}">
 	  <div id="container">
@@ -29,7 +24,7 @@
 				<li class="about"><a href="/about/">About</a></li>
 				<li class="contact"><a href="/contact/">Contact</a></li>
 			</ul>
-			<a href="/atom.xml" class="feed">Subscribe to the feed</a>
+			<a href="http://feeds2.feedburner.com/roderick" class="feed">Subscribe to the feed</a>
 		</header>
 		<div id="main" role="main">
 			{{ content }}
@@ -38,8 +33,6 @@
 			&copy; Morgan Roderick, unless otherwise noted.
 		</footer>
 	  </div>
-
-	  <!-- mathiasbynens.be/notes/async-analytics-snippet Change UA-XXXXX-X to be your site's ID -->
 	  <script>
 		var _gaq=[["_setAccount","UA-869742-1"],["_trackPageview"]];
 		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
