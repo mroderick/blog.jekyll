@@ -21,13 +21,6 @@ end
 require_recipe "rvm::vagrant"
 require_recipe "rvm::system"
 
-# install specific liquid gem that won't break on the Liquid highlighter
-# https://github.com/mojombo/jekyll/issues/422
-rvm_gem "liquid" do
-  version "2.2.2"
-  action  :install
-end
-
 rvm_gem "jekyll" do
   ruby_string "ruby-1.9.2-p290"
   action      :install
