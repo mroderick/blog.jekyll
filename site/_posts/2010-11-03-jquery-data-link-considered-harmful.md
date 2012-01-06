@@ -5,6 +5,8 @@ topics: javascript
 idcomments_post_id: http://roderick.dk/blog/2010/11/03/jquery-data-link-considered-harmful/
 ---
 
+# jQuery Data Link considered harmful
+
 "Considered harmful" has always been good link bait. 
 
 I am not trying to start a flamewar, but merely express my concerns over the recent decisions of the jQuery team to actively endorse plugins that deserves no special treatment from any other plugins out there.

@@ -5,6 +5,8 @@ topics: IE JSON
 comments_disabled: false
 ---
 
+# IE8 Getting EcmaScript 262 rev. 5 Compliant Native JSON
+
 Earlier this week, Microsoft posted an article with details on udpates to the native JSON implementation in IE8.
 
 > Because of the new ECMAScript specification changes, some customers have reported issues. These issues are caused by deviations between the native JSON feature in Internet Explorer 8 and the final specification. An update is now available to address these customer issues and improve JSON interoperability of Internet Explorer 8. This update enables JSON interoperability of Internet Explorer 8 to keep in conformance with the new "ECMAScript, fifth edition" standard specification.

@@ -4,6 +4,8 @@ layout: post
 topics: juicer
 ---
 
+# Juicer 1.0.0 Released
+
 Earlier today [Christian Johansen](http://cjohansen.no/en/) pushed the button and [published Juicer v1.0.0 as a gem](http://groups.google.com/group/juicer-dev/browse_thread/thread/1ce8b35ab2ccccae).
 
 For those unfamiliar with [Juicer](http://github.com/cjohansen/juicer), it's an open source Ruby based tool that allows you to merge and minify your JavaScript and CSS files. Internally, Juicer uses [JSLint](http://www.jslint.com/) to keep your JavaScript in good shape and supports both YUI Compressor and Google Closure Compiler to make your CSS and JavaScript files as small as possible.

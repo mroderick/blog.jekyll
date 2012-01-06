@@ -4,6 +4,9 @@ layout: post
 topics: textmate javascript lowpro
 disable_comments: true
 ---
+
+# TextMate snippet for creating Low Pro Behaviors
+
 ## Behaviours
 
 To encapsulate complex javascript behaviour on websites, I have been using [Dan Webb's Low Pro](http://www.danwebb.net/lowpro) library for several years. Low Pro allows you to create self-contained Behavior classes, which avoids polluting the global namespace with variables and makes for very easy re-use of code.

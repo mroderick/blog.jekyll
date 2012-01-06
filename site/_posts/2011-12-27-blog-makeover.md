@@ -3,6 +3,8 @@ title: Blog makeover
 layout: post
 ---
 
+# Blog makeover
+
 Finally, I've gotten round to migrating my blog from [Webby](http://webby.rubyforge.org/) to [Jekyll](https://github.com/mojombo/jekyll). I guess it really is true that the shoemaker's children go barefoot.
 
 There are a few reasons for my move away from Webby and into the open arms of Jekyll.

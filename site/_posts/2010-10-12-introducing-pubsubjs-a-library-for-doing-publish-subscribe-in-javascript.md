@@ -5,6 +5,8 @@ topics: javascript
 idcomments_post_id: http://roderick.dk/blog/2010/10/12/introducing-pubsubjs-a-library-for-doing-publish-subscribe-in-javascript/
 ---
 
+# Introducing PubSubJS, a Library for doing publish/subscribe in JavaScript
+
 For quite a while, I have been working on a large web application for a client. For [publish/subscribe](http://en.wikipedia.org/wiki/Publish/subscribe) style messaging in the web frontend, we use jQuery custom events triggered on the body element. This is quite a neat trick to ensure loose coupling of modules, since you're really just tracking what the user does, and not what module happened to generate the message.
 
 This approach has been introduced to my team by me, and I have been very eager to help my team mates understand how to use it.

@@ -5,6 +5,8 @@ topics: safari osx
 idcomments_post_id: http://roderick.dk/blog/2009/07/02/reclaim-disk-space-from-safari-4/
 ---
 
+# Reclaim Disk Space From Safari 4
+
 Having a MacBook Pro that seems to be continually low on disk space, I set out to tidy up a bit using the [excellent and free OmniDiskSweeper](http://www.omnigroup.com/applications/omnidisksweeper/). It will help you identify where all your disk space is going. Use with caution though, and always have a recent backup.
 
 After tidying up all over the file system, I noticed that the Safari cache was enourmous ... 1.2GB in my case. Further investigation revealed that most of that space was taken up by Webpage Previews, used by the top sites feature in Safari 4. As I don't care for that feature, I have disabled it with the following command

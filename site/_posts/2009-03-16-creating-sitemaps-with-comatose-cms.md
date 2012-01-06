@@ -5,6 +5,8 @@ topics: rails comatose sitemap
 disable_comments: true
 ---
 
+# Creating Sitemaps with Comatose CMS
+
 For some time now, I've been using [Comatose CMS](http://github.com/darthapo/comatose/tree/master) for client sites. It is quite possible the smallest Rails based CMS, having only the features you need for most sites and flexible enough to allow you to extend it if you need to. 
 
 Whenever you're doing content publishing, you should make it as easy as possible for search engines to find and catalog our content. In this post I will show you how you can create a simple [Sitemap](http://www.sitemaps.org) from a Comatose CMS.

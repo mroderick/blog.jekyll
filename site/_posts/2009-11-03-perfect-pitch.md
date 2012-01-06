@@ -4,6 +4,8 @@ layout: post
 comments_disabled: true
 ---
 
+# Perfect Pitch
+
 [Perfect Pitch](http://adactio.com/journal/1623/) is an article by Jeremy Keith that discusses some recent issues and misuses of DMCA unfairly to destroy competitors search engine rankings.
 
 It all started out as an innocent comment about attaining [Perfect Pitch](http://www.thesession.org/discussions/display/21250) on The Session.

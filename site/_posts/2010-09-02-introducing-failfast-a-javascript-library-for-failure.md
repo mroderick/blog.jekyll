@@ -5,6 +5,8 @@ topics: javascript
 idcomments_post_id: http://roderick.dk/blog/2010/09/02/introducing-failfast-a-javascript-library-for-failure/
 ---
 
+# Introducing FailFast, a JavaScript library for failure
+
 Tomorrow I will be attending [dConstruct 2010](http://2010.dconstruct.org/), which I am very excited about. I flew in a day early, so I could get some time to enjoy Brighton. One of the first stops has been [The Skiff](http://theskiff.org/), "a nice little place to work in the middle of Brighton".
 
 The Skiff is indeed a very nice place: very few interruptions and very friendly people. While sitting at my visitors desk, I've managed to finally finish a little JavaScript library, that has been a very long time in the making: [FailFast](http://github.com/mroderick/FailFast). All it took was tidying up the documentation and writing the last few missing unit tests.

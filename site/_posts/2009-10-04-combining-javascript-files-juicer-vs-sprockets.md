@@ -5,6 +5,8 @@ topics: javascript juicer sprockets
 idcomments_post_id: http://roderick.dk/blog/2009/10/04/combining-javascript-files-juicer-vs-sprockets/
 ---
 
+# Combining JavaScript Files - Juicer vs Sprockets
+
 Currently working on a project that has well defined use of "namespaces" and structured use folders for its JavaScript files. I wanted to investigate the options for combining and minifying JavaScript files.
 
 I need a tool that:

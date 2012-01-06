@@ -5,6 +5,8 @@ topics: ruby coverage rcov
 disable_comments: true
 ---
 
+# Fixing Bus Error / Segfault in Rcov
+
 We have recently run into problems with "rcov":http://eigenclass.org/hiki/rcov crashing with seemingly random errors, like
 
 {% highlight bash %}

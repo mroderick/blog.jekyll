@@ -4,11 +4,8 @@ site_section: blog
 ---
 <div class="article">
 	<article>
-		<h1><a href="{{ page.url }}" title="Permalink for this post">{{ page.title }}</a></h1>
-		<p class="post-date">Posted on {{ page.date | date: "%Y-%m-%d" }}</a></p>
-
 		{{ content }}
-		
+		<p class="post-date">Posted on {{ page.date | date: "%Y-%m-%d" }}</a></p>
 	</article>
 	{% unless page.disable_comments %}
 		<script>

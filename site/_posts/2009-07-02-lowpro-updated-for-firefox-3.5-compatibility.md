@@ -5,6 +5,8 @@ topics: javascript
 disable_comments: true
 ---
 
+# LowPro Updated for Firefox 3.5
+
 Firefox 3.5 was recently released, and offers significant updates. If you have not upgraded yet, you should [do so now](http://mozilla.org/firefox).
 
 In the [LowPro community](http://groups.google.com/group/low-pro), we have been tracking compatibility with the upcoming Firefox. The existing LowPro was compatible with Firefox 3.5RC2, but incompatible with the final release of Firefox 3.5.

@@ -6,12 +6,12 @@ site_section: blog
 
 {% for post in site.posts limit:1 %}
 <div class="post">
-	<h1><a href="{{ post.url }}" title="Permalink for this post">{{ post.title }}</a></h1>
-	<p class="post-date">Posted on {{ post.date | date: "%Y-%m-%d" }}</a></p>
-	
 	<div class="post_content">
 	  {{ post.content }}
 	</div>
+	<p>
+		<a href="{{ post.url }}" title="Permalink for this post">Permalink for this post</a>
+	</p>
 	
 	{% unless post.disable_comments %}
 		<script>

@@ -5,6 +5,8 @@ topics: rails comatose sitemap cache
 disable_comments: true
 ---
 
+# Adding Page Caching to Sitemaps
+
 The shortest distance between two points is not a straight line. The shortest distance is zero. Admittedly, we're not about to fold space or do time travel, but you get the idea.
 
 Likewise, for any web framework, the fastest way to deliver content to clients is to not use the framework at all, but let the webserver serve static files to clients.

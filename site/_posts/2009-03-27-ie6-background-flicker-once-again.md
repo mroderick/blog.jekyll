@@ -5,6 +5,8 @@ topics: IE6 javascript
 disable_comments: true
 ---
 
+# IE6 Background flicker once again
+
 Every once in awhile you come across one of those Internet Explorer 6 issues that tries it's hardest to be really annoying. Today was one of those days with IE.
 
 Having flown out to work directly with a client's web team yesterday, I spent some time today cursing at IE6 and trying to deal with a weird flickering of the webpage, apparently caused by hovering over a menu.

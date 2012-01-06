@@ -5,6 +5,8 @@ topics: javascript
 idcomments_post_id: http://roderick.dk/blog/2011/07/10/code-retreat-berlin/
 ---
 
+# Code Retreat Berlin
+
 On Saturday 2011-07-09 I attended [Code Retreat Berlin](coderetreat-berlin.de/), these are my notes.
 
 For those that have not been to or heard of code retreats, let me just quickly sketch out the concept. A code retreat is a place where programmers can practice their craft and improve their collaborative skills. Just like musicians need to practice, so do programmers.

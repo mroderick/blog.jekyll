@@ -5,6 +5,8 @@ topics: osx
 disable_comments: true
 ---
 
+# Setting Up Virtual Hosts on OS X Leopard
+
 Working with a new client and getting back to my roots of doing pure frontend development, I had to set up a virtual host for development on my MBP.
 
 When working with Rails, I usually just use `script/server` and/or Passenger to serve my applications... in this situation i just needed to serve some static files.

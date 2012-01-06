@@ -5,6 +5,8 @@ topics: javascript
 idcomments_post_id: http://roderick.dk/blog/2009/05/07/introduction-to-low-pro-for-prototype/
 ---
 
+# Introduction to Low Pro for Prototype
+
 Tonight I gave a lightweight introduction to [Low Pro](http://lowprojs.com) for Prototype at the [Öresund JavaScript meetup](http://www.meetup.com/The-Oresund-JavaScript-Meetup/).
 
 For those that missed it, or just want to study the example again, you can [see the slides as a PDF](/presentations/introduction-to-low-pro-for-prototype/Introduction-to-Low-Pro-for-Prototype.pdf), [see the sample](/presentations/introduction-to-low-pro-for-prototype/intro.html) or [download a zip file with everything](presentations/introduction-to-low-pro-for-prototype/Introduction-to-Low-Pro-for-Prototype.zip).
