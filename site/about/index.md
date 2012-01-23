@@ -22,6 +22,8 @@ If your company has specific procurement needs, I work with a few select partner
 * [7n](http://www.7n.com)
 * [Strand & Donslund](http://www.s-d.dk/)
 
+CV is available on request.
+
 ## Speaking, organising
 
 I've spoken at a few conferences, such as
@@ -29,7 +31,7 @@ I've spoken at a few conferences, such as
 * [RejectJS](http://lanyrd.com/2011/rejectjs/) (2011)
 * [Front Trends](http://2010.front-trends.com/) (2010)
 
-I am a keen speaker at JavaScript user groups, happy to share my learnings and learn from others
+I am also a keen speaker at JavaScript user groups, happy to share my learnings and learn from others
 
 * [AsyncJS](http://asyncjs.com/)
 * [BerlinJS](http://berlinjs.org)
