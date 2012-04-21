@@ -1,14 +1,15 @@
 ---
 layout: default
 title: roderick.dk
-site_section: blog
+site_section: frontpage blog
 ---
 
 {% for post in site.posts limit:1 %}
 <div class="post">
-	<div class="post_content">
-	  {{ post.content }}
-	</div>
+	<article>
+		<p class="post-date">Posted on {{ post.date | date: "%Y/%m/%d" }}</a></p>
+		{{ post.content }}
+	</article>
 	<p>
 		<a href="{{ post.url }}" title="Permalink for this post">Permalink for this post</a>
 	</p>

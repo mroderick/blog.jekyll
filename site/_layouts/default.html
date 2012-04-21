@@ -10,34 +10,53 @@
 			<meta name="description" content="{{page.description}}">
 		{% endif %}
 		<meta name="author" content="Morgan Roderick" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		
 		<link rel="stylesheet" href="/stylesheets/style.css" />
 		<link rel="stylesheet" href="/stylesheets/pygments.css" />
+				
 		<link rel="alternate" type="application/atom+xml" href="http://feeds2.feedburner.com/roderick" title="Atom Feed" />
 	</head>
 	<body class="{{page.site_section}}">
 	  <div id="container">
-		<header>
-			<a href="/" class="home">roderick.dk</a>
-			<ul class="nav">
-				<li class="blog"><a href="/">Blog</a></li>
-				<li class="archives"><a href="/archives/">Archives</a></li>
-				<li class="about"><a href="/about/">About</a></li>
-				<li class="contact"><a href="/contact/">Contact</a></li>
-			</ul>
+		<header role="banner">
+			<a class="logo" href="/" class="home"><img src="/images/logo.png" alt="Roderick" /></a>
+			<nav>
+				<li class="blog"><a href="/">Blog <em>Random ramblings</em></a></li>
+				<li class="archives"><a href="/archives/">Archives <em>Alle entries</em></a></li>
+				<li class="about"><a href="/about/">About <em>Me me &amp; me</em></a></li>
+				<li class="contact"><a href="/contact/">Contact <em>Drop me a line</em></a></li>
+			</nav>
 			<a href="http://feeds2.feedburner.com/roderick" class="feed">Subscribe to the feed</a>
 		</header>
 		<div id="main" role="main">
 			{{ content }}
 		</div>
+		{% if page.site_section == 'frontpage blog' %}
+	 	<aside id="sidebar">
+		
+			<div class="about-teaser">
+				<h3>About the author</h3>
+			
+				<img class="profile-img" src="/images/morg-profile.jpg" alt="Morgan Roderick" />
+			
+				<p>My name is Morgan Roderick, I write this blog.</p>
+
+				<p>As you might have guessed from reading some of the posts on the blog, I am a web developer, specialising in front end web development. I’ve been building just about every type of website professionally since 1998.</p>
+
+				<p>I believe I wrote my first webpage in 1994, the same year I got my first e-mail address. The webpage displayed photos taken by the Hubble telescope, and as far as I know, that page was only ever viewted in Mosaic on SGI Indy machines. <a href="/about">Read more...</a></p>
+			</div>
+	 	</aside>
+		{% endif %}
 		<footer>
 			&copy; Morgan Roderick, unless otherwise noted.
 		</footer>
 	  </div>
-	  <script>
+	  <!--<script>
 		var _gaq=[["_setAccount","UA-869742-1"],["_trackPageview"]];
 		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
 		g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
 		s.parentNode.insertBefore(g,s)}(document,"script"));
-	  </script>
+	  </script>-->
 	</body>
 </html>

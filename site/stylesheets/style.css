@@ -134,6 +134,39 @@ button {  width: auto; overflow: visible; }
    code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
 .ie7 img { -ms-interpolation-mode: bicubic; }
 
+
+
+/**
+ * Fonts
+ */
+
+@font-face {
+    font-family: 'LeagueGothicRegular';
+    src: url('/fonts/league-gothic/League_Gothic-webfont.eot');
+    src: url('/fonts/league-gothic/League_Gothic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/league-gothic/League_Gothic-webfont.woff') format('woff'),
+         url('/fonts/league-gothic/League_Gothic-webfont.ttf') format('truetype'),
+         url('/fonts/league-gothic/League_Gothic-webfont.svg#LeagueGothicRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'DroidSerifRegular';
+    src: url('/fonts/droid-serif/DroidSerif-Regular-webfont.eot');
+    src: url('/fonts/droid-serif/DroidSerif-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/droid-serif/DroidSerif-Regular-webfont.woff') format('woff'),
+         url('/fonts/droid-serif/DroidSerif-Regular-webfont.ttf') format('truetype'),
+         url('/fonts/droid-serif/DroidSerif-Regular-webfont.svg#DroidSerifRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
 /**
  * You might tweak these..
  */
@@ -142,59 +175,49 @@ body, select, input, textarea {
   /* #444 looks better than black: twitter.com/H_FJ/statuses/11800719859 */
   color: #333;
   /* Set your base font here, to apply evenly */
-  font-family: 'Lucida Grande',Verdana,Geneva,Lucida,Arial,Helvetica,sans-serif;
+  font-family: "DroidSerifRegular",serif;
 }
-
-/* Headers (h1, h2, etc) have no default font-size or margin; define those yourself */
-h1, h2, h3, h4, h5, h6 {
-    font-family: serif;
-    font-weight: bold;
-}
-
-h1 {
-    font-size: 3em;
-}
-
-a, a:active, a:visited { color: #607890; }
-a:hover { color: #036; }
 
 
 /**
  * Primary styles
  *
- * Author: Morgan Roderick
+ * Author: 	Morgan Roderick
+			Daniel Aakjaer Soerensen
  */
 
 body {
 	text-align: center;
-	font-size: 16px;
-	line-height: 1.5em;
+	font-size: 1.1em;
+	line-height: 1.6em;
+	border-top: 6px solid #e22e59;
 }
 
-
-
-#container > header {
-    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-    box-sizing: border-box;         /* Opera/IE 8+ */	
-
-	width: 960px;
-	padding: 32px;
+#container {
 	margin: 0 auto;
+	width: 95%;
+	max-width: 960px;
 	text-align: left;
-	position: relative;
-	height: 100px;
-
 }
 
-	#container > header .home {
-		position: absolute;
-		top: 16px;
-		left: 32px;
-		font-size: 32px;
-	}
+header[role="banner"] {
+	overflow: auto;
+	position: relative;
+	margin: 0 auto;
+	background: transparent url(/images/menu-border.png) 0 100% repeat-x;
+}
 
-	#container > header .feed {
+	header[role="banner"] .logo {
+		float: left;
+		width: 20%;
+		margin: 18px 0 0;
+	}
+		header[role="banner"] .logo img {
+			display: block;
+		}
+	
+	header[role="banner"] .feed {
+		display: none;
 		position: absolute;
 		top: 16px;
 		right: 32px;
@@ -204,109 +227,185 @@ body {
 		background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAPUSURBVHjarFZbaFRHGP7m3HbXdYnihaxpQ8TcEK9JqGjQtH0UC5bSagXxQYWiD+qL+OCD4OVVH1ooFAtSqPqkKOat1l6kL0kMNA+JKBEliTaIkt2wPZc54/wzey67iRfQWWZnzpnZ7/+/7///mWWotoG9y04tblqxz7btFstxwOil/GKMQT/QHIgWWPWd3qOnvuuhUnYfvZiYvNTzy/QpRNuH9zddK7a17eQvZiB4AMOUALInI/Ro6GdmQK8Zep4eafNs2cHjf8eub7g48aVJnjd1dn7nP3suTYn3AlejtJHJBsgtauz8elmZWSQLeR6BZtd8Dngl9RxO35e8y+8MTuhkIAwEchkXhG2R5qLixR7ne/fAXtkThQb8v/vgTwbhD18FylPvBK66HyC7INNiqYB6fswgiZ5u5vJ21Z3ub8EnhuDfPi0NPX0LuACXI2EbKjFSmgePB1Unz+ub2dSF7N5rsD458FZwmkMIsKkzW4TpVuYNqJErwG7vg7V6hwJPNzF1D/y3EypG84FT91hGMmCvzxYWlMFH++FdPwTvxmGI0lRsgBU3wtz+PYSZnxdcM5D7np7rFTavxOD5PT9SGUHITAonh8DH+sGkl8pgtgBry1EYbduTJBj/E+7N43PAqfNMDgZQ57n8mB93wVrVB2frMeQizSW4YvTXWYQP+pO4rNwGc92uOeBRDAwKUFoWsLrIZhbC6t4Pe8cPYEvaVUCD389IZrfiLc7mA0C+cY4BiS8ZMNQUkdt/HK7UPLh7oVbzJW2wSPOGVvVj9855hDN6nWUKyPYerDXAdQwMdXClK1TqrTJk5Cr8K1+BD11M2DgLYW47idDIg8+W4N79KSG64QuwQmMMLiIGSqI3lH84/LPSPWrGUsmkqvn/924ifJmwdDo+jcEVAzrbFMU0qMx9q/eo0txYs0tpzkdvIRhImNhdu+P0rPzza8Ji9WcxeCIRxSDlsS3T0CRgyvNNR8A6v9FFM3gZwi3FmlutfdrAyO3EQGtPDC54SqIaBoViTRKx5q26iKTm/kiSOVZztzLgT08irJSS98UODc4RBbmWAR3V6RY8/CMuIm/0ThKLhmIcUH9iLHFIpjWBh6HQBumaYw1mfHDxv8/CcMsqr+nAcweuJIUzOwN/fFBS16BRQL0noxCh1pyXSwpchNK5QJ7SD0+sH/+otdDCWPjaU3HensqWWPOq5wRuOhawlD0y6IKmO/RDghObBS2LQdjxpd+8tmMnXXOhF7y35wT+bPyBuvRZ/d8Wdc3Jm4hyTOhaqY51zxCptWpCSM258Gv+trwSYADpidxF1sQfwQAAAABJRU5ErkJggg==');	    
 	}
  
-	#container > header ul.nav {
-	    list-style-type: none;    
-	    overflow: auto;
-	    clear: both;
-		position: absolute;
-		bottom: 0;
-		right: 32px;
+	/* menu */
+	header[role="banner"] nav {
+	    list-style-type: none;
 	}
 
-	    #container > header ul.nav li {
+	    header[role="banner"] nav li {
 	        float: left;
+			width: 20%;
+			height: 160px;
 	    }
     
-	        #container > header ul.nav li a {
+	        header[role="banner"] nav li a {
 	            display: block;
-	            padding: 8px 16px;
-	            margin-right: 8px;
+	            margin: 30px 8px 0 0;
+	            padding: 20px 16px;
+				color: #333;
+				font-family: "LeagueGothicRegular", sans-serif;
+				font-style: normal;
+				font-weight: 400;
+				font-size: 30px;
+				text-decoration: none;
 	        }
 	
-	body.blog #container > header ul.nav > li.blog a,
-	body.archives #container > header ul.nav > li.archives a,
-	body.about #container > header ul.nav > li.about a,
-	body.contact #container > header ul.nav > li.contact a {
-		color: red;
+	        header[role="banner"] nav li a em {
+				display: block;
+				font-size: 20px;
+				color: #aaa;
+			}
+	
+	body.blog header[role="banner"] nav > li.blog,
+	body.archives header[role="banner"] nav > li.archives,
+	body.about header[role="banner"] nav > li.about,
+	body.contact header[role="banner"] nav > li.contact {
+		border-bottom: 7px solid #999;
+	}
+	body.blog header[role="banner"] nav > li.blog a,
+	body.archives header[role="banner"] nav > li.archives a,
+	body.about header[role="banner"] nav > li.about a,
+	body.contact header[role="banner"] nav > li.contact a {
+		color: #e22e59;
 	}
 
-#container > #main {
-    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-    box-sizing: border-box;         /* Opera/IE 8+ */	
-
-	width: 960px;
-	padding: 32px 32px 0;
-	margin: 0 auto;
-	text-align: left;
+#main {
 	position: relative;
+	margin: 0 auto;
+	padding: 32px 0 0;
+	text-align: left;
 }
 
-	#main p {
-	    margin: 0.5em 0 1em;
-	}
+#sidebar {
+	float: left;
+	display: inline;
+	width: 27%;
+	padding: 32px 0 0;
+}	
+
+
+body.frontpage #main {
+	float: left;
+	width: 68%;
+	margin-right: 5%;
+}
+
+body.frontpage .about-teaser p {
+	font-size: 0.9em;
+	line-height: 1.6em;
+}
+
 	
-	#main p.post-date {
+article {}
+
+	article .post-date {
+		margin: 0;
+		padding: 0;
+		font-size: 15px;
 		color: #999;
-		font-size: 14px;
-	}
-
-	#main h1 {
-	    font-size: 2em;
-	    margin: 1.2em 0 .5em;
-		padding: 0 0 .3em;
-		border-bottom: 1px solid #ccc;
-	}
-
-	#main h1 > a {
-		color: #333;
-		text-decoration: none;
+		text-transform: uppercase;
+		font-style: italic;
 	}
 	
- 	#main h1 > a:hover {
-		text-decoration: underline;	
-	}
-
-	#main h1 > a:hover:after {
-		color: #999;
-		content: ' #';
-	}	
-	
-	#main h2 {
-	    font-size: 1.8em;
-	    margin: 1.2em 0 .5em;
-	}
-	#main h3 {
-	    font-size: 1.6em;
-	    margin: 1.2em 0 .5em;
-	}
-
-	#main blockquote {
-		padding: 0 2em;
-		font-family: monospace;
-	}
-	
-	#main #idc-container-parent {
-		margin-top: 32px;
-	}
-	
-	#main .highlight {
-		border: 1px solid #bbb;
-		background: #efefef;
-	}
 
 #container footer {
-	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-    box-sizing: border-box;         /* Opera/IE 8+ */	
-
-	width: 960px;
+	clear: both;
 	padding: 32px;
 	margin: 0 auto;
 	text-align: center;
 	position: relative;
 	color: #999;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */	
 }
+
+
+a, a:active, a:visited { color: #e22e59; }
+a:hover { color: #e22e59; }
+
+/* Headers (h1, h2, etc) have no default font-size or margin; define those yourself */
+h1, h2, h3, h4, h5, h6 {
+	font-family: "LeagueGothicRegular", sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
+
+	h1 {
+	    margin: 0 0 .3em;
+		padding: 0;
+	    font-size: 72px;
+		line-height: 80px;
+	}
+		h1 > a {
+			color: #333;
+			text-decoration: none;
+		}
+	
+	 	h1 > a:hover {
+			text-decoration: underline;	
+		}
+
+			h1 > a:hover:after {
+				color: #999;
+				content: ' #';
+			}	
+	
+	h2 {
+	    margin: 1.2em 0 .5em;
+		font-size: 36px;
+	}
+	
+	h3 {
+	    font-size: 1.7em;
+	    margin: 1.2em 0 .5em;
+	}
+
+blockquote {
+	margin: 1.5em 0;
+	padding: 1em 1.5em;
+	background: #efefef;
+}
+
+hr,p,ul,ol,dl,pre, address,table,form {
+	margin-bottom:1.6em;
+}
+
+p + p {
+	margin-top:-.8em;
+}
+	
+	
+/* other elements */	
+	
+.profile-img {
+	margin: .5em 0;
+	border: 7px solid #e8e8e8;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */	
+}	
+	
+#idc-container-parent {
+	margin-top: 32px;
+}
+
+img,
+embed, 
+object, 
+iframe,
+video { 
+	max-width: 100%; 
+}
+
+.ie6 img {
+	width: 100%;
+}
+
+
+
 
 /**
  * Non-semantic helper classes: please define your styles before this section.
@@ -356,11 +455,52 @@ body {
 
 /* Grade-A Mobile Browsers (Opera Mobile, Mobile Safari, Android Chrome)
    consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
-@media screen and (max-device-width: 480px) {
+@media screen and (max-width: 768px) {
 
+	header[role="banner"] .logo img {
+		width: 75px;
+	}
+
+	header[role="banner"] nav li {
+		height: 110px;
+	}
+	
+		header[role="banner"] nav li a {
+			margin-top: 20px;
+			font-size: 25px;
+			letter-spacing: 1px;
+		}
+		
+			header[role="banner"] nav li a em {
+				display: none;
+			}
+
+	.frontpage div#main {
+		float: none;
+		width: auto;
+		margin-right: 0;
+	}
+	
+	#sidebar {
+		float: none;
+		width: auto;
+		margin-right: 0;
+	}
+
+	.profile-img {
+		float: right;
+		margin: 1em 0 1em 1em;
+	}
 
   /* Uncomment if you don't want iOS and WinMobile to mobile-optimize the text for you: j.mp/textsizeadjust */
   /* html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } */
+}
+
+@media screen and (max-width: 767px) {
+	h1 {
+		font-size: 50px;
+		line-height: 55px;
+	}
 }
 
 

@@ -4,8 +4,8 @@ site_section: blog
 ---
 <div class="article">
 	<article>
+		<p class="post-date">Posted on {{ page.date | date: "%Y/%m/%d" }}</a></p>
 		{{ content }}
-		<p class="post-date">Posted on {{ page.date | date: "%Y-%m-%d" }}</a></p>
 	</article>
 	{% unless page.disable_comments %}
 		<script>
