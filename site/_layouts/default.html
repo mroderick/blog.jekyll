@@ -18,24 +18,24 @@
 		<link rel="alternate" type="application/atom+xml" href="http://feeds2.feedburner.com/roderick" title="Atom Feed" />
 	</head>
 	<body class="{{page.site_section}}">
-	  <div id="container">
-		<header role="banner">
-			<a class="logo" href="/" class="home"><img src="/images/logo.png" alt="Roderick" /></a>
-			<nav>
-				<ul>
-					<li class="blog"><a href="/">Blog <em>Random ramblings</em></a></li>
-					<li class="archives"><a href="/archives/">Archives <em>Alle entries</em></a></li>
-					<li class="about"><a href="/about/">About <em>Me me &amp; me</em></a></li>
-					<li class="contact"><a href="/contact/">Contact <em>Drop me a line</em></a></li>
-				</ul>
-			</nav>
-			<a href="http://feeds2.feedburner.com/roderick" class="feed">Subscribe to the feed</a>
-		</header>
-		<div id="main" role="main">
-			{{ content }}
-		</div>
-		{% if page.site_section == 'frontpage blog' %}
-	 	<aside id="sidebar">
+	  	<div id="container">
+			<header role="banner">
+				<a class="logo" href="/" class="home"><img src="/images/logo.png" alt="Roderick" /></a>
+				<nav>
+					<ul>
+						<li class="blog"><a href="/">Blog <em>Random ramblings</em></a></li>
+						<li class="archives"><a href="/archives/">Archives <em>All entries</em></a></li>
+						<li class="about"><a href="/about/">About <em>Me me &amp; me</em></a></li>
+						<li class="contact"><a href="/contact/">Contact <em>Drop me a line</em></a></li>
+					</ul>
+				</nav>
+				<a href="http://feeds2.feedburner.com/roderick" class="feed">Subscribe to the feed</a>
+			</header>
+			<div id="main" role="main">
+				{{ content }}
+			</div>
+			{% if page.site_section == 'frontpage blog' %}
+		 	<aside id="sidebar">
 				<div class="about-teaser">
 					<h3>About the author</h3>
 			
