@@ -213,7 +213,6 @@ header[role="banner"] {
 		margin: 18px 0 0;
 	}
 		header[role="banner"] .logo img {
-			display: block;
 		}
 	
 	header[role="banner"] .feed {
@@ -307,6 +306,31 @@ article {}
 		font-style: italic;
 	}
 	
+.archive {
+	margin-left: 0;
+	list-style: none;
+}	
+	.archive li {
+		padding: .7em .5em;
+		border-bottom: 1px solid #e8e8e8;
+	}	
+		.archive li a {
+			display: block;
+			padding-left: 5em;
+			font-size: 1.2em;
+			text-decoration: none;
+		}	
+			.archive li a:hover {
+				text-decoration: underline;
+			}
+			
+			.archive li .posted-on {
+				float: left;
+				color: #777;
+				font-size: 1em;
+			}	
+
+	
 
 #container footer {
 	clear: both;
@@ -387,10 +411,84 @@ p + p {
     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
     box-sizing: border-box;         /* Opera/IE 8+ */	
 }	
-	
+
+/* comments */	
 #idc-container-parent {
-	margin-top: 32px;
+	margin-top: 40px;
 }
+	#idc-container-parent #idc-container {
+		max-width: none;
+	}
+
+	#idc-container-parent #idc-container .idc-c {
+		padding-top: 1.5em;
+		padding-bottom: 1em;
+		border-top: 1px solid #ccc;
+	}
+	
+		#idc-container .idc-a_nomenu, 
+		#idc-container .idc-a {
+			margin: 0 15px 0 0 !important;
+		}
+	
+		#idc-container .idc-thread .idc-thread .idc-a,
+		#idc-container .idc-thread .idc-thread .idc-c {
+			padding-left: 3em;
+		}
+
+
+	#idc-container-parent #idc-container h3 {
+		margin: 0 0 .5em;
+		padding: 0 0 .2em;
+		font-size: 28px;
+
+	}
+		#idc-container-parent #IDCommentsHead h3 {
+			font-size: 36px;
+			border-bottom: 4px solid #ccc;
+		}
+	
+	#idc-container-parent #idc-container .idc-c .idc-c-h {
+		background-image: none;
+	}
+	
+	#idc-container-parent #idc-container .idc-c .idc-i {
+		font-family: "LeagueGothicRegular", sans-serif;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 2.2em;
+	}
+	
+		#idc-container-parent #idc-container .idc-i a {
+			font-size: 26px;
+			color: #333;
+			text-decoration: none;
+		}
+		
+		#idc-container-parent #idc-container .idc-i em a {
+			font-size: 18px;
+			color: #999;
+		}
+
+
+		#idc-container-parent #idc-container div,		
+		#idc-container-parent #idc-container .idc-c-t-inner {
+			font-size: 16px;
+			line-height: 1.6em;
+		}
+
+		#idc-container-parent #idc-container .IDCommentThreadTimeRead {
+			display: none;
+		}
+
+/*
+font-family: "LeagueGothicRegular", sans-serif;
+font-style: normal;
+font-weight: 400;
+
+*/
+
+
 
 img,
 embed, 
@@ -453,6 +551,9 @@ video {
 
 }
 
+
+
+
 /* Grade-A Mobile Browsers (Opera Mobile, Mobile Safari, Android Chrome)
    consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
 @media screen and (max-width: 768px) {
@@ -502,6 +603,52 @@ video {
 		line-height: 55px;
 	}
 }
+
+/* max-width: 480
+....................................................................................... */
+
+@media screen and (max-width: 480px) {
+
+
+	header[role="banner"] {}
+		
+		/* Site logo */
+		header[role="banner"] .logo { 
+			float: none;
+			display: block;
+			width: auto;
+			text-align: center;
+		}
+
+		header[role="banner"] nav ul {
+			text-align: center;
+		}
+
+			header[role="banner"] nav li {
+				float: none;
+				width: auto;
+				display: inline-block;
+				height: auto !important;
+			}
+				
+				header[role="banner"] nav li a {
+					margin: 0 0 .5em;
+					padding: .3em .5em;
+					font-size: 22px;
+					text-transform: uppercase;
+				}
+
+	.archive li a {
+		padding-left: 0;
+	}	
+		.archive li .posted-on {
+			display: block;
+			float: none;
+			font-size: 0.8em;
+		}	
+
+}
+
 
 
 /**
