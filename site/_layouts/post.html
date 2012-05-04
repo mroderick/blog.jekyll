@@ -4,7 +4,14 @@ site_section: blog
 ---
 <div class="article">
 	<article>
-		<p class="post-date">Posted on {{ page.date | date: "%Y/%m/%d" }}</a></p>
+		{% capture this_year %}{{ page.date | date: "%Y" }}{% endcapture %}
+		{% capture this_month %}{{ page.date | date: "%m" }}{% endcapture %}
+		{% capture this_day %}{{ page.date | date: "%d" }}{% endcapture %}
+
+		<time class="post-date" datetime="{{ post.date | date: "%Y-%m-%d" }}">
+			Posted on <span class="year">{{ this_year }}</span>-<span class="month">{{ this_month }}</span>-<span class="day">{{ this_day }}</span> 
+		</time>
+
 		{{ content }}
 	</article>
 	{% unless page.disable_comments %}

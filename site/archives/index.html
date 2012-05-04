@@ -7,6 +7,14 @@ site_section: archives
 <h1>Archives</h1>
 <ul class="archive">
 	{% for post in site.posts %}
-	<li><span class="posted-on">{{ post.date | date: "%Y-%m-%d" }}</span><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+		{% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+		{% capture this_month %}{{ post.date | date: "%m" }}{% endcapture %}
+		{% capture this_day %}{{ post.date | date: "%d" }}{% endcapture %}
+		<li>
+			<time class="post-date" datetime="{{ post.date | date: "%Y-%m-%d" }}">
+				<span class="year">{{ this_year }}</span>-<span class="month">{{ this_month }}</span>-<span class="day">{{ this_day }}</span> 
+			</time>
+			<a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+		</li>
 	{% endfor %}
 </ul>
