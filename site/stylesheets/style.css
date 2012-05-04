@@ -251,20 +251,22 @@ header[role="banner"] {
 	
 	        header[role="banner"] nav li a em {
 				display: block;
-				font-size: 20px;
+				font-size: 21px;
 				color: #aaa;
+				font-style: normal;
+				font-weight: 400;
 			}
 	
-	body.blog header[role="banner"] nav > li.blog,
-	body.archives header[role="banner"] nav > li.archives,
-	body.about header[role="banner"] nav > li.about,
-	body.contact header[role="banner"] nav > li.contact {
+	body.blog header[role="banner"] nav li.blog,
+	body.archives header[role="banner"] nav li.archives,
+	body.about header[role="banner"] nav li.about,
+	body.contact header[role="banner"] nav li.contact {
 		border-bottom: 7px solid #999;
 	}
-	body.blog header[role="banner"] nav > li.blog a,
-	body.archives header[role="banner"] nav > li.archives a,
-	body.about header[role="banner"] nav > li.about a,
-	body.contact header[role="banner"] nav > li.contact a {
+	body.blog header[role="banner"] nav li.blog a,
+	body.archives header[role="banner"] nav li.archives a,
+	body.about header[role="banner"] nav li.about a,
+	body.contact header[role="banner"] nav li.contact a {
 		color: #e22e59;
 	}
 
@@ -300,7 +302,7 @@ article {}
 	article .post-date {
 		margin: 0;
 		padding: 0;
-		font-size: 15px;
+		font-size: .8em;
 		color: #999;
 		text-transform: uppercase;
 		font-style: italic;
@@ -324,10 +326,9 @@ article {}
 				text-decoration: underline;
 			}
 			
-			.archive li .posted-on {
+			.archive li .post-date {
 				float: left;
-				color: #777;
-				font-size: 1em;
+				color: #999;
 			}	
 
 	
@@ -354,13 +355,14 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: "LeagueGothicRegular", sans-serif;
 	font-style: normal;
 	font-weight: 400;
+	line-height: 1em;
 }
 
 	h1 {
 	    margin: 0 0 .3em;
 		padding: 0;
-	    font-size: 72px;
-		line-height: 80px;
+	    font-size: 4em;
+		line-height: 1.1em;
 	}
 		h1 > a {
 			color: #333;
@@ -378,7 +380,7 @@ h1, h2, h3, h4, h5, h6 {
 	
 	h2 {
 	    margin: 1.2em 0 .5em;
-		font-size: 36px;
+		font-size: 2.3em;
 	}
 	
 	h3 {
@@ -387,12 +389,22 @@ h1, h2, h3, h4, h5, h6 {
 	}
 
 blockquote {
-	margin: 1.5em 0;
-	padding: 1em 1.5em;
-	background: #efefef;
+	padding: 1em .6em 1em 2.5em;
+	font-style: italic;
+	border-top: 6px solid #ddd;
+	border-bottom: 6px solid #ddd;
 }
 
-hr,p,ul,ol,dl,pre, address,table,form {
+blockquote:before {
+	content: "”";
+	float: left;
+	margin: 27px 0 0 -50px;
+	padding-right: 30px;
+	font-size: 6em;
+	color: #ccc;
+}
+
+hr,p,ul,ol,dl,pre, address,table,form,blockquote {
 	margin-bottom:1.6em;
 }
 
@@ -400,6 +412,9 @@ p + p {
 	margin-top:-.8em;
 }
 	
+p:last-child {
+	margin-bottom: 0;
+}
 	
 /* other elements */	
 	
@@ -420,73 +435,119 @@ p + p {
 		max-width: none;
 	}
 
+		#idc-container-parent #idc-container {
+			max-width: none;
+		}
+	
+		#idc-container-parent #idc-container div {
+			font-size: 1em;
+		}
+
+		#idc-container-parent #idc-container h3 {
+			margin: 0 0 .5em;
+			padding: 0 0 .2em;
+			font-size: 1.8em;
+		}
+		
+		#idc-container-parent #IDCommentsHead h3 {
+			font-size: 2.3em;
+			border-bottom: 4px solid #ccc;
+		}
+
 	#idc-container-parent #idc-container .idc-c {
 		padding-top: 1.5em;
 		padding-bottom: 1em;
 		border-top: 1px solid #ccc;
 	}
+
+	/* thread */
+	#idc-container-parent #idc-container .idc-thread .idc-thread {
+		margin-left: 1em;
+	}
 	
-		#idc-container .idc-a_nomenu, 
-		#idc-container .idc-a {
-			margin: 0 15px 0 0 !important;
-		}
-	
-		#idc-container .idc-thread .idc-thread .idc-a,
-		#idc-container .idc-thread .idc-thread .idc-c {
-			padding-left: 3em;
+		#idc-container-parent #idc-container .idc-thread .idc-thread .idc-c {
+			background-position: -1528px -104px;
 		}
 
+		#idc-container-parent #idc-container .idc-thread:first-child > .idc-c {
+			padding-top: 0;
+			border-top: 0;
+		}
+		
 
-	#idc-container-parent #idc-container h3 {
-		margin: 0 0 .5em;
-		padding: 0 0 .2em;
-		font-size: 28px;
+	/* vote */
+	#idc-container-parent #idc-container .idc-v	{
+		font-size: 0.9em;
+	}
+	
+	#idc-container .idc-a_nomenu, 
+	#idc-container .idc-a {
+		margin: 0 15px 0 0 !important;
+	}
+	
+	#idc-container-parent #idc-container .idc-text,
+	#idc-container-parent #idc-container div.idc-text_noresize, 
+	#idc-container-parent #idc-container textarea.idc-text_noresize {
+		background-image: none;
+		border: 5px solid #e8e7e3;
+		font-size: 1em;
+		
+		-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	    box-sizing: border-box;         /* Opera/IE 8+ */	
 
 	}
-		#idc-container-parent #IDCommentsHead h3 {
-			font-size: 36px;
-			border-bottom: 4px solid #ccc;
-		}
 	
 	#idc-container-parent #idc-container .idc-c .idc-c-h {
 		background-image: none;
 	}
 	
 	#idc-container-parent #idc-container .idc-c .idc-i {
+		margin-left: 0;
 		font-family: "LeagueGothicRegular", sans-serif;
 		font-style: normal;
 		font-weight: 400;
-		font-size: 2.2em;
+		font-size: 1.7em;
 	}
 	
 		#idc-container-parent #idc-container .idc-i a {
-			font-size: 26px;
+			font-size: 1em;
 			color: #333;
 			text-decoration: none;
 		}
 		
 		#idc-container-parent #idc-container .idc-i em a {
-			font-size: 18px;
+			font-size: 1.6em;
 			color: #999;
 		}
-
-
-		#idc-container-parent #idc-container div,		
-		#idc-container-parent #idc-container .idc-c-t-inner {
-			font-size: 16px;
-			line-height: 1.6em;
+		
+		#idc-container-parent #idc-container .idc-i .idc-time {
+			color: #fff;
 		}
+
+
+		#idc-container-parent #idc-container .idc-c-t {
+			padding: 0;
+		}
+
+			#idc-container-parent #idc-container .idc-c-t-inner {
+				font-size: 0.9em;
+				line-height: 1.5em;
+			}
 
 		#idc-container-parent #idc-container .IDCommentThreadTimeRead {
 			display: none;
 		}
 
-/*
-font-family: "LeagueGothicRegular", sans-serif;
-font-style: normal;
-font-weight: 400;
+		#idc-container textarea.idc-text_noresize {
+			background-image: none;
+		}
 
-*/
+		#idc-container-parent #idc-container .idc-collapselink_closed, 
+		#idc-container-parent #idc-container .idc-collapselink {
+			font-size: 0.9em;
+			font-weight: normal;
+		}
 
 
 
@@ -568,7 +629,6 @@ video {
 	
 		header[role="banner"] nav li a {
 			margin-top: 20px;
-			font-size: 25px;
 			letter-spacing: 1px;
 		}
 		
@@ -599,8 +659,7 @@ video {
 
 @media screen and (max-width: 767px) {
 	h1 {
-		font-size: 50px;
-		line-height: 55px;
+		font-size: 3em;
 	}
 }
 
@@ -609,8 +668,13 @@ video {
 
 @media screen and (max-width: 480px) {
 
+	body {
+		font-size: 1em;
+	}
 
-	header[role="banner"] {}
+	header[role="banner"] {
+		height: 155px;
+	}
 		
 		/* Site logo */
 		header[role="banner"] .logo { 
@@ -641,15 +705,53 @@ video {
 	.archive li a {
 		padding-left: 0;
 	}	
-		.archive li .posted-on {
+		.archive li .post-date {
 			display: block;
 			float: none;
-			font-size: 0.8em;
+			font-size: 0.9em;
+			font-style: italic;
+			line-height: 1.4em;
 		}	
+
+	#idc-container-parent #idc-container .idc-v	{
+		display: none;
+	}
+
+	#idc-container-parent #idc-container .idc-thread .idc-thread {
+		margin-left: .3em;
+	}
+
+	#idc-container-parent #idc-container .idc-c-h,
+	#idc-container-parent #idc-container .idc-c .idc-i,
+	#idc-container-parent #idc-container .idc-c .idc-c-h-inner {
+		height: auto;
+	}
 
 }
 
 
+/* max-width: 320
+....................................................................................... */
+
+@media screen and (max-width: 320px) {
+
+	/* Site logo */
+	header[role="banner"] .logo { 
+	}
+
+		header[role="banner"] nav li a {
+			padding: .3em;
+		}
+
+	h1 {
+		font-size: 2.3em;
+	}
+
+	#idc-container-parent #idc-container .idc-i .idc-time {
+		white-space: nowrap;
+	}
+	
+}
 
 /**
  * Print styles.
