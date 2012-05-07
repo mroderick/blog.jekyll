@@ -16,3 +16,9 @@ Personally, I am looking forward to the [Deconstructing Agile](http://communityd
 I'll post the slides here after the talk.
 
 See you there!
+
+## Update - not speaking
+
+I have to be in Helsinki, Finland this Thursday for a workshop with a new client, so I won't be able to speak at Community Day this year. The work for the new client is VERY exciting, and I'll be blogging about the work soon. But, missing Community Day sucks. Next year!
+
+If you have something you'd like to share with the great community in Copenhagen, [@dalager](http://twitter.com/#!/dalager) is looking for a replacement speaker.
