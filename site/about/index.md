@@ -37,10 +37,13 @@ I am also a keen speaker at JavaScript user groups, happy to share my learnings 
 * [BerlinJS](http://berlinjs.org)
 * [CopenhagenJS](http://copenhagenjs.dk) — I am an organiser of CopenhagenJS
 
-
 ## Elsewhere
 
-* [My linkedin profile](http://www.linkedin.com/in/morganroderick)
+* [GitHub profile](https://github.com/mroderick)
+* [Ohloh profile](https://www.ohloh.net/accounts/mrgnrdrck)
+* [Lanyrd profile](http://lanyrd.com/profile/mrgnrdrck/)
+* [LinkedIn profile](http://www.linkedin.com/in/morganroderick)
+
 
 ## Copyright Information
 
