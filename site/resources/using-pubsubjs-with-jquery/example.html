@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Example of using PubSubJS with jQuery</title>
+	    <script src="jquery-1.7.2.js"></script>
+	    <script src="jquery.pubsub.js"></script>
+	    <script>
+			$(document).ready(function(){
+				// create a topic and a function to subscribe to that topic
+				var MY_TOPIC = 'my very exciting topic',
+				    subscriber = function( topic, data ){
+				    	if ( window.console ){
+				    		console.log( data );	
+				    	}			        
+				    };
+
+				// create a subscription
+				var subscription = $.pubsub( 'subscribe', MY_TOPIC, subscriber );
+	
+				// publish the topic
+				$.pubsub( 'publish', MY_TOPIC, 'hello world' );
+
+				// publish the topic syncronously
+				$.pubsub( 'publishSync', MY_TOPIC, 'hey world!' );
+
+				// use a timeout to allow async propagation to finish before removing subscribers
+				setTimeout(function(){
+					// remove a specific subscription by passing the subscription token returned when creating the subscription
+					$.pubsub( 'unsubscribe', subscription );
+
+					// remove all subscriptions for a subscriber, by passing the subscriber
+					$.pubsub( 'unsubscribe', subscriber );
+				}, 0);
+			});
+	    </script>
+	</head>
+	<body>
+		<h1>Example of using PubSubJS with jQuery</h1>
+		<p>
+			This is an example file for the article <a href="/resources/using-pubsubjs-with-jquery/">Using PubSubJS with jQuery</a>.
+		</p>
+		<p>
+			All the exciting things in this file are in the source and happens in the JavaScript console.
+		</p>
+	</body>
+</html>
