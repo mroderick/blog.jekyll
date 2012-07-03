@@ -54,7 +54,7 @@ $(document).ready(function(){
     // publish the topic
     $.pubsub( 'publish', MY_TOPIC, 'hello world' );
 
-    // publish the topic syncronously
+    // publish the topic synchronously
     $.pubsub( 'publishSync', MY_TOPIC, 'hey world!' );
 
     // use a timeout to allow async propagation to finish before removing subscribers
