@@ -20,7 +20,7 @@ Stenbocksgatan 6<br/>
 211 50 Malmö<br/>
 Sweden
 
-![Map showing Morgan's home](http://maps.google.com/staticmap?size=400x400&center=55.6014775,13.0126524&zoom=13&markers=55.6014775,13.0126524,&key=AIzaSyCKMYaVCmzeIR1vWS0WLKqwNtoLLUfj_Q8)
+![Map showing Morgan's home](http://staticmap.openstreetmap.de/staticmap.php?center=55.602447180894,13.008050916055&zoom=15&size=600x400&markers=55.601186460103,13.012943265298,lightblue1)
 
 When
 -------------------------
