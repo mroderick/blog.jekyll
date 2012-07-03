@@ -6,7 +6,7 @@ site_section:
 
 # Using PubSubJS with jQuery
 
-It was always possible to use PubSubJS with jQuery by using the `PubSub` global, see the [introduction to PubSubJS](./2010/10/12/introducing-pubsubjs-a-library-for-doing-publish-subscribe-in-javascript/) or check the examples in the [README](https://github.com/mroderick/PubSubJS/blob/master/README.md).
+It was always possible to use PubSubJS with jQuery by using the `PubSub` global, see the [introduction to PubSubJS](../../2010/10/12/introducing-pubsubjs-a-library-for-doing-publish-subscribe-in-javascript/) or check the examples in the [README](https://github.com/mroderick/PubSubJS/blob/master/README.md).
 
 Some projects prefer their JavaScript to have a more uniform and jQuery like style. From v1.3.0, [PubSubJS](https://github.com/mroderick/PubSubJS) comes with support for just that.
 
