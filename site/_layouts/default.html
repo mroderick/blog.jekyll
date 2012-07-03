@@ -18,39 +18,42 @@
 		<link rel="alternate" type="application/atom+xml" href="http://feeds2.feedburner.com/roderick" title="Atom Feed" />
 	</head>
 	<body class="{{page.site_section}}">
-	  <div id="container">
-		<header role="banner">
-			<a class="logo" href="/" class="home"><img src="/images/logo.png" alt="Roderick" /></a>
-			<nav>
-				<ul>
-					<li class="blog"><a href="/">Blog <em>Random ramblings</em></a></li>
-					<li class="archives"><a href="/archives/">Archives <em>All entries</em></a></li>
-					<li class="about"><a href="/about/">About <em>Me me &amp; me</em></a></li>
-					<li class="contact"><a href="/contact/">Contact <em>Drop me a line</em></a></li>
-				</ul>
-			</nav>
-			<a href="http://feeds2.feedburner.com/roderick" class="feed">Subscribe to the feed</a>
-		</header>
-		<div id="main" role="main">
-			{{ content }}
-		</div>
-		{% if page.site_section == 'frontpage blog' %}
-	 	<aside id="sidebar">
-		
-			<div class="about-teaser">
-				<h3>About the author</h3>
+		<div id="container">
+			<header role="banner">
+				<a class="logo" href="/" class="home"><img src="/images/logo.png" alt="Roderick" /></a>
+				<nav>
+					<ul>
+						<li class="blog"><a href="/">Blog <em>Random ramblings</em></a></li>
+						<li class="archives"><a href="/archives/">Archives <em>All entries</em></a></li>
+						<li class="about"><a href="/about/">About <em>Me me &amp; me</em></a></li>
+						<li class="contact"><a href="/contact/">Contact <em>Drop me a line</em></a></li>
+					</ul>
+				</nav>
+				<a href="http://feeds2.feedburner.com/roderick" class="feed">Subscribe to the feed</a>
+			</header>
+
+			<div id="main" role="main">
+				{{ content }}
+			</div>
+
+			{% if page.site_section == 'frontpage blog' %}
+		 	<aside id="sidebar">
 			
-				<figure>
-					<img class="profile-img" src="/images/morg-profile.jpg" alt="Morgan Roderick" />
-				</figure>
-			
+				<div class="about-teaser">
+					<h3>About the author</h3>
+					<figure>
+						<img class="profile-img" src="/images/morg-profile.jpg" alt="Morgan Roderick" />
+					</figure>
 					<p>My name is Morgan Roderick, I write this blog.</p>
-
 					<p>As you might have guessed from reading some of the posts on the blog, I am a web developer, specialising in front end web development. I’ve been building just about every type of website professionally since 1998.</p>
+					<p><a href="/about">Read more&hellip;</a></p>
 
-					<p>I believe I wrote my first webpage in 1994, the same year I got my first e-mail address. The webpage displayed photos taken by the Hubble telescope, and as far as I know, that page was only ever viewed in Mosaic on SGI Indy machines. <a href="/about">Read more...</a></p>
+					<h3>Articles</h3>
+					<ul class="articles">
+						<li><a href="/resources/using-pubsubjs-with-jquery/">Using PubSubJS with jQuery</a></li>
+					</ul>
 				</div>
-		 	</aside>
+			</aside>
 			{% endif %}
 			<footer>
 				&copy; Morgan Roderick, unless otherwise noted.

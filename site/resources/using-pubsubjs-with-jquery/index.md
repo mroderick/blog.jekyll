@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Using PubSubJS with jQuery
 site_section: 
 ---
@@ -59,7 +59,8 @@ $(document).ready(function(){
 
     // use a timeout to allow async propagation to finish before removing subscribers
     setTimeout(function(){
-        // remove a specific subscription by passing the subscription token returned when creating the subscription
+        // remove a specific subscription by passing the subscription token returned
+        // when creating the subscription
         $.pubsub( 'unsubscribe', subscription );
 
         // remove all subscriptions for a subscriber, by passing the subscriber

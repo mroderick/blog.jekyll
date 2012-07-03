@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<div class="article">
+	<article>
+		{{ content }}
+	</article>
+	{% unless page.disable_comments %}
+		<script>
+			var idcomments_post_id,
+				idcomments_post_url,
+				idcomments_acct = '4f0e1cb7e445080ae75ccf48cdd0252d';
+			{% if page.idcomments_post_id %}
+				idcomments_post_id = "{{page.idcomments_post_id}}";
+			{% endif %}
+		</script>
+		<span id="IDCommentsPostTitle" style="display:none"></span>
+		<script src='http://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
+	{% endunless %}
+</div>

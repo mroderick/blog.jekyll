@@ -331,7 +331,12 @@ article {}
 				color: #999;
 			}	
 
-	
+#sidebar ul.articles {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	font-size: 0.9em;
+}	
 
 #container footer {
 	clear: both;
