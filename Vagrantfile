@@ -1,6 +1,6 @@
 Vagrant::Config.run do |config|
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "base"
+  config.vm.box = "lucid32"
 
   # Force gui to resolve some issues where the VM becomes unreachable
   config.vm.boot_mode = :gui
