@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>jQuery click event via event delegate for checkboxes broken</title>
+		 <script src="jquery.js"></script>
+		 <!--
+		 <script src="jquery-1.9.1.js"></script>
+		-->
+		<!--
+		 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		-->
+		<style>
+			.test-area {
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>jQuery/WebKit event delegate bug</h1>
+		<p>
+			This is an experiment to reproduce a possible bug, where synthetic click events for jQuery Event Delegates for checkboxes are broken in WebKit based browsers.
+		</p>
+		<p>
+			Older versions of jQuery (1.7.2) does not exhibit this behaviour, but the latest stable (and development) of the 1.9.x branch does.
+		</p>
+		<p>
+			In most browsers, the results table below will display "YES" for every scenario. In WebKit browsers, it seems that the synthetic trigger of the click event never activates the event delegate.
+		</p>
+		<p>
+			Please view the source of this document to see the test setup.
+		</p>
+
+		<table class="results" border="1">
+			<thead>
+				<tr>
+					<th>&nbsp;</th>
+					<th>Click</th>
+					<th>Delegated click</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>Click for attached nodes</th>
+					<td class="attached-click">Nope</td>
+					<td class="attached-delegate">Nope</td>
+				</tr>
+				<tr>
+					<th>Click for un-attached nodes</th>
+					<td class="un-attached-click">Nope</td>
+					<td class="un-attached-delegate">Nope</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="test-area"></div>
+		<script>
+			var container1 = $('<div id="container1"></div>');
+			var attached = $('<input>', { type : 'checkbox', id : 'myCheckbox-1' } );
+
+			container1.append( attached );
+
+
+			// un-delegated click event
+			attached.on('click', function(){
+				$('.attached-click').html('YES');
+			});
+
+			// event delegate
+			container1.on('click', '#myCheckbox-1', function(){
+				$('.attached-delegate').html('YES');
+			});
+
+			$('.test-area').append(container1);
+
+			// trigger the event, to update the table
+			attached.trigger('click');
+
+			// NOW FOR THE UN-ATTACHED TEST
+			var container2 = $('<div id="container1"></div>');
+			var unattached = $('<input>', { type : 'checkbox', id : 'myCheckbox-2' } );
+
+			container2.append( unattached );
+
+			// un-delegated click event
+			unattached.on('click', function(){
+				$('.un-attached-click').html('YES');
+			});
+
+			// event delegate
+			container2.on('click', '#myCheckbox-2', function(){
+				$('.un-attached-delegate').html('YES');
+			});
+
+			// THIS NODE IS NOT APPENDED TO THE DOCUMENT
+
+			// trigger the event, to update the table
+			unattached.trigger('click');
+		</script>
+	</body>
+</html>
