@@ -6,11 +6,11 @@
 	<head>
 		<meta charset="utf-8">
 		<title>CV for Morgan Roderick — Freelance front end developer</title>
-		
+
 		<meta name="author" content="Morgan Roderick" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
+		<link href="bootstrap/css/bootstrap.css" rel="stylesheet" media="all" />
 		<style>
 			body {
 				padding-top: 60px;
@@ -35,11 +35,16 @@
 					font-size: 40px;
 				}
 			}
-		</style>		
+
+			@media print {
+				.navbar {
+					display: none !important;
+				}
+			}
+		</style>
 		<link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet" />
 	</head>
 	<body>
-
 		<div class="navbar navbar-fixed-top">
 			<div class="navbar-inner">
 				<div class="container">
@@ -77,9 +82,10 @@
 				<div class="span4 address">
 					<address>
 						<b>Morgan Roderick</b><br>
-						Stenbocksgatan 6<br>
-						SE-21150 Malmö<br>
-						Sweden
+						c/o Sarah Horton<br/>
+						Willibal-Alexis Straße 32<br/>
+						10965 Berlin<br/>
+						Germany<br/>
 					</address>
 				</div>
 				<div class="span4">
@@ -87,7 +93,7 @@
 							<dt>E-mail</dt>
 							<dd><a href="mailto:morgan@roderick.dk">morgan@roderick.dk</a></dd>
 							<dt>Mobile</dt>
-							<dd><a href="tel:+45%204087%207776">+45 4087 7776</a></dd>
+							<dd><a href="tel:+45%204087%207776">+49 (0)157 79368339</a></dd>
 							<dt>Twitter</dt>
 							<dd><a href="https://twitter.com/mrgnrdrck">@mrgnrdrck</a></dd>
 							<dt>Website</dt>
@@ -177,20 +183,20 @@
 								<td><a href="http://en.wikipedia.org/wiki/JavaScript">JavaScript</a></td>
 								<td>Expert</td>
 								<td class="number">10+</td>
-								<td class="number">2012</td>
+								<td class="number">2013</td>
 
 							</tr>
 							<tr>
 								<td><a href="http://en.wikipedia.org/wiki/HTML">HTML</a></td>
 								<td>Expert</td>
 								<td class="number">10+</td>
-								<td class="number">2012</td>
+								<td class="number">2013</td>
 							</tr>
 							<tr>
 								<td><a href="http://en.wikipedia.org/wiki/Cascading_Style_Sheets">CSS</a></td>
 								<td>Expert</td>
 								<td class="number">10+</td>
-								<td class="number">2012</td>
+								<td class="number">2013</td>
 							</tr>
 							<tr>
 								<td><a href="http://www.ruby-lang.org">Ruby</a></td>
@@ -233,7 +239,7 @@
 								<td><a href="http://jquery.com/">jQuery</a></td>
 								<td>Advanced</td>
 								<td class="number">5</td>
-								<td class="number">2012</td>
+								<td class="number">2013</td>
 							</tr>
 							<tr>
 								<td><a href="http://www.prototypejs.org/">Prototype</a></td>
@@ -245,13 +251,13 @@
 								<td><a href="http://sinonjs.org/">Mustache.js</a></td>
 								<td>Confident</td>
 								<td class="number">1</td>
-								<td class="number">2012</td>
+								<td class="number">2013</td>
 							</tr>
 							<tr>
 								<td><a href="http://sinonjs.org/">RequireJS</a></td>
 								<td>Confident</td>
 								<td class="number">1</td>
-								<td class="number">2012</td>
+								<td class="number">2013</td>
 							</tr>
 							<tr>
 								<td><a href="http://rubyonrails.org/">Ruby on Rails</a></td>
@@ -274,22 +280,22 @@
 						</thead>
 						<tbody>
 							<tr>
+								<td><a href="http://busterjs.org/">Buster.JS</a></td>
+								<td>Experienced</td>
+								<td class="number">1</td>
+								<td class="number">2013</td>
+							</tr>
+							<tr>
 								<td><a href="http://code.google.com/p/js-test-driver/">JsTestDriver</a></td>
 								<td>Experienced</td>
 								<td class="number">3</td>
 								<td class="number">2012</td>
 							</tr>
 							<tr>
-								<td><a href="http://busterjs.org/">Buster.JS</a></td>
-								<td>Experienced</td>
-								<td class="number">1</td>
-								<td class="number">2012</td>
-							</tr>
-							<tr>
 								<td><a href="http://sinonjs.org/">Sinon</a></td>
 								<td>Experienced</td>
 								<td class="number">2</td>
-								<td class="number">2012</td>
+								<td class="number">2013</td>
 							</tr>
 							<tr>
 								<td><a href="http://www.ruby-doc.org/stdlib-1.9.3/libdoc/test/unit/rdoc/Test/Unit.html">Test::Unit</a></td>
@@ -314,16 +320,16 @@
 									Source control
 								</dt>
 								<dd>
-									Subversion, Git, Mercurial, CVS, Source Safe, Harvest
+									Subversion, Git, Mercurial, CVS, Source Safe, CA Harvest
 								</dd>
 							</dl>
-	
+
 							<dl>
 								<dt>
 									Quality
 								</dt>
 								<dd>
-									JSLint, jsdoc-toolkit, Jenkins
+									JSLint/JSHint, jsdoc-toolkit, Jenkins, Travis CI
 								</dd>
 							</dl>
 						</div>
@@ -370,7 +376,16 @@
 						<li><a href="http://www.semler-it.dk/">Semler IT</a>, IT supplier and integrator to automotive sector</li>
 						<li><a href="http://www.leoburnett.com/">Leo Burnett</a>, ad agency, I worked with the then Copenhagen office</li>
 						<li><a href="https://www.it-jobbank.dk/">IT-Jobbank</a>, bootstrapped startup acquired by StepStone</li>
-						
+
+					</ul>
+
+					<h3>2013 &ndash; present <a href="http://brandwatch.com">Brandwatch</a></h3>
+					<p>
+						<b>Senior JavaScript developer</b><br />
+					</p>
+					<ul>
+						<li>JavaScript web development</li>
+						<li>Frotend architecture, tools, processes</li>
 					</ul>
 
 					<h3>2003 &ndash; 2005 <a href="http://valtech.dk">Valtech A/S</a></h3>
@@ -410,13 +425,13 @@
 
 					<blockquote>
 						<p>
-							I had a pleasure to work with Morgan for 1.5 year. I remember very distinctively from my first 
-							day at Nokia that he was the first person to show me my way around in the new project. He's a great 
-							colleague and one of the best programmers I know. Morgan is smart and get things done. He learns 
-							constantly about new developments in web technology and several times he introduced to our project 
-							new tools that greatly helped us. I learned a lot from him. Morgan has a strong personality and was 
-							one of the most important driving forces in our team. He cares a lot for the overall success of a 
-							project and strikes the perfect balance between deadlines and code quality. If you have a challenging 
+							I had a pleasure to work with Morgan for 1.5 year. I remember very distinctively from my first
+							day at Nokia that he was the first person to show me my way around in the new project. He's a great
+							colleague and one of the best programmers I know. Morgan is smart and get things done. He learns
+							constantly about new developments in web technology and several times he introduced to our project
+							new tools that greatly helped us. I learned a lot from him. Morgan has a strong personality and was
+							one of the most important driving forces in our team. He cares a lot for the overall success of a
+							project and strikes the perfect balance between deadlines and code quality. If you have a challenging
 							project and need a star developer to help you – Morgan is the man.
 						</p>
 						<small>Krzysztof Szafranek, Web front-end architect, Nokia, 2011-05-16</small>
@@ -434,12 +449,12 @@
 
 					<blockquote>
 						<p>
-							I've worked with Morgan for over a year, and have only good things to say. He takes responsibility and 
-							ownership beyond of what is stated in his contract. He comes with constructive suggestions and tangible 
-							improvements both for the development process, as well as the product or service under construction. Due 
-							to his long experience, those suggestions are really worth listening to. Morgans best trait, however, is 
-							that he is not afraid to raise concerns or point out problems, regardless of whether he's talking to the 
-							CEO or co-developer. This sobering view is the most important things a consultant can bring to any 
+							I've worked with Morgan for over a year, and have only good things to say. He takes responsibility and
+							ownership beyond of what is stated in his contract. He comes with constructive suggestions and tangible
+							improvements both for the development process, as well as the product or service under construction. Due
+							to his long experience, those suggestions are really worth listening to. Morgans best trait, however, is
+							that he is not afraid to raise concerns or point out problems, regardless of whether he's talking to the
+							CEO or co-developer. This sobering view is the most important things a consultant can bring to any
 							project, in my opinion.
 						</p>
 						<small>Kai Inkinen, Senior Specialist at Futurice Gmbh, 2011-11-01</small>
@@ -447,15 +462,15 @@
 
 					<blockquote>
 						<p>
-							We had Morgan as one of the strongest contributors in our team of highly skilled web frontend-developers. 
-							He combines excellent knowledge of latest web technologies with extra-ordinary dedication to results delivered 
-							on time and according to highest quality standards. He is always interested to optimize both solution &amp; 
+							We had Morgan as one of the strongest contributors in our team of highly skilled web frontend-developers.
+							He combines excellent knowledge of latest web technologies with extra-ordinary dedication to results delivered
+							on time and according to highest quality standards. He is always interested to optimize both solution &amp;
 							value for his customer. I fully recommend Morgan to all teams that strive for product excellence.
 						</p>
 						<small>Markus Schetelig, Director, Product Program Manager at Nokia, 2012-02-01</small>
 					</blockquote>
 				</div>
-			</div>			
+			</div>
 
 
 			<div class="row">
@@ -484,7 +499,7 @@
 			<hr />
 
 			<footer>
-				<p>&copy; 2012 Morgan Roderick</p>
+				<p>&copy; 2012, 2013 Morgan Roderick</p>
 			</footer>
 
 		</div>

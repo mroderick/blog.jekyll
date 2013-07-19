@@ -1,0 +1,190 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Experiment: outside positioned elements and z-index</title>
+        <style>
+            .exosphere    { z-index: 1000000 }
+            .thermosphere { z-index: 100000 }
+            .mesosphere   { z-index: 10000 }
+            .stratosphere { z-index: 1000 }
+            .troposphere  { z-index: 100 }
+
+            h4 {
+                margin-top: 0;
+            }
+
+            .sidebar {
+                float: left;
+                width: 400px;
+                background: yellow;
+            }
+
+            .content {
+                float: left;
+                width: 600px;
+                border: 2px solid #ccc;
+                margin-left: 20px;
+                padding: 10px;
+            }
+                .content {
+                    position: relative;
+                    padding-bottom: 30px;
+                }
+
+                .content .raised {
+                    position: relative;
+                    border: 2px solid #888;
+                    margin: 0 20px;
+                    padding: 10px;
+                }
+
+            .break-layout {
+                width: 10000px;
+                background: cyan;
+                border: 2px solid black;
+            }
+
+            .thing {
+                padding: 12px;
+                border: 2px solid red;
+                background: lime;
+                position: absolute;
+                top: 350px;
+                right: -100px;
+                width: 350px;
+
+                -webkit-box-shadow: 7px 7px 5px rgba(50, 50, 50, 0.75);
+                -moz-box-shadow:    7px 7px 5px rgba(50, 50, 50, 0.75);
+                box-shadow:         7px 7px 5px rgba(50, 50, 50, 0.75);
+            }
+
+            .previous-context {
+                position: relative;
+                border: 2px solid blue;
+
+                /* solves problems of widgets not breaking entire layout, needed, try removing it and see the layout break by .break-layout */
+                overflow: hidden;
+            }
+
+            .positioning-context {
+                position: relative;
+                z-index: 5000
+            }
+
+            .rendering-context {
+
+            }
+
+            .overflow-context {
+                padding: 10px;
+                border: 2px solid blue;
+                overflow: hidden;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Stop chasing z-indices</h1>
+        <p>
+            This is an example to show a different approach to solve problems with positioned elements inside widgets, overflow and z-index. It came out of a conversation with Graham, prompted by <a href="https://github.com/BrandwatchLtd/frontend/pull/2075">yet another pull request to set z-index on another form element</a>.
+        </p>
+        <h3>Challenges</h3>
+        <ul>
+            <li>Under no circumstances can widgets be allowed to break the layout</li>
+            <li>Some parts of a widget (like a notification, or expandable control), needs to be displayed outside the widget boundary and on top of other widgets</li>
+        </ul>
+
+        <h3>Problems</h3>
+        <li>To prevent widgets from breaking the layout, <code>overflow:hiddden</code> must be used on them</li>
+        <li>Positioning elements outside the widget boundary is now impossible, so they are appended to the <code>body</code> element</li>
+        <li><a href="https://github.com/BrandwatchLtd/frontend/pull/2075">Management of z-index is now a handheld process</a>, as the widget is no longer an ancestor</li>
+        <li><code>top, right, bottom, left</code> values for positioning the element now becomes a much more complicated operation</li>
+        <li>The widget is no longer self contained, cleanup and testing requires much more effort</li>
+
+        <h3>Proposal for solution</h3>
+
+        <ul>
+            <li>Every widget must have a &quot;positioning context&quot;, containing an &quot;overflow context&quot;</li>
+            <li>Ids and identifying classnames are attached to the &quot;positioning context&quot; (the outer element)</li>
+            <li>Regular content that doesn't need positioning outside the widget border, is placed in the &quot;overflow context&quot;</li>
+            <li>z-indices are managed by adding an extra class name to positioning contexts, these should be predefined</li>
+        </ul>
+
+<h4>Example z-index class names and how they could be used</h4>
+<code><pre>
+.exosphere    { z-index: 1000000 }  /* modals */
+.thermosphere { z-index: 100000 }   /* notifications (like Rails' flash messages ) */
+.mesosphere   { z-index: 10000 }    /* high priority widgets with outside positioned elements (navigation) */
+.stratosphere { z-index: 1000 }     /* widgets with outside positioned elements */
+.troposphere  { z-index: 100 }      /* regular widgets */
+.sealevel     { z-index: 0 }        /* regular widgets/text content */
+</pre></code>
+
+<h2>Example</h2>
+
+        <div class="wrap">
+            <div class="sidebar">
+                <div class="widget positioning-context stratosphere">
+                    <div class="overflow-context">
+                        <h4>.stratosphere z-index 1000</h4>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <div class="break-layout">I break layouts</div>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut congue enim vitae dolor elementum at ultrices est sagittis. Donec vel est a massa accumsan adipiscing quis at libero. Sed id fermentum est. Donec mattis posuere elit id porta. Nulla aliquet aliquam eros, nec iaculis lacus rhoncus vitae. Nunc aliquam sem at urna rutrum volutpat et a erat. Pellentesque sit amet ipsum enim. Nunc arcu ligula, eleifend eget pellentesque vel, sagittis in sem.
+                        </p>
+                        <p>Aliquam neque augue, sollicitudin quis rutrum ac, rutrum in odio. Proin in neque metus. Curabitur pulvinar est eu urna imperdiet volutpat. Nulla facilisi. Phasellus accumsan lectus et turpis aliquam sollicitudin. Ut consequat, tortor eu porttitor faucibus, felis odio elementum quam, et porta felis risus ut libero. Maecenas commodo pellentesque urna vel ornare. Integer ultricies lacinia velit in sollicitudin. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas faucibus lectus eu nibh mollis nec rhoncus risus placerat. Curabitur congue libero eget dui suscipit consequat.
+                        </p>
+                    </div>
+
+                    <!--
+                        by placing this inside the .positioning-context element, we can control where it goes AND keep easy management of z-index
+                        since it's outside the overflow-context, we don't have clipping/overflow conflicts
+                    -->
+                    <div class="thing">
+                        <h4>Outside positioned child element</h4>
+                        I am positioned relative to my nearest positioned ancestor (<code>.positioning-context</code>), but not clipped, as I am outside the <code>.overflow-context.</code><br/>
+                        I inherit the z-index of my ancestor, and can thus sit on top of the content, even that in the troposphere<br/>
+                        <br/>
+                        There's no need to break me out of my ancestor and append me to the end of &lt;body&gt;<br/>
+                        <br/>
+                        If you want me to be anchored to an element inside the overflow-context, you will still need to measure for values, but only inside the widget itself
+                    </div>
+                </div>
+            </div>
+
+            <div class="content">
+                <h4>Sea level, no z-index</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut congue enim vitae dolor elementum at ultrices est sagittis. Donec vel est a massa accumsan adipiscing quis at libero. Sed id fermentum est. Donec mattis posuere elit id porta. Nulla aliquet aliquam eros, nec iaculis lacus rhoncus vitae. Nunc aliquam sem at urna rutrum volutpat et a erat. Pellentesque sit amet ipsum enim. Nunc arcu ligula, eleifend eget pellentesque vel, sagittis in sem.
+                </p>
+                <p>Aliquam neque augue, sollicitudin quis rutrum ac, rutrum in odio. Proin in neque metus. Curabitur pulvinar est eu urna imperdiet volutpat. Nulla facilisi. Phasellus accumsan lectus et turpis aliquam sollicitudin. Ut consequat, tortor eu porttitor faucibus, felis odio elementum quam, et porta felis risus ut libero. Maecenas commodo pellentesque urna vel ornare. Integer ultricies lacinia velit in sollicitudin. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas faucibus lectus eu nibh mollis nec rhoncus risus placerat. Curabitur congue libero eget dui suscipit consequat.
+                </p>
+
+                <div class="raised troposphere">
+                    <h4>.troposphere z-index 100</h4>
+
+                    <p>
+                        I am raised above the sea level
+                    </p>
+
+                    <p>Donec tincidunt lacinia nulla, a ornare metus interdum vel. Nam non nibh ipsum, feugiat dapibus augue. Nulla facilisi. Vestibulum interdum, sapien vitae pharetra aliquet, nisl tortor scelerisque lorem, in vestibulum tellus lectus a libero. Pellentesque euismod ipsum eu tortor viverra tincidunt. Sed nec leo purus, nec pharetra urna. Fusce ac tempor sem. Nunc venenatis velit rhoncus quam convallis ut faucibus mi consequat. Vivamus tortor leo, consectetur a blandit id, lacinia in nisl. Quisque eget mauris eu ligula sollicitudin volutpat nec tempor nulla. Ut ornare pretium urna, ac lacinia orci tincidunt eu. Mauris tempus, urna vitae blandit laoreet, tellus leo condimentum nunc, et accumsan urna lorem ac odio. Pellentesque lobortis risus ac sem aliquam eget adipiscing mauris euismod.
+                    </p>
+                </div>
+
+                <h4>Sea level, no z-index</h4>
+                <p>Phasellus vel est ut diam molestie tristique. Proin risus urna, fermentum non lobortis vitae, sodales sit amet magna. Phasellus tempus ultrices lectus, nec faucibus mi dignissim nec. Morbi odio erat, ornare non tincidunt in, semper eget enim. Donec interdum feugiat adipiscing. Donec tincidunt aliquam consequat. Suspendisse id erat et lectus pretium faucibus. Phasellus quis varius lorem. Mauris at odio nulla. Donec sit amet enim in turpis varius interdum in eu tortor. Nam lacus risus, porttitor vitae cursus quis, molestie nec mauris.
+                </p>
+                <p>Suspendisse eleifend tempus velit vel imperdiet. In pharetra cursus dolor in pretium. In porttitor auctor mauris id posuere. Aliquam sit amet sapien urna, et eleifend enim. Phasellus ultrices sagittis libero cursus mollis. Suspendisse ante urna, congue eu sodales a, dictum bibendum risus. Curabitur ut massa a est cursus sagittis. Quisque vitae justo nisi, mattis vestibulum mauris. Suspendisse potenti.
+                </p>
+
+            </div>
+
+        </div>
+
+    </body>
+</html>
