@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/mroderick/blog.jekyll",
   "devDependencies": {
-    "grunt": "~0.4.2"
+    "grunt": "~0.4.2",
+    "grunt-contrib-imagemin": "~0.4.0"
   }
 }
