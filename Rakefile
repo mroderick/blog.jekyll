@@ -6,17 +6,7 @@ task :default => :server
 
 desc 'Build site with Jekyll'
 task :build do
-  jekyll '--no-server --no-auto'
-end
-
-desc 'Automatically rebuild the site when there are changes, but don\' start a server'
-task :auto do
-  jekyll '--no-server --auto'
-end
-
-desc 'Build and start server with --auto'
-task :server do
-  jekyll '--server --auto'
+  sh 'jekyll build'
 end
 
 desc 'Build and deploy'
