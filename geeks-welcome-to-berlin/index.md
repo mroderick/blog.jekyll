@@ -17,7 +17,7 @@ This page is far from complete, but I hope it'll help you started on the right f
 
 If you're visiting via an airport, you'll probably want to go to Alexanderplatz and then get your bearings from there.
 
-Then in doubt, or if you're not going to Alexanderplatz, The [BVG journey planner](http://www.bvg.de/index.php/en/index.html) is quite good, as are the route planning apps (see below).
+When in doubt, or if you're not going to Alexanderplatz, The [BVG journey planner](http://www.bvg.de/index.php/en/index.html) is quite good, as are the route planning apps (see below).
 
 ### From TXL
 From Tegel Airport, the easiest way to get to Alexanderplatz is to take the "TXL" bus route that goes directly there. You'll need an AB ticket, which will cost €2.60 and is valid for the rest of your journey inside the AB zone.
@@ -37,16 +37,27 @@ Or, you can take a taxi, should be about €35 to Alexanderplatz.
 
 First things first, you will probably want a data plan for one or more of your devices for your visit, right?
 
+**Obvious reminder**: make sure you get the correct sim card size for your device!
+
+Most prepaid sims sold over the counter are regular/micro, not nano sims (iPhone5+). Save yourself some hassle and and time in Berlin, and **order your sim online** and have it sent to your hotel or a friend in Berlin (I don't think any of the companies will ship sims outside Germany).
+
 [http://prepaidwithdata.wikia.com/wiki/Germany](http://prepaidwithdata.wikia.com/wiki/Germany) has a good overview of what is available.
 
+### Recommendation - congstar
+[congstar](http://prepaidwithdata.wikia.com/wiki/Germany#congstar) uses the Telekom Deutschland (formlery T-mobile) network, which has excellent coverage in Berlin and has pretty good coverage in rural areas as well.
+
+You can [buy their sim cards online](http://www.congstar.de/prepaid/) or in [many physical locations]((http://prepaidwithdata.wikia.com/wiki/Germany#congstar)
+
+* <http://www.congstar.de/prepaid/>
+* <http://prepaidwithdata.wikia.com/wiki/Germany#congstar>
+
 ### Recommendation - blau.de
-In Berlin, blau.de works fairly well, and is quite affordable. It's easy enough to understand their website using just Google Translate in Chrome.
+In Berlin, [blau.de](http://prepaidwithdata.wikia.com/wiki/Germany#blau.de) works fairly well, and is quite affordable. It's easy enough to understand their website using just Google Translate in Chrome.
 
-You can get sim cards from [Media Markt in Alexa on Alexanderplatz](https://www.google.com/maps/preview#!q=Alexa&data=!4m15!2m14!1m13!1s0x0%3A0x519409aa3f6cb7e6!3m8!1m3!1d2010!2d13.41475!3d52.51998!3m2!1i1308!2i636!4f13.1!4m2!3d52.5199797!4d13.4147492) for €10 (which gives you €10 credit), and top up credit from most drug stores and small convenience stores. You probably want €10 extra credit, so you can get the "Internet-Flat 1 GB" option for €9.90.
+You can [buy their sim cards online](https://www.blau.de) or in [many physical locations](http://prepaidwithdata.wikia.com/wiki/Germany#blau.de)
 
-Make sure you get the sim card size for your phone! If you don't know what size, just ask in the shop, they're capable and helpful.
-
-Bonus points for talking a friend in Berlin into buying it for you ahead of your arrival, so there's one thing less to worry about.
+* <https://www.blau.de>
+* <http://prepaidwithdata.wikia.com/wiki/Germany#blau.de>
 
 ## Money
 
@@ -54,14 +65,14 @@ Berlin operates mostly on cash, so you'll want some.
 
 Luckily there are cash machines everywhere.
 
-Beware of the fees when getting cash. If it's not free, you can expect to pay ~€5 per transaction.
+Beware of the fees when getting cash from cash machines. If it's not free, you can expect to pay ~€5 per transaction.
 
 You can find details of the fee structure on every cash machine. When in doubt, always get €200 or more to beat the minimum fee.
 
-### App
-I use the [Geldautomat Suche](https://itunes.apple.com/de/app/geldautomat-suche-ihre-kostenlose/id438417025?mt=8) app to find banks in CashGroup (which means I can take out cash without fees).
+Some issuers of cards offer you to take out cash without fees from any machine, it's probably worth checking if you have one of those.
 
-You should probably check your cards, and see if there are some that allows you to get cash without fees.
+### Money - finding cash machines
+I use the [Geldautomat Suche](https://itunes.apple.com/de/app/geldautomat-suche-ihre-kostenlose/id438417025?mt=8) app to find banks in CashGroup (which means I can take out cash without fees). The app also lists cash machines for non-CashGroup banks.
 
 ## Getting around
 
@@ -76,23 +87,33 @@ Busses
 
 The tickets might not look the same, but they do cover all systems and allows you to transfer from one to the other to complete your journey.
 
-There are also taxis. In my experience, they're reasonably priced compared to Scandinavia and drivers take the most direct route or ask your preference if you show German proficiency.
+There are also taxis. In my experience, they're reasonably priced (compared to Scandinavia at least) and drivers take the most direct route or even ask your preference if you show any German proficiency.
+
+### Getting around - bicycles
+
+Berlin is very bicycle friendly, and you can rent bicycles pretty much everywhere.
+
+I've used [Fat Tire](http://berlin.fattirebiketours.com/pages/information/online-rentals) before, and was very happy with their service.
+
+Don't forget to buy a ticket for your bike, if you decide to take it with you on public transit.
 
 ### Getting around - apps
 
 Get one of the official apps to help planning your travel through the city, you can load these onto your phone even before you leave your home.
 
-iOS — [iFahrinfo](https://itunes.apple.com/de/app/berlin-brb/id409357982?mt=8)
+iOS — [BVG FahrInfo Plus](https://itunes.apple.com/de/app/fahrinfo-berlin/id284971745?mt=8)
 
-Android — [Fahrinfo Mobile](https://play.google.com/store/apps/details?id=de.hafas.android.vbb)
+Android — [BVG FahrInfo Plus](https://play.google.com/store/apps/details?id=de.eos.uptrade.android.fahrinfo.berlin&hl=de)
 
-A reader recommends [Öffi for Android](https://play.google.com/store/apps/details?id=de.schildbach.oeffi&hl=en), as a more user friendly alternative to the BVG app. I haven't tried it, let me know if you find it useful!
+If you provide the app with payment information, you can use them to buy tickets (if you have an internet connection). You can set this up ahead of time, so you're ready to rock when you arrive in Berlin.
+
+**Idea**: You can even buy an all-day ticket (AB for TXL, ABC for SXF) before you even leave your home, and be ready to just step on the train/bus/tram when you arrive in Berlin.
 
 Also, Google has added Berlin public transit to the routing in the Maps apps on iOS, I suspect that means it's already in Android.
 
 ### BVG - tickets
 
-You can buy tickets in all Rail, S-bahn, U-bahn stations as well as on trams and busses.
+You can buy tickets in all Rail, S-bahn, U-bahn stations as well as on trams and busses, and even using the official BVG apps (see above).
 
 The [Tickets & Fares](http://www.bvg.de/index.php/en/17182/name/Single+Tickets+and+Day+Ticket.html) page should have all the information you need.
 
@@ -118,7 +139,15 @@ I maintain a [list of my favourite coffee places](https://foursquare.com/user/79
 
 ## Food && Drink
 
-I also maintain a list of [favourite restaurants] on Foursquare as well as a [short list of Berlin bars](https://foursquare.com/user/79085/list/berlin-bars).
+Here are a few more lists that might be of interest to you
+
+* [Favourite restaurants](https://foursquare.com/mrgnrdrck/list/favourite-restaurants)
+* [Japanese food in Berlin](https://foursquare.com/mrgnrdrck/list/japanese-food-in-berlin)
+* [Korean food in Berlin](https://foursquare.com/mrgnrdrck/list/korean-food-in-berlin)
+* [Chinese food in Berlin](https://foursquare.com/mrgnrdrck/list/chinese-food-in-berlin)
+* [Berlin bars](https://foursquare.com/user/79085/list/berlin-bars)
+
+The places listed here are places that I like for various reasons, and that I'd happily visit again.
 
 ## Free wifi
 
