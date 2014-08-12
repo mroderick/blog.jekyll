@@ -1,0 +1,76 @@
+==================================================================
+https://keybase.io/mrgnrdrck
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://roderick.dk
+  * I am mrgnrdrck (https://keybase.io/mrgnrdrck) on keybase.
+  * I have a public key with fingerprint 3ABC 8817 CF95 2AF1 78E1  0115 19F2 57E0 CF18 1A69
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "client": {
+            "name": "keybase.io node.js client",
+            "version": "0.4.14"
+        },
+        "key": {
+            "fingerprint": "3abc8817cf952af178e1011519f257e0cf181a69",
+            "host": "keybase.io",
+            "key_id": "19F257E0CF181A69",
+            "uid": "229d6d972d447526c2b2cf9b20f80c00",
+            "username": "mrgnrdrck"
+        },
+        "merkle_root": {
+            "ctime": 1407224165,
+            "hash": "333d89f537752b4b844f76e7c8b94f2aa6c6fe5cafdb5606700e7768cb768a183c06197c87bb56d6746082411b9bb9435805c95f17b78fff9e860f3ef5fe908a",
+            "seqno": 33285
+        },
+        "service": {
+            "hostname": "roderick.dk",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1407224205,
+    "expire_in": 157680000,
+    "prev": "d7dacfbb13bb50896cb9e3d9b39fc1af13d468910360c552919a1bb47c0cc1d7",
+    "seqno": 5,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v1
+
+owFVkmtoHFUYhjdpo6mxUmy0YlKNgxSs2/WcuZzLoj9sbbxQBFvBP9btuSbjZme2
+ZyaXpcaW1EYT3CrG+KMlMaJSEMVaqlIsrVZrvUVQQUSUVluDGhEEb1gbPBMi2vkx
+zJnznPf93u87jy9dlGts2B9uf+fldcdHGj78gec2nRqpb3N4LGtOcZsjekIVpdlX
+xCrKKTplVeMsUYUw7ohiqQr3Jx0LTN7pUyYJ48hSoOAXoO8M5jM+O63DqEuZqgkz
+McdjXBACsdA0cJmGmCgIIAwg1W6AFRAaEsgQtZrdcZKeZ+vMa5ZCaf9C2mn59WBd
+p+Vvnud75zdcl0okKXal7+PARcLlrjXjLtAECAAyMFFmIVPFdEVGGlHOCq4oU+5R
+JRPH87FFGmYM9AF2XR+iwJbEku4shOdJQnXgYevAfU58X2OksCCc+tplDAmkVSCY
+ljxAAGEAFMaICG5fDBJPAASpxTG3+xJhHwFiLSCn3Cp4AQGBoIHtDsdEa00VQUB7
+SgdaUUCYzZCorVHsFD3PJcFgtjR9oVBZ2VnbFtIZOyYTinJBlu2RqonTWMQ9dqM7
+TavFLHJaq2Zgv+KllxY0SjyMpJ3Z/6cKLXp+O1xg26EGqqFRpTAjAhsN2CfzUX1W
+U2LJhOYcejYkIBQJTpUnKfeoFtCO3pM+IhQCDwERBC6FlEHOfSyAEFDi/0Jap5R1
+Wckk7IpY2muUMzjS0L4419CYu6CpMbu2uYuWLPv3Lq+ca84dKU1Nr3xi7uSSG5va
+X51Yu2OrHr3tjxfaLl0+9uS49+CJlrk3tx87cMV3+cmJjXjPjP/z8OxwZ9v45uOT
+a9ta3/hq2ZV/Dj199fhO8v5r99078OJ1Z356q/DeqjvrNx2sPD/adODwoU/2ic6z
+bOz31m/Otldnm6aG/DMTow/dMP71t+z0uwOVtx/dv/OX6bH11fj0F6+Y3d9v2XL0
+1IWFTed23X7J9fVVx3Yt/vujfc1XHXzgrqUrWovPflZTO5rdfOHWXvPUtUeeKW8w
+P+45lL84eaSlXv914wd3HK6fm/nr4+LwLZ/3zXw5JVo2PJz2Pzd74uRQ8lvtsTUd
+99z9eig/3c2meaW/vHrgMm/FNZfv/Qc=
+=6wKn
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/mrgnrdrck
+
+==================================================================
