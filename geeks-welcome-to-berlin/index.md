@@ -46,7 +46,7 @@ Most prepaid sims sold over the counter are regular/micro, not nano sims (iPhone
 ### Recommendation - congstar
 [congstar](http://prepaidwithdata.wikia.com/wiki/Germany#congstar) uses the Telekom Deutschland (formlery T-mobile) network, which has excellent coverage in Berlin and has pretty good coverage in rural areas as well.
 
-You can [buy their sim cards online](http://www.congstar.de/prepaid/) or in [many physical locations]((http://prepaidwithdata.wikia.com/wiki/Germany#congstar)
+You can [buy their sim cards online](http://www.congstar.de/prepaid/) or in [many physical locations](http://prepaidwithdata.wikia.com/wiki/Germany#congstar)
 
 * <http://www.congstar.de/prepaid/>
 * <http://prepaidwithdata.wikia.com/wiki/Germany#congstar>
