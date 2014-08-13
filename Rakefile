@@ -4,13 +4,18 @@
 
 task :default => :server
 
+desc 'Build CV to PDF with pandoc'
+task :cv  => [:build] do
+	sh 'pandoc _site/cv/cv.md -o _site/cv/cv.pdf'
+end
+
 desc 'Build site with Jekyll'
-task :build do
-  sh 'jekyll build'
+task :build do  
+  sh 'jekyll build' 
 end
 
 desc 'Build and deploy'
-task :deploy => [:build] do
+task :deploy => [:build, :cv] do
   sh 'rsync -a --delete --delay-updates --progress -e ssh _site/ morgan@roderick.dk:/dana/data/www.roderick.dk/docs/'
 end
 
