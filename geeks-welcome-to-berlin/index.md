@@ -78,12 +78,12 @@ I use the [Geldautomat Suche](https://itunes.apple.com/de/app/geldautomat-suche-
 
 Berlin has an excellent public transport system, consisting of:
 
-High speed long distance rail
-Local rail
-S-bahn (above ground)
-U-bahn (below ground)
-Tram (streetcars)
-Busses
+* High speed long distance rail
+* Local rail
+* S-bahn (above ground)
+* U-bahn (below ground)
+* Tram (streetcars)
+* Busses
 
 The tickets might not look the same, but they do cover all systems and allows you to transfer from one to the other to complete your journey.
 
