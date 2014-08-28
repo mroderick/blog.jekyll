@@ -78,14 +78,17 @@ I use the [Geldautomat Suche](https://itunes.apple.com/de/app/geldautomat-suche-
 
 Berlin has an excellent public transport system, consisting of:
 
-* High speed long distance rail
-* Local rail
-* S-bahn (above ground)
-* U-bahn (below ground)
+* High speed long distance rail: ICE, IC, EC (not local!)
+* Local rail: RE, RB
+* S-Bahn (above ground)
+* U-Bahn (below ground)
 * Tram (streetcars)
 * Busses
+* Fähren (ferries)
 
-The tickets might not look the same, but they do cover all systems and allows you to transfer from one to the other to complete your journey.
+The tickets might not look the same, but they do cover all local systems and allows you to transfer from one to the other to complete your journey. [You can find the different zones on the map](http://www.bvg.de/de/index.php?section=downloads&cmd=58&download=399), that helps you to decide whether you need an AB or ABC ticket.
+
+
 
 There are also taxis. In my experience, they're reasonably priced (compared to Scandinavia at least) and drivers take the most direct route or even ask your preference if you show any German proficiency.
 
