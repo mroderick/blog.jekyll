@@ -129,9 +129,6 @@ If you're exploring and not spending the day at a conference or working, a day t
 ### Taxis
 If I can't immediately see a free taxi, I use the [mytaxi app](https://www.mytaxi.com/en/home.html) to hail a taxi.
 
-### Uber
-I haven't used them yet, but the [Uber limosine service](https://www.uber.com/) has arrived in Berlin.
-
 ## Coffee
 
 Caffeination is important.
