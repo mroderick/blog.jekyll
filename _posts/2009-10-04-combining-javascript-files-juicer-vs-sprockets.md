@@ -40,17 +40,17 @@ I first became aware of Juicer when Christian Johansen released the 0.2.0 versio
 
 Installation of Juicer is pretty straight forward
 
-{% highlight bash %}
+```shell
 $ gem install juicer
 $ juicer install yui_compressor
 $ juicer install jslint
-{% endhighlight %}
+```
 
 ### Usage
 
 Using Juicer for JavaScript dependency management is pretty straight forward, in your code you simply specify dependencies with the @depend keyword and juiced picks up on this and merges the files automagically.
 
-{% highlight javascript %}
+```javascript
 /**
   * My script file
   *
@@ -59,13 +59,13 @@ Using Juicer for JavaScript dependency management is pretty straight forward, in
   var myNS = {
     myObject = {}
   };
-{% endhighlight %}
+```
 
 To merge the dependencies into the file you simply run
 
-{% highlight javascript %}
+```javascript
 $ juicer merge myfile.js
-{% endhighlight %}
+```
 
 This will produce a new file, `myfile.min.js`, which contains all dependencies merged in. It parses each dependency and resolves it's dependencies as well. The file will be stripped of all comments and minified, this is highly configurable, if you know how to use [YUI Compressor](http://developer.yahoo.com/yui/compressor/) (and you should know this).
 
@@ -89,9 +89,9 @@ To my knowledge, Sprockets was released at around the same time as Juicer, both 
 
 Installing Sprockets is a no brainer, if you have ruby
 
-{% highlight bash %}
+```shell
 $ gem install --remote sprockets
-{% endhighlight %}
+```
 
 This will give you a gem, with all you need to run Sprockets, including a "sprocketize" command.
 
@@ -99,7 +99,7 @@ This will give you a gem, with all you need to run Sprockets, including a "sproc
 
 Using Sprockets for JavaScript dependency management is very easy, you specify dependencies in your source code with the `//= require` notation, and it will resolve the dependencies for you.
 
-{% highlight javascript %}
+```javascript
 //= require "jquery-1.2.0"
 /**
   * My script file
@@ -107,13 +107,13 @@ Using Sprockets for JavaScript dependency management is very easy, you specify d
   var myNS = {
     myObject = {}
   };
-{% endhighlight %}
+```
 
 To merge the dependencies in, you simply run the `sprocketize` command on the file, specifying where the output should go.
 
-{% highlight bash %}
+```shell
 $ sprocketize myfile.js > myfile.combined.js
-{% endhighlight %}
+```
 
 This creates the merged file, with all dependencies merged in, neat and to the point. Sprockets has many subtleties that allows for greater control and for easier reading of the dependency directives. Luckily, it's very well documented, reading the documentation for the finer points is recommended.
 

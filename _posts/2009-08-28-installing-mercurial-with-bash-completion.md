@@ -32,9 +32,9 @@ Once the python26 port is working on Snow Leopard (probably fixed by the time yo
 
 All you need to do to attain bliss, is just to instruct MacPorts to install the bash completion variant.
 
-{% highlight bash %}
+```shell
 $ sudo port install mercurial +bash_completion
-{% endhighlight %}
+```
 
 Such a long post for a little port statement :-)
 

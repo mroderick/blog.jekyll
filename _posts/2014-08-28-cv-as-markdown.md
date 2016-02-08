@@ -5,7 +5,7 @@ layout: post
 
 # cv as markdown
 
-For a while I've had a [Bootstrap](http://getbootstrap.com) based cv on this site. While it showed that I am capable of writing HTML, it was a pain to edit. As most people will attest to, keeping your cv is one of their least favourite tasks. Adding HTML doesn't make it any more enjoyable.
+For a while I've had a [Bootstrap](http://getbootstrap.com) based cv on this site. While it showed that I am capable of writing HTML, it was a pain to edit. As most people will attest to, keeping your cv up to date is one of their least favourite tasks. Adding HTML doesn't make it any more enjoyable.
 
 I wanted to switch to having the source of my cv in [Markdown](http://daringfireball.net/projects/markdown/) for a number of reasons:
 
@@ -27,7 +27,7 @@ Enter [pandoc](http://johnmacfarlane.net/pandoc/index.html), "a universal docume
 
 On OSX, installing it is fairly easy with [Homebrew](http://brew.sh)
 
-```
+```shell
 $ brew install pandoc
 ```
 
@@ -35,7 +35,7 @@ Before you pat yourself on the shoulder for a job well done, you'll still need a
 
 Installation was as easy as installing any regular application on OSX, and now I can generate the PDF in a single command
 
-```
+```shell
 $ pandoc cv/cv.md -o cv/cv.pdf
 ```
 
@@ -51,15 +51,15 @@ I use a [Rakefile](http://en.wikipedia.org/wiki/Rake_(software)) to build and de
 
 The Rakefile now looks like this
 
-```ruby
+``` ruby
 desc 'Build CV to PDF with pandoc'
 task :cv  => [:build] do
 	sh 'pandoc _site/cv/cv.md -o _site/cv/cv.pdf'
 end
 
 desc 'Build site with Jekyll'
-task :build do  
-  sh 'jekyll build' 
+task :build do
+  sh 'jekyll build'
 end
 
 desc 'Build and deploy'

@@ -47,13 +47,13 @@ Basically, you can subscribe to messages, publish messages (with a payload) and 
 
 Let's see some code already!
 
-{% highlight javascript %}
+```javascript
 // subscribing to messages is quite easy,
 // first we'll create a subscriber function
 var logToConsole = function( message, data ){
     // once a message arrives, it'll get logged to the console
     // data passed in messages can be whatever you want
-    console.log( message, data );  
+    console.log( message, data );
 };
 
 // every subscription gives you a token,
@@ -65,7 +65,7 @@ PubSub.publish( 'some message', 'hello world!' );
 
 // now let's unsubscribe from this message
 PubSub.unsubscribe( token );
-{% endhighlight %}
+```
 
 So, as you can see, it's fairly simple to work with.
 

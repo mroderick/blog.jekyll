@@ -1,27 +1,27 @@
 code, pre {
-	margin-bottom: 0;
-	font-family: Monaco, Consolas, "Lucida Console", monospace;
-	font-size: 14px;
+    margin-bottom: 0;
+    font-family: Monaco, Consolas, "Lucida Console", monospace;
+    font-size: 14px;
 }
 
-.highlight  { 
-  	margin-bottom: 1em;
-	padding: 0 0 .5em;
-	background: #2b2b2b;
-	border: 7px solid #e8e8e8; 
-	color: #fff;
-	font-size: 14px;
-	font-family: Monaco, Consolas, "Lucida Console", monospace;
-	line-height: 1.5em;
+.highlight  {
+    margin-bottom: 1em;
+    /*padding: 0 0 .5em;*/
+    background: #2b2b2b;
+    border: 7px solid #e8e8e8;
+    color: #fff;
+    font-size: 14px;
+    font-family: Monaco, Consolas, "Lucida Console", monospace;
+    line-height: 1.5em;
 }
-	.highlight .hll { 
-		background-color: #333333;
-	}
+    .highlight .hll {
+        background-color: #333333;
+    }
 
-	.highlight span {
-		font-family: Monaco, Consolas, "Lucida Console", monospace;
-		font-size: 1em;
-	}
+    .highlight span {
+        font-family: Monaco, Consolas, "Lucida Console", monospace;
+        font-size: 1em;
+    }
 
 .highlight .hll { background-color: #49483e }
 .highlight .c { color: #75715e } /* Comment */
@@ -36,6 +36,12 @@ code, pre {
 .highlight .c1 { color: #75715e } /* Comment.Single */
 .highlight .cs { color: #75715e } /* Comment.Special */
 .highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #aa0000 } /* Generic.Error */
+.highlight .gh { color: #999999 } /* Generic.Heading */
+.highlight .gi { color: #000000; background-color: #ddffdd } /* Generic.Inserted */
+.highlight .gi .x { color: #000000; background-color: #aaffaa } /* Generic.Inserted.Specific */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #555555 } /* Generic.Prompt */
 .highlight .gs { font-weight: bold } /* Generic.Strong */
 .highlight .kc { color: #fec852 } /* Keyword.Constant */
 .highlight .kd { color: #fec852 } /* Keyword.Declaration */
