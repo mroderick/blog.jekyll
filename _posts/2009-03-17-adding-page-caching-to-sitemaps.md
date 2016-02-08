@@ -19,35 +19,34 @@ In this post I will take you through the steps to add page caching to our Sitema
 
 As you can see below, enabling page caching is as simple as just adding one extra line in a controller
 
-{% highlight ruby %}
+```ruby
 ## app/controllers/info_controller.rb
 class InfoController < ApplicationController
-	caches_page :sitemap
-	def sitemap
-		respond_to do |format|
+    caches_page :sitemap
+    def sitemap
+        respond_to do |format|
       format.xml do
-				@website_url = 'http://example.com'
-				@pages = ComatosePage.find(:all, :conditions => "full_path not like ''")
-				render :action => 'sitemap', :layout => false
-			end
-		end
-	end
+                @website_url = 'http://example.com'
+                @pages = ComatosePage.find(:all, :conditions => "full_path not like ''")
+                render :action => 'sitemap', :layout => false
+            end
+        end
+    end
 end
-{% endhighlight %}
-
+```
 
 ### Verify caching
 
 To verify that we are have succesfully enabled page cache, let's update the development environment to mimick the production environment.
 
-{% highlight ruby %}
+```ruby
 ## config/environments/development.rb
 config.action_controller.perform_caching = true
-{% endhighlight %}
+```
 
 Then we need to restart the server, do a request to <http://localhost:3000/sitemap.xml> and you should see something like the following in your log.
 
-{% highlight bash %}
+```shell
 Processing InfoController#sitemap (for 127.0.0.1 at 2009-03-17 17:04:26) [GET]
   Parameters: {"action"=>"sitemap", "controller"=>"info"}
   SQL (0.2ms)   SET NAMES 'utf8'
@@ -57,7 +56,7 @@ Rendering info/sitemap
   ComatosePage Columns (2.0ms)   SHOW FIELDS FROM `comatose_pages`
 Cached page: /sitemap.xml (0.7ms)
 Completed in 16ms (View: 9, DB: 4) | 200 OK [http://localhost/sitemap.xml]
-{% endhighlight %}
+```
 
 The line we're looking for is `Cached page: /sitemap.xml (0.7ms)`
 
@@ -72,35 +71,35 @@ Now that we can succesfully cache the sitemap, we need to make sure it stays fre
 
 Rails provides us with Cache Sweepers, which is kind of like an observer, but specialised. Let's create a cache sweeper that observes ComatosePage, and deletes the cached sitemap.xml when pages are saved or destroyed.
 
-{% highlight ruby %}
+```ruby
 ## app/sweepers/comatose_sweeper.rb
 class ComatoseSweeper < ActionController::Caching::Sweeper
-	observe ComatosePage
-  
-	def after_save(page)
-		expire_cache(page)
-	end
-  
-	def after_destroy(page)
-		expire_cache(page)
-	end
-  
-	def expire_cache(page)
-		# Use the ApplicationController, as were outside the scope 
-		# of the executing controller		
-		ApplicationController.expire_page( "/sitemap.xml" )
+    observe ComatosePage
+
+    def after_save(page)
+        expire_cache(page)
+    end
+
+    def after_destroy(page)
+        expire_cache(page)
+    end
+
+    def expire_cache(page)
+        # Use the ApplicationController, as were outside the scope
+        # of the executing controller
+        ApplicationController.expire_page( "/sitemap.xml" )
   end
 end
-{% endhighlight %}
+```
 
 Finally, we need to tell Comatose to use the sweeper.
 
-{% highlight ruby %}
+```ruby
 ## config/initializers/comatose.rb
 # set a cache sweeper to react when comatose expires pages from it's page caching
-ComatoseAdminController.send :cache_sweeper, 
-	:comatose_sweeper, :only => 'expire_cms_page'
-{% endhighlight %}
+ComatoseAdminController.send :cache_sweeper,
+    :comatose_sweeper, :only => 'expire_cms_page'
+```
 
 ### Verify cache sweeper
 

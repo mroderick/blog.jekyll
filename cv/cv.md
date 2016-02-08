@@ -38,9 +38,9 @@ Outside of work, he is passionate about cooking and photography, as well as part
 
 | Name             | Level     | Years | Last used |
 |------------------|-----------|-------|-----------|
-| [JavaScript][js] | Expert    | 10+   | 2014      |
-| [HTML][html]	   | Expert    | 10+   | 2014      |
-| [CSS][css]       | Expert    | 10+   | 2014      |
+| [JavaScript][js] | Expert    | 10+   | 2016      |
+| [HTML][html]	   | Expert    | 10+   | 2016      |
+| [CSS][css]       | Expert    | 10+   | 2016      |
 | [Ruby][rb]       | Confident | 4     | 2012      |
 | [PHP][php]       | Confident | 5     | 2012      |
 | [C#][c#]         | Confident | 4     | 2009      |
@@ -61,16 +61,16 @@ Over the time of my career I've naturally spent time with many programming langu
 
 | Name                    | Level     | Years | Last used |
 |-------------------------|-----------|-------|-----------|
-| [jQuery][jquery]        | Advanced  | 5+    | 2014      |
+| [jQuery][jquery]        | Advanced  | 5+    | 2016      |
 | [Prototype][prototype]  | Advanced  | 4     | 2009      |
 | [RequireJS][requirejs]  | Advanced  | 3     | 2014      |
-| [Backbone][backbone]    | Advanced  | 1     | 2014      |
-| [Mustache][mustache]    | Confident | 1     | 2013      |
+| [Backbone][backbone]    | Advanced  | 3     | 2016      |
+| [Mustache][mustache]    | Advanced  | 3     | 2016      |
 | [Ruby on Rails][rails]  | Confident | 5     | 2012      |
 
-I have worked with other frameworks and libraries, like Ember. 
+I have worked with other frameworks and libraries, like Ember.
 
-I remain sceptical of current clientside mvc frameworks, as the limitations they impose often leads to non-obvious code and shoe horning an application into a framework that was most likely built to solve a different problem.
+I remain sceptical of current clientside MVC frameworks, as the limitations they impose often leads to non-obvious code and shoe horning an application into a framework that was most likely built to solve a different problem.
 
 Code craftsmanship excites me a lot more than frameworks.
 
@@ -82,28 +82,29 @@ Code craftsmanship excites me a lot more than frameworks.
 [rails]: http://rubyonrails.org/
 
 
-## Test frameworks and libraries
+## Test frameworks, runners and libraries
 
 | Name                   | Level        | Years | Last used |
 |------------------------|--------------|-------|-----------|
-| [Buster.JS][buster]    | Experienced  | 2     | 2014      |
+| [Sinon][sinon]         | Expert       | 6     | 2016      |
+| [Buster.JS][buster]    | Advanced     | 6     | 2016      |
 | [JsTestDriver][jstd]   | Experienced  | 3     | 2012      |
-| [Sinon][sinon]         | Experienced  | 4     | 2014      |
+| [Mocha][mocha]         | Advanced     | 3     | 2016      |
+| [Karma][karma]         | Experienced  | 1     | 2016      |
 | [Jasmine][jasmine]     | Experienced  | 2     | 2014      |
-| [Mocha][mocha]         | Experienced  | 1     | 2014      |
 | [Test::Unit][testunit] | Confident    | 1     | 2009      |
 | [Cucumber][cuke]       | Intermediate | 1     | 2009      |
 
-I am a [collaborator on the Sinon.JS project](https://github.com/cjohansen/Sinon.JS/graphs/contributors)
+I am a [core member of the Sinon.JS project](https://github.com/cjohansen/Sinon.JS/graphs/contributors)
 
 [buster]: http://busterjs.org/
-[jstd]: http://code.google.com/p/js-test-driver/ 
-[sinon]: http://sinonjs.org/ 
-[jasmine]: http://jasmine.github.io/ 
-[mocha]: http://visionmedia.github.io/mocha/ 
+[jstd]: http://code.google.com/p/js-test-driver/
+[sinon]: http://sinonjs.org/
+[jasmine]: http://jasmine.github.io/
+[mocha]: http://visionmedia.github.io/mocha/
+[karma]: http://karma-runner.github.io
 [testunit]: http://www.ruby-doc.org/stdlib-1.9.3/libdoc/test/unit/rdoc/Test/Unit.html
 [cuke]: http://cukes.info/
-
 
 ## Tools
 
@@ -142,6 +143,7 @@ Since 2001 I have worked mostly as a freelance frontend specialist and have expe
 
 #### Clients
 
+* [Zalando SE](https://www.zalando.de), Online retailer
 * [Imagine Easy Solutions](http://www.imagineeasy.com/), "A Tiny Company with Big Ideas"
 * [ATEA](http://atea.dk/), IT infrastructure specialists
 * [TDC](http://tdc.dk/), Denmark's largest telco
@@ -155,6 +157,14 @@ Since 2001 I have worked mostly as a freelance frontend specialist and have expe
 * [Leo Burnett](http://www.leoburnett.com/), ad agency, I worked with the then Copenhagen office
 * [IT-Jobbank](https://www.it-jobbank.dk/), bootstrapped startup acquired by StepStone
 
+
+### 2015 Zalando SE
+
+**Senior JavaScript developer**
+
+JavaScript web development
+Frotend architecture, tools, processes
+Code reviews and refactoring
 
 ### 2013 – 2014 Brandwatch GmbH
 

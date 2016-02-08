@@ -21,23 +21,23 @@ Firstly, I've created two _driver_ stylesheets, that is responsible for importin
 
 First, the stylesheet for modern browsers.
 
-{% highlight css %}
+```css
 /* master.modern.css - holds stylesheets for modern browsers */
 @import url(/stylesheets/tripoli/tripoli.simple.css);
 @import url(/stylesheets/coderay.css);
 @import url(/stylesheets/base.css);
-{% endhighlight %}
+```
 
 Second, the stylesheet older versions of Internet Explorer
 
-{% highlight css %}
+```css
 /* master.ie7.css - loads stylesheets for IE7 and lower */
 @import url(/stylesheets/tripoli/tripoli.simple.css);
 @import url(/stylesheets/tripoli/tripoli.simple.ie.css);
 @import url(/stylesheets/coderay.css);
 @import url(/stylesheets/base.css);
 @import url(/stylesheets/ie7.css);
-{% endhighlight %}
+```
 
 Steve Souders has explained that [you should not use @import](http://stevesouders.com/blog/2009/04/09/dont-use-import/) in your stylesheets, as it will block parallel downloads. But, don't worry, Juicer will combine all of these stylesheets into one and all will be well in the world.
 
@@ -45,7 +45,7 @@ Steve Souders has explained that [you should not use @import](http://stevesouder
 
 To control the behaviour of Juicer, I've created a little rake task.
 
-{% highlight ruby %}
+```ruby
 # juicer.rake
 namespace :juicer do
   namespace :merge do
@@ -56,7 +56,7 @@ namespace :juicer do
     end
   end
 end
-{% endhighlight %}
+```
 
 You should update the rake task with the correct paths and filenames for your site.
 
@@ -64,7 +64,7 @@ You should update the rake task with the correct paths and filenames for your si
 
 In order for Webby to generate these new files, you will need to update your `Sitefile`, and instruct Webby to run the merge task with every build. To do this you simply add a dependency for the built-in build tasks.
 
-{% highlight ruby %}
+```ruby
 # add these lines to your Sitefile
 desc "Build the website"
 task :build => [:configure_basepath, 'juicer:merge:stylesheets' ]
@@ -74,7 +74,7 @@ task :rebuild => [:configure_basepath, 'juicer:merge:stylesheets' ]
 
 desc "Continuously build the website"
 task :autobuild => [:configure_basepath, 'juicer:merge:stylesheets' ]
-{% endhighlight %}
+```
 
 Using the new merged stylesheets couldn't be easier, you just reference them by their new names `master.modern.min.css` and `master.ie7.min.css`.
 

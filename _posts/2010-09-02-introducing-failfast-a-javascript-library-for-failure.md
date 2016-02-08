@@ -33,7 +33,7 @@ You could use it for all the public methods of a library, or even just a compone
 
 Let's get you started with writing (fast) failing code!
 
-{% highlight javascript %}
+```javascript
 function divide( dividend, divisor ){
     FailFast.assertNumber( dividend, 'divide: you must pass a number as the "dividend" argument' );
     FailFast.assertNumber( divisor, 'divide: you must pass a number as the "divisor" argument' );
@@ -44,13 +44,13 @@ function divide( dividend, divisor ){
 divide( "1", 2 ) // will throw exception
 divide( 1, 0 ) // will throw exception
 divide( 1, 2 ) // will return 0.5
-{% endhighlight %}
+```
 
 Our `divide` function will free us from unusable error messages and long stack traces, by throwing errors whenever bad input values are being passed. If a console (like Firebug, Safari, Chrome) is available, the error will also be logged to the console.
 
 FailFast has a number of different assertions to help us write better code:
 
-{% highlight javascript %}
+```javascript
 assert : function( exp, msg )
 assertBoolean : function( exp, msg )
 assertNotNull : function( exp, msg )
@@ -62,7 +62,7 @@ assertHasProperty : function( object, propertyName, msg )
 assertString : function( exp, msg )
 assertArray : function( exp, msg )
 assertFunction : function( exp, msg )
-{% endhighlight %}
+```
 
 Most of these are really just convinience wrappers for the `assert` function, but they do help make the code that uses FailFast much more expressive.
 

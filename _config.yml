@@ -1,7 +1,9 @@
 safe:        false
 future:      true
 lsi:         false
-pygments:    true
-markdown:    redcarpet
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 permalink:   /:year/:month/:day/:title/
 exclude:     ['node_modules']

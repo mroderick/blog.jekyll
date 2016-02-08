@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Using PubSubJS with jQuery
-site_section: 
+site_section:
 ---
 
 # Using PubSubJS with jQuery
@@ -14,19 +14,19 @@ Some projects prefer their JavaScript to have a more uniform and jQuery like sty
 
 In order to use PubSubJS with jQuery, we need to build a local copy of `jquery.pubsub.js`.
 
-{% highlight bash %}
+```shell
 $ git clone https://github.com/mroderick/PubSubJS.git
 $ cd PubSubJS
 $ rake jquery # produces jquery.pubsub.js
-{% endhighlight %}
+```
 
 We now have a `jquery.pubsub.js` file that needs to be copied into our project.
 
 ## Add jquery.pubsub.js
 
-Use the `jquery.pubsub.js` file instead of `pubsub.js` and make sure you load it after jQuery has loaded. 
+Use the `jquery.pubsub.js` file instead of `pubsub.js` and make sure you load it after jQuery has loaded.
 
-{% highlight html %}
+```html
 <!doctype html>
 <html>
     <head>
@@ -34,18 +34,18 @@ Use the `jquery.pubsub.js` file instead of `pubsub.js` and make sure you load it
         <script src="jquery.pubsub.js"></script>
     </head>
 </html>
-{% endhighlight %}
+```
 
 ## Start using jquery.pubsub.js
 
-{% highlight javascript %}
+```javascript
 $(document).ready(function(){
     // create a topic and a function to subscribe to that topic
     var MY_TOPIC = 'my very exciting topic',
         subscriber = function( topic, data ){
             if ( window.console ){
-                console.log( data );    
-            }                   
+                console.log( data );
+            }
         };
 
     // create a subscription
@@ -67,14 +67,14 @@ $(document).ready(function(){
         $.pubsub( 'unsubscribe', subscriber );
     }, 0);
 });
-{% endhighlight %}
+```
 
 If you run the example above, you will see the following in the browser's console:
 
-{% highlight bash %}
+```shell
 hey world!
 hello world
-{% endhighlight %}
+```
 
 You can also [see this example in action](example.html).
 

@@ -23,7 +23,7 @@ Today, I finally got around to creating a [TextMate snippet for creating new Beh
 
 Activating the snippet and filling in the options (class name, default options, etc) will give you something like this:
 
-{% highlight javascript %}
+```javascript
 /**
  * class MyBehavior
  * Behavior class for managing behavior of ...
@@ -45,7 +45,7 @@ var MyBehavior = Behavior.create({
     // alert( this.options.myOption )
   }
 );
-{% endhighlight %}
+```
 
 The snippet is [available on github](http://gist.github.com/168604), should you feel the need to customize or improve it.
 

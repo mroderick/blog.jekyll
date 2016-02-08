@@ -17,20 +17,20 @@ In order not to forget about the solution immediately, I am posting it here. Per
 
 I cannot take credit for the solution, I am just posting my preferred version of it here for posterity. The solution is very simple, albeit a bit obscure.
 
-{% highlight javascript %}
+```javascript
 // prevent background flickering bug in Internet Explorer 6
 try {
 	document.execCommand("BackgroundImageCache",false,true));
 } catch(e) {}
-{% endhighlight %}
+```
 
 To avoid pollution the rest of the website for users with modern browsers, I prefer to stick this in my IE6.js file and load it using conditional comments.
 
-{% highlight html %}
+```html
 <!--[if lte IE 7]>
 	<script type="text/javascript" src="/javascripts/ie6.js"></script>
 <![endif]-->
-{% endhighlight %}
+```
 
 This is yet another example of developers using Internet Explorers misguided proprietary extensions to counter some of all the obscsure bugs.
 
