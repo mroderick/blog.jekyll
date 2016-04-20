@@ -23,9 +23,6 @@ Outside of work, he is passionate about cooking and photography, as well as part
 
 * [GitHub](https://github.com/mroderick)
 * [LinkedIn](http://www.linkedin.com/in/morganroderick)
-* [Lanyrd](http://lanyrd.com/profile/mrgnrdrck/)
-* [Speaker Deck](https://speakerdeck.com/u/mrgnrdrck)
-* [SpeakerRate](http://speakerrate.com/speakers/3641-morgan-roderick)
 
 ## Spoken Languages
 
@@ -72,7 +69,7 @@ I have worked with other frameworks and libraries, like Ember.
 
 I remain sceptical of current clientside MVC frameworks, as the limitations they impose often leads to non-obvious code and shoe horning an application into a framework that was most likely built to solve a different problem.
 
-Code craftsmanship excites me a lot more than frameworks.
+Code craftsmanship excites me a lot more than frameworks. I often advocate that more developers read books like [Clean Code][cleancode] and [Working Effectively with Legacy Code][legacycode].
 
 [jquery]: http://jquery.com/
 [prototype]: http://www.prototypejs.org/
@@ -80,6 +77,8 @@ Code craftsmanship excites me a lot more than frameworks.
 [backbone]: http://backbonejs.org
 [mustache]: http://mustache.github.io
 [rails]: http://rubyonrails.org/
+[cleancode]: https://www.goodreads.com/book/show/3735293-clean-code
+[legacycode]: https://www.goodreads.com/book/show/44919.Working_Effectively_with_Legacy_Code
 
 
 ## Test frameworks, runners and libraries
@@ -118,10 +117,10 @@ I am a [core member of the Sinon.JS project](https://github.com/cjohansen/Sinon.
 
 ### Quality, tasks
 
-* JSLint/JSHint, JSCS
+* ESLint, JSLint/JSHint, JSCS
 * jsdoc-toolkit
 * tomdoc
-* Grunt
+* Makefile, Grunt
 * Jenkins
 * Travis CI
 
