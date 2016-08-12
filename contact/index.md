@@ -7,11 +7,11 @@ site_section: contact
 # Contact
 
 Morgan Roderick<br/>
-Roderick IT
 
-Stenbocksgatan 6<br/>
-211 50 Malmö<br/>
-Sweden
+Raumerstr. 40<br/>
+10437 Berlin<br/>
+Germany
 
-Tel: +45 4087 7776<br/>
-E-mail: <morgan@roderick.dk>
+Tel: +49 (0)152 0723 9351<br/>
+E-mail: <morgan@roderick.dk><br/>
+Twitter: [@mrgnrdrck](https://twitter.com/mrgnrdrck/)
