@@ -72,11 +72,13 @@ Here's a brief list of some of the frameworks and libraries I've worked with ove
 | [Mustache][mustache]    | Advanced  | 3     | 2016      |
 | [Ruby on Rails][rails]  | Confident | 5     | 2012      |
 
-I have worked with other frameworks and libraries, like Ember.
+I have worked with other frameworks and libraries, like Ember, MarionetteJS, etc.
 
 I remain sceptical of most current clientside frameworks, as the limitations they impose often leads to non-obvious code and shoe horning an application into a framework that was most likely built to solve a different problem.
 
 Code craftsmanship excites me a lot more than frameworks. I often advocate that more developers read books like [Clean Code][cleancode] and [Working Effectively with Legacy Code][legacycode].
+
+With that in mind, I think that great results can be achieved by applying good practices with carefully chosen tools.
 
 [jquery]: http://jquery.com/
 [prototype]: http://www.prototypejs.org/
@@ -150,6 +152,7 @@ Since 2001 I have worked mostly as a freelance frontend specialist and have expe
 
 #### Clients
 
+* [Apple Inc.](https://www.apple.com)
 * [Zalando SE](https://www.zalando.de), Online retailer
 * [Imagine Easy Solutions](http://www.imagineeasy.com/), "A Tiny Company with Big Ideas"
 * [ATEA](http://atea.dk/), IT infrastructure specialists
@@ -164,6 +167,9 @@ Since 2001 I have worked mostly as a freelance frontend specialist and have expe
 * [Leo Burnett](http://www.leoburnett.com/), ad agency, I worked with the then Copenhagen office
 * [IT-Jobbank](https://www.it-jobbank.dk/), bootstrapped startup acquired by StepStone
 
+### 2015-2016 Apple Inc.
+
+**Software engineer**
 
 ### 2015 Zalando SE
 
