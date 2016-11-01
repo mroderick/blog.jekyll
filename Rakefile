@@ -16,7 +16,7 @@ end
 
 desc 'Build and deploy'
 task :deploy => [:build, :cv] do
-  sh 'rsync -a --delete --delay-updates --progress -e ssh _site/ morgan@roderick.dk:/dana/data/www.roderick.dk/docs/'
+  sh 'rsync -a --delete --delay-updates --progress -e "ssh -p 232" _site/ morgan@roderick.dk:/dana/data/www.roderick.dk/docs/'
 end
 
 def jekyll(opts = '')
