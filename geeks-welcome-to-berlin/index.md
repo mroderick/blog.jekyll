@@ -20,20 +20,22 @@ If you're visiting via an airport, you'll probably want to go to Alexanderplatz 
 When in doubt, or if you're not going to Alexanderplatz, The [BVG journey planner](http://www.bvg.de/index.php/en/index.html) is quite good, as are the route planning apps (see below).
 
 ### From TXL
-From Tegel Airport, the easiest way to get to Alexanderplatz is to take the "TXL" bus route that goes directly there. You'll need an AB ticket, which will cost €2.60 and is valid for the rest of your journey inside the AB zone.
+From Tegel Airport, the easiest way to get to Alexanderplatz is to take the "TXL" bus route that goes directly there. You'll need an AB ticket, which will cost €2.70 and is valid for the rest of your journey inside the AB zone.
 
 **Don't forget to validate your ticket**
 
-Or, you can take a taxi, should be about €25 to Alexanderplatz.
+Or, you can take a taxi, should be about €25-€30 to Alexanderplatz.
 
 ### From SXF
-From Schönefeld Airport, you have the option of two different train connections. I recommend taking the regional train (not the S-bahn). You'll need an ABC ticket, which will cost €3.20 and is valid for the rest of your journey inside the ABC zone.
+From Schönefeld Airport, you have the option of two different train connections. I recommend taking the regional train (not the S-bahn). You'll need an ABC ticket, which will cost €3.30 and is valid for the rest of your journey inside the ABC zone.
 
 **Don't forget to validate your ticket**
 
-Or, you can take a taxi, should be about €35 to Alexanderplatz.
+Or, you can take a taxi, should be about €35-€40 to Alexanderplatz.
 
 ## Getting a data plan
+
+*[If you have an EU sim card, and are reading this after 2017-06-15, then this section is most likely irrelevant](https://ec.europa.eu/digital-single-market/en/news/commission-prepares-ground-end-roaming-charges-june-2017), as the unreasonable roaming charges will have been banned.*
 
 First things first, you will probably want a data plan for one or more of your devices for your visit, right?
 
@@ -43,14 +45,6 @@ Most prepaid sims sold over the counter are regular/micro, not nano sims (iPhone
 
 [http://prepaidwithdata.wikia.com/wiki/Germany](http://prepaidwithdata.wikia.com/wiki/Germany) has a good overview of what is available.
 
-### Recommendation - congstar
-[congstar](http://prepaidwithdata.wikia.com/wiki/Germany#congstar) uses the Telekom Deutschland (formlery T-mobile) network, which has excellent coverage in Berlin and has pretty good coverage in rural areas as well.
-
-You can [buy their sim cards online](http://www.congstar.de/prepaid/) or in [many physical locations](http://prepaidwithdata.wikia.com/wiki/Germany#congstar)
-
-* <http://www.congstar.de/prepaid/>
-* <http://prepaidwithdata.wikia.com/wiki/Germany#congstar>
-
 ### Recommendation - blau.de
 In Berlin, [blau.de](http://prepaidwithdata.wikia.com/wiki/Germany#blau.de) works fairly well, and is quite affordable. It's easy enough to understand their website using just Google Translate in Chrome.
 
@@ -58,6 +52,8 @@ You can [buy their sim cards online](https://www.blau.de) or in [many physical l
 
 * <https://www.blau.de>
 * <http://prepaidwithdata.wikia.com/wiki/Germany#blau.de>
+
+When you buy blau.de sims at Saturn on Alexanderplatz, you don't need to register an address. Or, that was the case last time I bought one for a friend.
 
 ## Money
 
@@ -88,8 +84,6 @@ Berlin has an excellent public transport system, consisting of:
 
 The tickets might not look the same, but they do cover all local systems and allows you to transfer from one to the other to complete your journey. [You can find the different zones on the map](http://www.bvg.de/de/index.php?section=downloads&cmd=58&download=399), that helps you to decide whether you need an AB or ABC ticket.
 
-
-
 There are also taxis. In my experience, they're reasonably priced (compared to Scandinavia at least) and drivers take the most direct route or even ask your preference if you show any German proficiency.
 
 ### Getting around - bicycles
@@ -112,11 +106,13 @@ If you provide the app with payment information, you can use them to buy tickets
 
 **Idea**: You can even buy an all-day ticket (AB for TXL, ABC for SXF) before you even leave your home, and be ready to just step on the train/bus/tram when you arrive in Berlin.
 
-Also, Google has added Berlin public transit to the routing in the Maps apps on iOS, I suspect that means it's already in Android.
+Both Apple Maps on iOS and Google Maps (iOS, Android) have routing in Berlin via public transit.
+
+Another great option for routing is [Citymapper](https://citymapper.com/berlin?set_region=de-berlin), they also provide apps for both iOS and Android.
 
 ### BVG - tickets
 
-You can buy tickets in all Rail, S-bahn, U-bahn stations as well as on trams and busses, and even using the official BVG apps (see above).
+You can buy tickets in all Rail, S-bahn, U-bahn stations as well as on trams and busses. The easiest way to buy tickets is using the official BVG apps (see above).
 
 The [Tickets & Fares](http://www.bvg.de/index.php/en/17182/name/Single+Tickets+and+Day+Ticket.html) page should have all the information you need.
 
@@ -145,9 +141,16 @@ Here are a few more lists that might be of interest to you
 * [Japanese food in Berlin](https://foursquare.com/mrgnrdrck/list/japanese-food-in-berlin)
 * [Korean food in Berlin](https://foursquare.com/mrgnrdrck/list/korean-food-in-berlin)
 * [Chinese food in Berlin](https://foursquare.com/mrgnrdrck/list/chinese-food-in-berlin)
+* [Vegetarian and vegan friendly food in Berlin](https://foursquare.com/mrgnrdrck/list/vegetarian-and-vegan-friendly-food-in-berlin)
 * [Berlin bars](https://foursquare.com/user/79085/list/berlin-bars)
 
 The places listed here are places that I like for various reasons, and that I'd happily visit again.
+
+## Free maps and recommendations for neighbourhoods in Berlin
+
+If you want to explore the better places Prenzlauer Berg, Friedrichshain, Kreuzberg or Neukölln, then a free map from [Oooh, Berlin!](http://ooohberlin.com) would probably serve you well.
+
+You'll find their maps in many of the great locations featured, so once you've found one, finding more becomes a lot easier. There are also downloadable maps, on their website, as well as [interviews with the passionate people](http://ooohberlin.com/interviews/) that make these great places tick.
 
 ## Free wifi
 
@@ -157,4 +160,4 @@ Be a good sport and buy a coffee, meal, beer, whatever so cafes and bars will co
 
 ## Questions?
 
-Have I forgotten something important? Please send questions to [@mrgnrdrck](https://twitter.com/mrgnrdrck/) and I'll try to answer questions here.
+Have I forgotten something important? Please send questions to [@mrgnrdrck](https://twitter.com/mrgnrdrck/) and I'll try to answer them here.
