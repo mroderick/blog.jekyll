@@ -1,70 +1,64 @@
 <!doctype html>
 <!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]>	   <html class="no-js ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]>	   <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="no-js ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-	<head>
-		<meta charset="utf-8">
-		<title>{{ page.title }}</title>
-		{% if page.description %}
-			<meta name="description" content="{{page.description}}">
-		{% endif %}
-		<meta name="author" content="Morgan Roderick" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <head>
+        <meta charset="utf-8">
+        <title>{{ page.title }}</title>
+        {% if page.description %}
+            <meta name="description" content="{{page.description}}">
+        {% endif %}
+        <meta name="author" content="Morgan Roderick" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-		<link rel="stylesheet" href="/stylesheets/style.css" />
+        <link rel="stylesheet" href="/stylesheets/style.css" />
         <link rel="stylesheet" href="/stylesheets/syntax.css" />
 
-		<link rel="author" href="https://plus.google.com/112422010339274602126" />
-	</head>
-	<body class="{{page.site_section}}">
-		<div id="container">
-			<header role="banner">
-				<a class="logo" href="/" class="home"><img src="/images/logo.png" alt="Roderick" /></a>
-				<nav>
-					<ul>
-						<li class="blog"><a href="/">Blog <em>Random ramblings</em></a></li>
-						<li class="archives"><a href="/archives/">Blog archive <em>All blog entries</em></a></li>
-						<li class="about"><a href="/about/">About <em>Me me &amp; me</em></a></li>
-						<li class="contact"><a href="/contact/">Contact <em>Drop me a line</em></a></li>
-					</ul>
-				</nav>
-				<a href="http://feeds2.feedburner.com/roderick" class="feed">Subscribe to the feed</a>
-			</header>
+        <link rel="author" href="https://plus.google.com/112422010339274602126" />
+    </head>
+    <body class="{{page.site_section}}">
+        <div id="container">
+            <header role="banner">
+                <a class="logo" href="/" class="home"><img src="/images/logo.png" alt="Roderick" /></a>
+                <nav>
+                    <ul>
+                        <li class="blog"><a href="/">Blog <em>Random ramblings</em></a></li>
+                        <li class="archives"><a href="/archives/">Blog archive <em>All blog entries</em></a></li>
+                        <li class="about"><a href="/about/">About <em>Me me &amp; me</em></a></li>
+                        <li class="contact"><a href="/contact/">Contact <em>Drop me a line</em></a></li>
+                    </ul>
+                </nav>
+                <a href="http://feeds2.feedburner.com/roderick" class="feed">Subscribe to the feed</a>
+            </header>
 
-			<div id="main" role="main">
-				{{ content }}
-			</div>
+            <div id="main" role="main">
+                {{ content }}
+            </div>
 
-			{% if page.site_section == 'frontpage blog' %}
-		 	<aside id="sidebar">
+            {% if page.site_section == 'frontpage blog' %}
+            <aside id="sidebar">
 
-				<div class="about-teaser">
-					<h3>About the author</h3>
-					<figure>
-						<img class="profile-img" src="/images/morg-profile.jpg" alt="Morgan Roderick" />
-					</figure>
-					<p>My name is Morgan Roderick, I write this blog.</p>
-					<p>As you might have guessed from reading some of the posts on the blog, I am a web developer, specialising in front end web development. I’ve been building just about every type of website professionally since 1998.</p>
-					<p><a href="/about">Read more&hellip;</a></p>
+                <div class="about-teaser">
+                    <h3>About the author</h3>
+                    <figure>
+                        <img class="profile-img" src="/images/morg-profile.jpg" alt="Morgan Roderick" />
+                    </figure>
+                    <p>My name is Morgan Roderick, I write this blog.</p>
+                    <p>As you might have guessed from reading some of the posts on the blog, I am a web developer, specialising in front end web development. I’ve been building just about every type of website professionally since 1998.</p>
+                    <p><a href="/about">Read more&hellip;</a></p>
 
-					<h3>Articles</h3>
-					<ul class="articles">
-						<li><a href="/resources/using-pubsubjs-with-jquery/">Using PubSubJS with jQuery</a></li>
-						<li><a href="/geeks-welcome-to-berlin/">Geeks, welcome to Berlin</a></li>
-					</ul>
-				</div>
-			</aside>
-			{% endif %}
-			<footer>
-				&copy; Morgan Roderick, unless otherwise noted.
-			</footer>
-	  	</div>
-		<script>
-			var _gaq=[["_setAccount","UA-869742-1"],["_trackPageview"]];
-			(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
-			g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
-			s.parentNode.insertBefore(g,s)}(document,"script"));
-		</script>
-	</body>
+                    <h3>Articles</h3>
+                    <ul class="articles">
+                        <li><a href="/resources/using-pubsubjs-with-jquery/">Using PubSubJS with jQuery</a></li>
+                        <li><a href="/geeks-welcome-to-berlin/">Geeks, welcome to Berlin</a></li>
+                    </ul>
+                </div>
+            </aside>
+            {% endif %}
+            <footer>
+                &copy; Morgan Roderick, unless otherwise noted.
+            </footer>
+        </div>
+    </body>
 </html>
