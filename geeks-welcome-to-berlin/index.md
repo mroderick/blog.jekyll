@@ -20,14 +20,14 @@ If you're visiting via an airport, you'll probably want to go to Alexanderplatz 
 When in doubt, or if you're not going to Alexanderplatz, The [BVG journey planner](http://www.bvg.de/index.php/en/index.html) is quite good, as are the route planning apps (see below).
 
 ### From TXL
-From Tegel Airport, the easiest way to get to Alexanderplatz is to take the "TXL" bus route that goes directly there. You'll need an AB ticket, which will cost €2.80 and is valid for the rest of your journey inside the AB zone.
+From Tegel Airport, the easiest way to get to Alexanderplatz is to take the "TXL" bus route that goes directly there. You'll need an AB ticket, which will cost €2.80 and is valid for the rest of your journey inside the AB zone for two hours.
 
 **Don't forget to validate your ticket**
 
 Or, you can take a taxi, should be about €25 to Alexanderplatz.
 
 ### From SXF
-From Schönefeld Airport, you have the option of two different train connections. I recommend taking the regional train (not the S-bahn). You'll need an ABC ticket, which will cost €3.20 and is valid for the rest of your journey inside the ABC zone.
+From Schönefeld Airport, you have the option of two different train connections. I recommend taking the regional train (not the S-bahn). You'll need an ABC ticket, which will cost €3.40 and is valid for the rest of your journey inside the ABC zone for two hours.
 
 **Don't forget to validate your ticket**
 
@@ -88,7 +88,9 @@ Berlin has an excellent public transport system, consisting of:
 
 The tickets might not look the same, but they do cover all local systems and allows you to transfer from one to the other to complete your journey. [You can find the different zones on the map](http://www.bvg.de/de/index.php?section=downloads&cmd=58&download=399), that helps you to decide whether you need an AB or ABC ticket.
 
+With a Day Ticket, you can travel as often as you want on the day printed on the ticket or from validation of the ticket when starting your journey until 3.00 am on the following day. It costs €7 for AB zone. More info on tickets and the different options can be found [here](http://www.s-bahn-berlin.de/en/tickets-fares/tickets).
 
+You might also be interested in the [Berlin Welcome Card](http://www.berlin.de/en/tourism/1895467-2975548-berlin-welcomecard.en.html). The ticket costs €19.90 for 48 hours, has unlimited travel on public transport and upto 50% discount at approx. 200 major sights. More info [here](http://www.berlin.de/en/tourism/1895467-2975548-berlin-welcomecard.en.html). 
 
 There are also taxis. In my experience, they're reasonably priced (compared to Scandinavia at least) and drivers take the most direct route or even ask your preference if you show any German proficiency.
 
