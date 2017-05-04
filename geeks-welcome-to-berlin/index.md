@@ -20,7 +20,7 @@ If you're visiting via an airport, you'll probably want to go to Alexanderplatz 
 When in doubt, or if you're not going to Alexanderplatz, The [BVG journey planner](http://www.bvg.de/index.php/en/index.html) is quite good, as are the route planning apps (see below).
 
 ### From TXL
-From Tegel Airport, the easiest way to get to Alexanderplatz is to take the "TXL" bus route that goes directly there. You'll need an AB ticket, which will cost €2.60 and is valid for the rest of your journey inside the AB zone.
+From Tegel Airport, the easiest way to get to Alexanderplatz is to take the "TXL" bus route that goes directly there. You'll need an AB ticket, which will cost €2.80 and is valid for the rest of your journey inside the AB zone.
 
 **Don't forget to validate your ticket**
 
