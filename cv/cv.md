@@ -1,6 +1,6 @@
 # CV for Morgan Roderick
 
-Freelance frontend developer
+Frontend specialised software engineer
 
 
 ## Contact
@@ -19,7 +19,7 @@ I prefer e-mail over phone calls for most things.
 
 ## Summary
 
-I am a senior frontend specialised developer with more than fifteen years of professional experience. My primary focus is building high quality software products with long life span and low effort maintenance.
+I am a senior frontend specialised software engineer with more than fifteen years of professional experience. My primary focus is building high quality software products with long life span and low effort maintenance.
 
 I am a web expert and master [HTTP][http], [JavaScript][js], [HTML][html] and [CSS][css]. I have extensive experience with building [Single Page Applications][spa], as well as highly resilient web applications using [progressive enhancement][pr-enh]. I am equally comfortable working both client- and server-side.
 
@@ -42,7 +42,7 @@ Outside of my work life, I am passionate about cooking and photography, as well 
 
 ## Experience
 
-Since 2001 I have worked mostly as a freelance frontend specialist and have experience working with companies in sizes ranging from two to more than 100.000 people.
+Since 2001 I have worked mostly as a freelance frontend specialist and have experience working with companies in sizes ranging from two to more than 100.000 employees.
 
 ### Agents
 
@@ -88,7 +88,7 @@ Recommendations by past clients, employers and co-workers are available on [my l
 * Danish: Fluent
 * English: Fluent
 * Swedish: Some
-* German: Basic
+* German: ~B1
 
 
 ## Education and certifications
