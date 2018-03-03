@@ -19,7 +19,7 @@ I prefer e-mail over phone calls for most things.
 
 ## Summary
 
-I am a senior frontend specialised software engineer with more than fifteen years of professional experience. My primary focus is building high quality software products with long life span and low effort maintenance.
+I am a senior software engineer with twenty years of professional experience. My primary focus is building high quality software products with long life span and low effort maintenance.
 
 I am a web expert and master [HTTP][http], [JavaScript][js], [HTML][html] and [CSS][css]. I have extensive experience with building [Single Page Applications][spa], as well as highly resilient web applications using [progressive enhancement][pr-enh]. I am equally comfortable working both client- and server-side.
 
