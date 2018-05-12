@@ -14,7 +14,7 @@ I wanted to switch to having the source of my cv in [Markdown](http://daringfire
 	* [pull requests on GitHub](https://help.github.com/articles/creating-a-pull-request)
 	* writing documentation for the software I work on
 * I can paste the source document into a plain text email, and everyone can immediately read it
-* I can easily generate a binary formats for recruiters that prefer that
+* I can easily generate binary formats for recruiters that prefer that
 * It's easy to read diffs in git
 
 It took me a bit to do all the editing from HTML to Markdown, but now my [cv is available as Markdown](/cv/cv.md). From now on, updating it will be as easy as all the other editing I do on a daily basis.
