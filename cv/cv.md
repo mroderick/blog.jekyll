@@ -19,7 +19,7 @@ I prefer e-mail over phone calls for most things.
 
 ## Summary
 
-I am a senior software engineer with twenty years of professional experience. My primary focus is building high quality software products with long life span and low effort maintenance.
+I am a senior software engineer with a couple of decades of professional experience. My primary focus is on building high quality software products with long life span and low effort maintenance.
 
 I am a web expert and master [HTTP][http], [JavaScript][js], [HTML][html] and [CSS][css]. I have extensive experience with building [Single Page Applications][spa], as well as highly resilient web applications using [progressive enhancement][pr-enh]. I am equally comfortable working both client- and server-side.
 
@@ -100,6 +100,7 @@ Recommendations by past clients, employers and co-workers are available on [my l
 
 ## Community work
 
+* Volunteer coach at [codebar][codebar]
 * Volunteer mentor at [CoderDojo][dojo] events in Berlin
 * Volunteer cook at [Homeless Veggie Dinner][hvd] in Berlin
 * Co-founded and ran [CopenhagenJS][copenhagenjs] for ~18 months, until I moved to Berlin
@@ -115,6 +116,7 @@ Recommendations by past clients, employers and co-workers are available on [my l
 [berlinjs]: http://berlinjs.org
 [brandwatch]: https://www.brandwatch.com
 [cleancode]: https://www.goodreads.com/book/show/3735293-clean-code
+[codebar]: https://codebar.io/berlin
 [coop]: https://om.coop.dk/Om%20Coop.aspx
 [copenhagenjs]: http://copenhagenjs.dk
 [css]: https://en.wikipedia.org/wiki/CSS
