@@ -66,6 +66,7 @@ if (someConditionIsMet) {
 
 ### Bonus: use `Boolean` in iteration
 
+You can also use `Boolean` in iteration, which would be a lot less elegant with `!!`.
 
 ```js
 const values = [1, 0, {}, undefined, [], null, 'apple pie', '',  false, true, ];
