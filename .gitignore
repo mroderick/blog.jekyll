@@ -30,3 +30,4 @@ build/config/buildinfo.properties
 _site
 .vagrant
 /node_modules/
+.jekyll-cache/
