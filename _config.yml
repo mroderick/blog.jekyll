@@ -7,3 +7,5 @@ kramdown:
   syntax_highlighter: rouge
 permalink:   /:year/:month/:day/:title/
 exclude:     ['node_modules']
+plugins:
+  - jekyll-feed
