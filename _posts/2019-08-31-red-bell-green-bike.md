@@ -24,7 +24,7 @@ Bicycle paths in Berlin are not always marked well. Well meaning, even native Be
 
 A few weeks ago, while enjoying riding at speed down Danziger Strasse, the Pilen branded bell on my bicycle rattled loose, jumped into the street and shattered everywhere.
 
-Being bell-less might work in smaller/other cities. Not so much here. Losing the abibility to produce an audible warning signal on your bike in Berlin is makes things *challenging*.
+Being bell-less might work in smaller/other cities. Not so much here. Losing the abibility to produce an audible warning signal on your bike in Berlin makes things *challenging*.
 
 Luckily, we have plenty of friendly bicycle shops. I visited one of my local ones, [PrenzlBike][prenzlbike], and got a new loud bell fitted on my trusty bicycle.
 
