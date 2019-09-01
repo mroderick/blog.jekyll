@@ -24,9 +24,9 @@ Bicycle paths in Berlin are not always marked well. Well meaning, even native Be
 
 A few weeks ago, while enjoying riding at speed down Danziger Strasse, the Pilen branded bell on my bicycle rattled loose, jumped into the street and shattered everywhere.
 
-Being bell-less might work in smaller/other cities. Not so much here. Losing the abibility to produce an audible warning signal on your bike in Berlin makes things *challenging*.
+Being bell-less might work in smaller/other cities. Not so much here. Losing the ability to produce an audible warning signal on your bike in Berlin makes things *challenging*.
 
-Luckily, we have plenty of friendly bicycle shops. I visited one of my local ones, [PrenzlBike][prenzlbike], and got a new loud bell fitted on my trusty bicycle.
+Luckily, we have plenty of friendly bicycle shops. I visited one of my local ones, and got a new loud bell fitted on my trusty bicycle.
 
 ![Red bell, green bike][2]
 
@@ -38,7 +38,6 @@ Once again, Berlin should be able to hear me coming!
 
 [aero]: https://en.wikipedia.org/wiki/Saab_9-5#Aero
 [pilen-lyx]: https://www.pilencykel.se/en/pilen-lyx-gents-duragreen-brooks-b66-brown/
-[prenzlbike]: https://www.facebook.com/pages/category/Bicycle-Shop/PrenzlBike-Der-Fahrradladen-392482484512944/
 [1]: /images/2019-08-31/1-800.jpg
 [2]: /images/2019-08-31/2-800.jpg
 [3]: /images/2019-08-31/3-800.jpg
