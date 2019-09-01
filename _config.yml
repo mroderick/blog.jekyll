@@ -11,3 +11,5 @@ permalink:   /:year/:month/:day/:title/
 exclude:     ['node_modules']
 plugins:
   - jekyll-feed
+jekyll_compose:
+    auto_open: true
