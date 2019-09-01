@@ -1,8 +1,10 @@
 ---
 layout: default
 title: CV
+site_section: about
 ---
 
 My cv is available in the following formats
 
-* [cv.md](cv.md)
+* [Markdown](cv.md)
+* [PDF](cv.md)
