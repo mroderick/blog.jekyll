@@ -34,4 +34,13 @@ Everyone!
 
 ### When?
 
-The first event will likely be on [Wednesday, 2019-09-18](https://indieweb.org/events/2019-09-18-homebrew-website-club) "after work". I will update this post as things solidify.
+The first event will be on [Wednesday, 2019-09-18](https://indieweb.org/events/2019-09-18-homebrew-website-club) from 18.30.
+
+
+### Venue
+
+The event will be hosted by [Signavio](https://www.signavio.com)
+
+[Signavio](https://www.signavio.com)<br/>
+Kurfürstenstraße 111,<br/>
+10787 Berlin
