@@ -1,6 +1,6 @@
 # CV for Morgan Roderick
 
-Frontend specialised software engineer
+Frontend specialised senior software engineer with 20+ years experience
 
 
 ## Contact
@@ -21,7 +21,9 @@ I prefer e-mail over phone calls for most things.
 
 I am a senior software engineer with a couple of decades of professional experience. My primary focus is on building high quality software products with long life span and low effort maintenance.
 
-I am a web expert and master [HTTP][http], [JavaScript][js], [HTML][html] and [CSS][css]. I have extensive experience with building [Single Page Applications][spa], as well as highly resilient web applications using [progressive enhancement][pr-enh]. I am equally comfortable working both client- and server-side.
+I am a [lean web](https://leanweb.dev) enthusiast, which means I subscribe to the idea that we can make a simpler, faster web by using the evolving web standards and browsers to their fullest. I master [HTTP][http], [JavaScript][js], [HTML][html] and [CSS][css].
+
+I have extensive experience with building and maintaining [Single Page Applications][spa], highly resilient web applications using [progressive enhancement][pr-enh] as well as high quality JavaScript libraries. I am equally comfortable working both client- and server-side.
 
 Over the time of my career I've naturally spent time with many different programming languages, libraries and frameworks, servers, etc. Please ask for specifics.
 
@@ -54,6 +56,7 @@ Since 2001 I have worked mostly as a freelance frontend specialist and have expe
 
 * [Apple Inc.][aapl]
 * [Zalando SE][zalando], Online retailer
+* [Kalo][kalo], freelancer management systems
 * [Brandwatch GmbH][brandwatch]
 * [Imagine Easy Solutions][imagine], "A Tiny Company with Big Ideas"
 * [ATEA][atea], IT infrastructure specialists
@@ -88,7 +91,7 @@ Recommendations by past clients, employers and co-workers are available on [my l
 * Danish: Fluent
 * English: Fluent
 * Swedish: Some
-* German: ~B1
+* German: \~B1
 
 
 ## Education and certifications
@@ -100,7 +103,7 @@ Recommendations by past clients, employers and co-workers are available on [my l
 
 ## Community work
 
-* Volunteer coach at [codebar][codebar]
+* Volunteer coach at [codebar][codebar] in Berlin
 * Volunteer mentor at [CoderDojo][dojo] events in Berlin
 * Volunteer cook at [Homeless Veggie Dinner][hvd] in Berlin
 * Co-founded and ran [CopenhagenJS][copenhagenjs] for ~18 months, until I moved to Berlin
@@ -131,6 +134,7 @@ Recommendations by past clients, employers and co-workers are available on [my l
 [imagine]: http://www.imagineeasy.com/
 [itjob]: https://www.it-jobbank.dk/
 [js]: https://en.wikipedia.org/wiki/JavaScript
+[kalo]: https://kalohq.com
 [legacycode]: https://www.goodreads.com/book/show/44919.Working_Effectively_with_Legacy_Code
 [leob]: http://www.leoburnett.com/
 [linkedin]: http://www.linkedin.com/in/morganroderick
