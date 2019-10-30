@@ -1,5 +1,17 @@
 title: Morgan Roderick's blog
-author: Morgan Roderick
+author: morgan
+twitter:
+  username: mrgnrdrck
+  card: summary
+social:
+  name: Morgan Roderick
+  links:
+    - https://twitter.com/mrgnrdrck
+    - https://www.linkedin.com/in/morganroderick/
+    - https://github.com/mroderick
+    - https://keybase.io/mrgnrdrck
+logo: /images/logo.png
+lang: en_GB
 safe:        false
 future:      true
 lsi:         false
@@ -11,5 +23,6 @@ permalink:   /:year/:month/:day/:title/
 exclude:     ['node_modules']
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
 jekyll_compose:
-    auto_open: true
+  auto_open: true

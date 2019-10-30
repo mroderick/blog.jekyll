@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Homebrew Website Club, 2019-10-30
+image: /images/homebrew-website-club.jpg
 date: 2019-10-29 11:58 +0100
 ---
 
