@@ -4,69 +4,49 @@ https://keybase.io/mrgnrdrck
 
 I hereby claim:
 
-  * I am an admin of http://roderick.dk
+  * I am an admin of https://roderick.dk
   * I am mrgnrdrck (https://keybase.io/mrgnrdrck) on keybase.
-  * I have a public key with fingerprint 3ABC 8817 CF95 2AF1 78E1  0115 19F2 57E0 CF18 1A69
+  * I have a public key ASC-oWudizR4U7-SgID0xk6xVh-TDPPwUoT1gj0qaJBL1go
 
-To claim this, I am signing this object:
+To do so, I am signing this object:
 
 {
-    "body": {
-        "client": {
-            "name": "keybase.io node.js client",
-            "version": "0.4.14"
-        },
-        "key": {
-            "fingerprint": "3abc8817cf952af178e1011519f257e0cf181a69",
-            "host": "keybase.io",
-            "key_id": "19F257E0CF181A69",
-            "uid": "229d6d972d447526c2b2cf9b20f80c00",
-            "username": "mrgnrdrck"
-        },
-        "merkle_root": {
-            "ctime": 1407224165,
-            "hash": "333d89f537752b4b844f76e7c8b94f2aa6c6fe5cafdb5606700e7768cb768a183c06197c87bb56d6746082411b9bb9435805c95f17b78fff9e860f3ef5fe908a",
-            "seqno": 33285
-        },
-        "service": {
-            "hostname": "roderick.dk",
-            "protocol": "http:"
-        },
-        "type": "web_service_binding",
-        "version": 1
+  "body": {
+    "key": {
+      "eldest_kid": "0101e85d0017235e61b0af31ac006d59693c83ba78e508b1abc7dd5610a86b0586400a",
+      "host": "keybase.io",
+      "kid": "0120bea16b9d8b347853bf928080f4c64eb1561f930cf3f05284f5823d2a68904bd60a",
+      "uid": "229d6d972d447526c2b2cf9b20f80c00",
+      "username": "mrgnrdrck"
     },
-    "ctime": 1407224205,
-    "expire_in": 157680000,
-    "prev": "d7dacfbb13bb50896cb9e3d9b39fc1af13d468910360c552919a1bb47c0cc1d7",
-    "seqno": 5,
-    "tag": "signature"
+    "merkle_root": {
+      "ctime": 1572595166,
+      "hash": "31a8314a4031ac2dc758a250ff11e95c0fe52826b6e67ed367ddf7aae373ad38d7c301de5ba3eac7ae80cc0ab07ed4e3187fc264df050668d4dcd24cf241b34d",
+      "hash_meta": "fa3b558fb2a538e240440f8ba6143e4a27a8562df01daf9ff5a8a20c2d65f18b",
+      "seqno": 8585068
+    },
+    "service": {
+      "entropy": "TCgyJL0PXWH5krkdUn23L2xA",
+      "hostname": "roderick.dk",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "4.7.2"
+  },
+  "ctime": 1572595169,
+  "expire_in": 504576000,
+  "prev": "a91fb2e384d06a501f29db0f515548e11428d73711df6f5c90824261dd1b715f",
+  "seqno": 47,
+  "tag": "signature"
 }
 
-with the aforementioned key, yielding the PGP signature:
+which yields the signature:
 
------BEGIN PGP MESSAGE-----
-Version: GnuPG v1
-
-owFVkmtoHFUYhjdpo6mxUmy0YlKNgxSs2/WcuZzLoj9sbbxQBFvBP9btuSbjZme2
-ZyaXpcaW1EYT3CrG+KMlMaJSEMVaqlIsrVZrvUVQQUSUVluDGhEEb1gbPBMi2vkx
-zJnznPf93u87jy9dlGts2B9uf+fldcdHGj78gec2nRqpb3N4LGtOcZsjekIVpdlX
-xCrKKTplVeMsUYUw7ohiqQr3Jx0LTN7pUyYJ48hSoOAXoO8M5jM+O63DqEuZqgkz
-McdjXBACsdA0cJmGmCgIIAwg1W6AFRAaEsgQtZrdcZKeZ+vMa5ZCaf9C2mn59WBd
-p+Vvnud75zdcl0okKXal7+PARcLlrjXjLtAECAAyMFFmIVPFdEVGGlHOCq4oU+5R
-JRPH87FFGmYM9AF2XR+iwJbEku4shOdJQnXgYevAfU58X2OksCCc+tplDAmkVSCY
-ljxAAGEAFMaICG5fDBJPAASpxTG3+xJhHwFiLSCn3Cp4AQGBoIHtDsdEa00VQUB7
-SgdaUUCYzZCorVHsFD3PJcFgtjR9oVBZ2VnbFtIZOyYTinJBlu2RqonTWMQ9dqM7
-TavFLHJaq2Zgv+KllxY0SjyMpJ3Z/6cKLXp+O1xg26EGqqFRpTAjAhsN2CfzUX1W
-U2LJhOYcejYkIBQJTpUnKfeoFtCO3pM+IhQCDwERBC6FlEHOfSyAEFDi/0Jap5R1
-Wckk7IpY2muUMzjS0L4419CYu6CpMbu2uYuWLPv3Lq+ca84dKU1Nr3xi7uSSG5va
-X51Yu2OrHr3tjxfaLl0+9uS49+CJlrk3tx87cMV3+cmJjXjPjP/z8OxwZ9v45uOT
-a9ta3/hq2ZV/Dj199fhO8v5r99078OJ1Z356q/DeqjvrNx2sPD/adODwoU/2ic6z
-bOz31m/Otldnm6aG/DMTow/dMP71t+z0uwOVtx/dv/OX6bH11fj0F6+Y3d9v2XL0
-1IWFTed23X7J9fVVx3Yt/vujfc1XHXzgrqUrWovPflZTO5rdfOHWXvPUtUeeKW8w
-P+45lL84eaSlXv914wd3HK6fm/nr4+LwLZ/3zXw5JVo2PJz2Pzd74uRQ8lvtsTUd
-99z9eig/3c2meaW/vHrgMm/FNZfv/Qc=
-=6wKn
------END PGP MESSAGE-----
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgvqFrnYs0eFO/koCA9MZOsVYfkwzz8FKE9YI9KmiQS9YKp3BheWxvYWTESpcCL8QgqR+y44TQalAfKdsPUVVI4RQo1zcR329ckIJCYd0bcV/EINh8hBWTkzflXubbkHoG4m44lTdGcRuaIM9SacW6ZnsJAgHCo3NpZ8RAu7oqqnXTQLZkYmlYJXo0VG2ZkI+UxUQ+AmxRYM9AdFso9TIEc++pQKhh7kAUnb9lJSxgRRfJY6NRWAj4BijMAKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIO75XTcXGgs6VkQkXra9zwTDsOksf5GKZz9ftqyvc8VGo3RhZ80CAqd2ZXJzaW9uAQ==
 
 And finally, I am proving ownership of this host by posting or
 appending to this document.
