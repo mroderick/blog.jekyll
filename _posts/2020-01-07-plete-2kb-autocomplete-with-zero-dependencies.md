@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 'plete: 2KB autocomplete with zero dependencies'
+date: 2020-01-07 21:43 +0000
 ---
-
 ## plete: 2KB autocomplete with zero dependencies
 
 For a project at work, we needed an autocomplete component, that meets the following criteria:
