@@ -13,6 +13,7 @@ Frontend specialised senior software engineer with 20+ years experience
 | E-mail: [morgan@roderick.dk](mailto:morgan@roderick.dk)
 | Phone: [+49 (0) 152 0723 9351](tel:+4915207239351)
 | Twitter: [@mrgnrdrck][twitter]
+| Web: https://roderick.dk
 
 I prefer e-mail over phone calls for most things.
 
