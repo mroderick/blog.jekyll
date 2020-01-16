@@ -83,9 +83,8 @@ Recommendations by past clients, employers and co-workers are available on [my l
 
 ## Profiles
 
-* [GitHub][github]
-* [LinkedIn][linkedin]
-
+* GitHub: https://github.com/mroderick
+* LinkedIn: http://www.linkedin.com/in/morganroderick
 
 ## Spoken Languages
 
@@ -128,7 +127,6 @@ Recommendations by past clients, employers and co-workers are available on [my l
 [dojo]: http://coderdojo.com
 [eloquent-js]: http://eloquentjavascript.net
 [ftrends]: http://2010.front-trends.com
-[github]: https://github.com/mroderick
 [hvd]: https://www.facebook.com/groups/121769647855905/
 [html]: https://en.wikipedia.org/wiki/HTML
 [http]: https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol
