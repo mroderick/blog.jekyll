@@ -45,6 +45,12 @@ My personal ambitions are not tied to specific outcomes, but to keep moving in a
 
 Having said that, I am looking for opportunities that will allow me to pursue a role as Principal Engineer or Head of Engineering.
 
+## Locations
+
+* Berlin, Germany
+* Las Palmas de Gran Canaria, Spain
+* Remote
+
 ## Interested?
 
 Grab a [PDF version of my CV](http://roderick.dk/cv/cv.pdf) and get in touch.
