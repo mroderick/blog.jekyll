@@ -28,7 +28,7 @@ In the General tab of settings, you'll find the screen settings. These are my re
 
 ### "Use dual monitors"
 
-If you ever use more than one monitor, this setting is great. It allows you to keep one window with the feed of the participants and one window with anythign that is being share by or with you.
+If you ever use more than one monitor, this setting is great. It allows you to keep one window with the feed of the participants and one window with anything that is being shared by or with you.
 
 When you only have one screen connected, things are as if this setting was off. Set and forget. Sorted.
 
