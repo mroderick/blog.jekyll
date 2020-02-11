@@ -1,7 +1,6 @@
 # CV for Morgan Roderick
 
-Frontend specialised senior software engineer with 20+ years experience
-
+Full stack senior software engineer with 20+ years experience
 
 ## Contact
 
@@ -11,12 +10,11 @@ Frontend specialised senior software engineer with 20+ years experience
 | Germany
 
 | E-mail: [morgan@roderick.dk](mailto:morgan@roderick.dk)
-| Phone: [+49 (0) 152 0723 9351](tel:+4915207239351)
-| Twitter: [@mrgnrdrck][twitter]
+| Phone: +49 (0) 152 0723 9351
+| Twitter: @mrgnrdrck
 | Web: https://roderick.dk
 
 I prefer e-mail over phone calls for most things.
-
 
 ## Summary
 
@@ -38,7 +36,7 @@ I am always looking to develop lasting skillsets that focus on good practices, r
 * [Release It!][release-it]
 * [Working Effectively with Legacy Code][legacycode]
 
-As a natural part of my work, I help other developers hone their skills, especially around refactoring and unit testing. I am a [core member of the Sinon.JS project][sinon].
+As a natural part of my work, I work with other engineers hone their skills, especially around refactoring and unit testing. I am a [core member of the Sinon.JS project][sinon].
 
 Outside of my work life, I am passionate about cooking and photography, as well as participating in community work.
 
@@ -152,7 +150,6 @@ Recommendations by past clients, employers and co-workers are available on [my l
 [sparnord]: https://www.sparnord.dk/
 [tdc]: http://tdc.dk/
 [thisted-gym]: http://www.thisted-gymnasium.dk
-[twitter]: https://twitter.com/mrgnrdrck
 [valtech]: http://valtech.dk
 [zalando]: https://www.zalando.de
 [zyb]: https://zyb.com/
