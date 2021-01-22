@@ -20,6 +20,8 @@ I prefer e-mail over phone calls for most things.
 
 I am a senior software engineer with a couple of decades of professional experience. My primary focus is on building high quality software products with long life span and low effort maintenance.
 
+In the next year or two, I want to continue my work as Lead Engineer, aiming towards a role as Staff Engineer or Principal Engineer.
+
 I am a [lean web](https://leanweb.dev) enthusiast, which means I subscribe to the idea that we can make a simpler, faster web by using the evolving web standards and browsers to their fullest. I master [HTTP][http], [JavaScript][js], [HTML][html] and [CSS][css].
 
 I have extensive experience with building and maintaining [Single Page Applications][spa], highly resilient web applications using [progressive enhancement][pr-enh] as well as high quality JavaScript libraries. I am equally comfortable working both client- and server-side.
@@ -39,7 +41,6 @@ I am always looking to develop lasting skillsets that focus on good practices, r
 As a natural part of my work, I work with other engineers hone their skills, especially around refactoring and unit testing. I am a [core member of the Sinon.JS project][sinon].
 
 Outside of my work life, I am passionate about cooking and photography, as well as participating in community work.
-
 
 ## Experience
 
