@@ -8,9 +8,11 @@ site_section: about
 
 My name is Morgan Roderick, I write this blog.
 
-As you might have guessed from reading some of the posts on the blog, I am a web developer, specialising in front end web development. I’ve been building just about every type of website professionally since 1998.
+As you might have guessed from reading some of the posts on the blog, I am a software engineer, specialising in web development. I’ve been building just about every type of web property professionally since 1998.
 
 I believe I wrote my first webpage in 1994, the same year I got my first e-mail address. The webpage displayed photos taken by the Hubble telescope, and as far as I know, that page was only ever viewed in [Mosaic](http://en.wikipedia.org/wiki/Mosaic_browser) on [SGI Indy machines](http://en.wikipedia.org/wiki/SGI_Indy).
+
+Ever since that time, I've been fascinated with the web and what we can do with it.
 
 ### Hire me
 
