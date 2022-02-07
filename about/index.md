@@ -22,9 +22,8 @@ CV is available at [/cv/](/cv/)
 
 If your company has specific procurement needs, I work with a few select partners
 
+* [Equal Experts](https://www.equalexperts.com)
 * [ProData](http://prodata.dk/)
-* [7n](http://www.7n.com)
-* [Strand & Donslund](http://www.s-d.dk/)
 
 ### Speaking, organising, volunteering
 
@@ -57,6 +56,7 @@ These charities are close to my heart.
 * [kiva](https://www.kiva.org/lender/morganroderick)
 * [Médecins Sans Frontières](https://www.msf.org)
 * [Plan International](https://plan-international.org)
+* [Wikipedia](https://donate.wikimedia.org)
 
 ### Copyright Information
 
