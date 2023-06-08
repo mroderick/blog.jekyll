@@ -11,9 +11,9 @@ Uyanga (Uya) and I will be celebrating our combined 90 years on this planet by h
 
 ![Fräulein Kimchi](./fraulein-kimchi.jpg)
 
-The party will be in the premises of the newly opened [Fraeulein Kimchi Restaurant in Berlin Weissensee, Gürtelstraße 10, 13088 Berlin](https://goo.gl/maps/jRiNdosn4nrSpzi37) and will be fairly casual.
+The photo above is of Fräulein Kimchi in her food truck.
 
-
+The party will be in the premises of the newly opened [Fräulein Kimchi Restaurant in Berlin Weissensee, Gürtelstraße 10, 13088 Berlin](https://goo.gl/maps/jRiNdosn4nrSpzi37) and will be fairly casual.
 
 We start at 12 noon and will go until ~5.30 pm. You can come by whenever you like and don't need to stay for the whole day.
 
